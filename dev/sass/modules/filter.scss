@@ -1,0 +1,44 @@
+// FilterBlock
+.filterBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.filterBlock .filterMask{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    overflow: auto;
+}
+.filterBlock .filterAll{
+    display: flex;
+    max-width: 1200px;
+    // border: 1px solid red;
+}
+.filterBlock .filterAll li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 52px;
+    font-size: $fzTitle;
+    font-weight: bold;
+    // border: 1px solid red;
+    cursor: pointer;
+}
+.showFilter{
+    background-image: url("../img/route/showFilterImage.png");
+}
+.filterBgImage{
+    width: 100%;
+    max-width: 1200px;
+}
+// routeFilterBlock RWD
+// @media screen and (max-width:$small){
+//     .filterBlock .filterAll li{
+//         font-size: $fzContent;
+//     }
+
+// }

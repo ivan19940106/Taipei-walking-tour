@@ -1,0 +1,999 @@
+@import './base/var.scss';
+
+@import './modules/moodConcat.scss';
+
+@import './modules/eventConcat.scss';
+
+// 
+.wrapper{
+    // background-image: $bgImage;
+    background-image: $bgGrid;
+}
+
+
+// banner 
+.banner_01 .routeTitleImage2{
+    position: absolute;
+    top: 0;
+    left: 105px;
+    transform: rotate(-15deg);
+    animation: rotateMove 1.5s cubic-bezier(.15,.76,.98,.4) alternate infinite;
+}
+@keyframes rotateMove{
+    from{transform: rotate(-10deg);}
+    to{transform: rotate(10deg);}
+}
+
+// banner routeTitleMove RWD
+@media screen and (max-width:$small){
+
+    .banner_01 .routeTitleImage1{
+        width: 100%;
+    }
+    .banner_01 .routeTitleImage2{
+        width: 25%;
+        left: 70px;
+    }
+}
+
+//routeSloganBlock
+.sloganBlock{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width:375px){
+        overflow: hidden;
+        padding-top: 60px;
+        margin-bottom: 20px;
+    }
+}
+.sloganBlock .routeShineAnimation{
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 120px;
+    overflow: hidden;
+    opacity: .85;
+    @media screen and (max-width:$medium){
+        right: 60px;
+    }
+    @media screen and (max-width:860px){
+        right: 20px;
+    }
+    @media screen and (max-width:767px){
+        width: 200px;
+    }
+    @media screen and (max-width:$small){
+        top:-45px;
+    }
+    @media screen and (max-width:375px){
+        width: 200px;
+        top:0;
+        overflow: hidden;
+        transform: translate(66px,-18px);
+    }
+}
+// cloud
+.routeShineAnimation .cloud{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 3.6875em;
+    height: 3.6875em;
+    color: #eee;
+    margin: -1.84375em;
+    background: currentColor;
+    border-radius: 50%;
+    box-shadow:
+      -2.1875em 0.6875em 0 -0.6875em,
+      2.0625em 0.9375em 0 -0.9375em,
+      0 0 0 0.375em #ccc,
+      -2.1875em 0.6875em 0 -0.3125em #ccc,
+      2.0625em 0.9375em 0 -0.5625em #ccc;
+      &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -0.5em;
+            display: block;
+            width: 4.5625em;
+            height: 1em;
+            color: #eee;
+            background: currentColor;
+            box-shadow: 0 0.4375em 0 -0.0625em #ccc;
+      }
+      &.left{
+          left: 40%;
+          z-index: 2;
+        font-size:18px;
+        animation: sunShineLeft 5s alternate infinite;
+        @media screen and (max-width:$small){
+            font-size:12px ;
+        }
+      }
+      &.right{
+          left: 65%;
+          z-index: 1;
+        font-size:12px;
+        animation: sunShineRight 5s alternate infinite;
+        @media screen and (max-width:$small){
+            font-size:8px ;
+        }
+      }
+    }
+    @keyframes sunShineLeft{
+        from{transform: translateX(0px);}
+        to{transform: translateX(-50px);}
+    }
+    @keyframes sunShineRight{
+        from{transform: translateX(0px);}
+        to{transform: translateX(50px);}
+    }
+.routeShineAnimation .sun{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 24px;
+    color: yellow;
+    margin: -1.25em;
+    background: currentColor;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.375em #f29341;
+    animation: spin 18s infinite linear;
+    @media screen and (max-width:$small) {
+        font-size: 18px;        
+    }
+}
+@keyframes spin{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+.sun .rays{
+    position: absolute;
+    top: -2em;
+    left: 50%;
+    font-size: 22px;
+    display: block;
+    width: 0.375em;
+    height: 1.125em;
+    margin-left: -0.1875em;
+    background: #f29341;
+    border-radius: 0.25em;
+    box-shadow: 0 5.375em #f29341;
+    &::before,&::after{
+        content: '';
+        position: absolute;
+        top: 0em;
+        left: 0em;
+        font-size: 22px;
+        display: block;
+        width: 0.375em;
+        height: 1.125em;
+        transform: rotate(60deg);
+        transform-origin: 50% 3.25em;
+        background: #f29341;
+        border-radius: 0.25em;
+        box-shadow: 0 5.375em #f29341;
+            @media screen and (max-width:$small){
+                font-size: 18px;
+            }
+    }
+    &::before{
+        transform: rotate(120deg);
+    }
+    @media screen and (max-width:$small){
+        font-size: 18px;
+}
+}
+// routeSloganBlock RWD
+@media screen and (max-width:$medium){
+    .routeSloganImage{
+        width: 550px;
+    }
+}
+@media screen and (max-width:$small){
+    .routeSloganImage{
+        width: 360px;
+    }
+}
+
+// routeContent
+.routeContent{
+    margin: 60px 0 0px;
+}
+.routeContent .routeBlockBgImage{
+    background-image: url("../img/route/routeBlockImage.png");
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);;
+    margin: auto;
+    padding: 80px 0 130px;
+    position: relative;
+    @media screen and(max-width:991px) {
+        overflow: hidden;
+    }
+    @media screen and(max-width:860px) {
+        width: 90%;    
+}
+}
+// decorationBlock
+.tape{
+    position: absolute;
+    @media screen and(max-width:991px) {
+        display: none;
+    }
+    &.tape1{
+        top:-80px;
+        left: 5px;
+        transform: rotate(45deg);
+        @media screen and(max-width:1388px) {
+            top:-130px;
+            left: 95px;
+            transform: rotate(90deg);
+        }
+    }
+    &.tape2{
+        top:600px;
+        right: -40px;
+        @media screen and(max-width:1388px) {
+            right: -0px;
+        }
+    }
+    &.tape3{
+        bottom:80px;
+        left: -40px;
+        @media screen and(max-width:1388px) {
+            left: -5px;
+        }
+    }
+    &.tape4{
+        bottom:-80px;
+        right: 0px;
+        transform: rotate(45deg);
+        @media screen and(max-width:1388px) {
+            bottom:-140px;
+            right: 110px;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.routeBlockBgImage .routeTilteBlock{
+    // width: 100%;
+    text-align: right;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    .routeInfo{
+        width: 100px;
+        position: relative;
+        left: 50px;
+        animation: sharks 1s alternate infinite;
+    }
+    img:nth-child(2){
+    filter:brightness(0.3);
+    }
+    @media screen and (max-width:860px) {
+    margin-bottom: 60px;
+    }
+}
+@keyframes sharks{
+    from{transform: translateY(0px);}
+    to{transform: translateY(-10px);}
+}
+.routeBlockBgImage .routeBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.routeBlock .routeBlockPart{
+    display: flex;
+    margin-top: 120px;
+    @media screen and (max-width:860px){
+        margin-top: 20px;
+    }
+}.routeBlock .routeBlockPart:first-child{
+    margin-top: unset;
+}
+.routeBlock .routeBlockPart:nth-child(odd) .routeAttractionBlock{
+    transform: translateX(-40px);
+    .attractionTitle{
+        transform: translateX(-40px);
+    }
+    @media screen and (max-width:1000px){
+        transform: translateX(0px);
+    }
+    @media screen and (max-width:860px){
+        .attractionTitle{
+            transform: translateX(0px);
+        }
+    }
+}
+.routeBlock .routeBlockPart:nth-child(even) .routeAttractionBlock{
+    order: 2;
+    transform: translateX(40px);
+    .attractionTitle{
+        transform: translateX(40px);
+    }
+    @media screen and (max-width:1000px){
+        transform: translateX(0px);
+    }
+    @media screen and (max-width:860px){
+        .attractionTitle{
+            transform: translateX(0px);
+        }
+    }
+}
+.routeAttractionBlock{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin: 0 30px;
+    @media screen and (max-width:992px) {
+        margin: 0px;
+    }
+    @media screen and (max-width:860px) {
+        margin-bottom: 80px;
+    }
+}
+.routeAttractionBlock .attractionTitle{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-size: $fzContent;
+    font-weight: bold;
+    :nth-child(3),:nth-child(4){
+        margin-top: 10px;
+    }
+    :nth-child(4){
+        color: $importantColor;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.3) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 24px;
+            margin-right: 2px;
+            transform: translateY(-3px);
+        }
+    }
+}
+.attractionTitle .landMark{
+    animation: markMove 1.5s alternate infinite;
+}
+@keyframes markMove{
+    from{transform: translateY(0px);}
+    to{transform: translateY(5px);}
+}
+
+
+.routeAttractionBlock .attractionImageBlock{
+    background-color:#fff;
+    width: 400px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    @media screen and(max-width:$small) {
+        width: 300px;
+        height: 250px;
+    }
+
+}
+.attractionImageBlock .attractionImage{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+    background-image: url("../img/route/AttractionBorder.png");
+    background-size: contain;
+    background-repeat: none;
+    overflow: hidden;
+    @media screen and(max-width:$small) {
+        background-size: 100% 100%;
+    }
+}
+.attractionImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;    
+}
+.attractionImage .attractionMask{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @media screen and(max-width:$small) {
+        width: 90%;
+        height: 90%;
+    }
+
+}
+.attractionImage .attractionMask::after{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 120%;
+    height: 120%;
+    background-color: rgba(170,216,235,.45);
+    transform: rotate(55deg);
+    transform-origin: left top;
+    transition: transform 1s;
+    @media screen and (max-width:$small){
+        background-color: rgba(255,255,255,.2);
+        transform: unset;
+        transition: unset;
+    }
+}
+.attractionImage .attractionMask:hover::after{
+    transform: rotate(0deg);
+    @media screen and (max-width:$small){
+        transform: unset;
+    }
+}
+
+.routeAttractionBlock2{
+    width: 400px;
+    height: 350px;
+    position: relative;
+    // border: 1px solid #ccc;
+    display: flex;
+    align-items: flex-end;
+
+    @media screen and (max-width:860px){
+        display: none;
+    }
+    
+}
+// SVG block
+#svg,#svg2,#svg3,#svg4,#svg5 {
+    width: 400px;
+    height: 400px;
+}
+#svg2{
+    transform: translateY(20px) rotate(-10deg);
+}
+// SVG pathStyle
+#cls-1,#cls-2,#cls-3,#cls-4,#cls-5{
+    fill: none;
+    stroke: #666;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 4px;
+}
+#cls-1 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+#cls-2 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+#cls-3 {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+}
+#cls-4 {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+}
+#cls-5 {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+}
+// routeAttractionBlock2 SVG and decoration block
+.dec{
+    position: absolute;
+}
+// addAnimation
+.disPlay{
+    opacity: 1 !important; 
+}
+.routeBlock .routeBlockPart:nth-child(1) .routeAttractionBlock2{
+    transform: translate(20px,60px);
+    .groupA{
+        opacity: 0;
+    }
+    .tree1{
+        width: 280px;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        transition:opacity .5s .3s;
+    }
+
+    .tree2{
+        width: 100px;
+        top: 60px;
+        left: 160px;
+        opacity: 0;
+        transition:opacity .5s;
+    }
+    .grass{
+        width: 180px;
+        top: 85px;
+        left: -25px;
+    }
+
+}
+.routeBlock .routeBlockPart:nth-child(2) .routeAttractionBlock2{
+    transform: translate(10px,80px);
+    .groupB{
+        opacity: 0;
+    }
+    .tree4{
+        width: 60px;
+        top: -70px;
+        right:75px;
+        transition:opacity .5s .1s;
+    }
+    .tree5{
+        width: 60px;
+        top: -70px;
+        right:115px;
+        transition:opacity .5s .2s;
+    }
+    .tree6{
+        width: 80px;
+        top: -90px;
+        right:160px;
+        transition:opacity .5s .3s;
+    }
+    .grass2{
+        width: 200px;
+        top: 0;
+        right: 0;
+    }
+    .tree7{
+        width: 100px;
+        top: -70px;
+        left:-10px;
+        transition:opacity .5s .5s;
+    }
+    .tree8{
+        width: 100px;
+        top: 0px;
+        left:60px;
+        transition:opacity .5s .6s;
+    }
+    .tree9{
+        width: 120px;
+        top: 40px;
+        left:105px;
+        transition:opacity .5s .7s;
+    }
+    .tree10{
+        width: 200px;
+        bottom: 40px;
+        right:-10px;
+        transition:opacity .5s .8s;
+    }
+
+}
+.routeBlock .routeBlockPart:nth-child(3) .routeAttractionBlock2{
+    transform: translate(50px,60px);
+    .groupC{
+        opacity: 0;
+    }
+    .temp{
+        width: 100px;
+        filter: grayscale(.5) blur(.5px);
+        top: -60px;
+        right:160px;
+        transition:opacity .5s .3s;
+    }
+    .flower{
+        width: 100px;
+        top: -5px;
+        right:60px;
+        z-index: 2;
+    }
+    .flower2{
+        width: 80px;
+        top: 0px;
+        left:80px;
+        z-index: 2;
+    }
+    .tree19{
+        width: 80px;
+        top: -40px;
+        left: 50px;
+        transition:opacity .5s .1s;
+    }
+    .tree20{
+        width: 120px;
+        top: 0;
+        right: -10px;
+        z-index: 3;
+        transition:opacity .5s .5s;
+    }
+    .grass3{
+        width:200px;
+        top:60px;
+        left: 0;
+    }
+    .house{
+        width: 300px;
+        bottom: 20px;
+        right: 0;
+        filter: grayscale(.2);
+        transition:opacity .5s .6s;
+    }
+    .plant{
+        width: 65px;
+        bottom: 0;
+        left: 85px;
+        transition:opacity .5s .8s;
+    }
+    .plant2{
+        width: 60px;
+        bottom: 10px;
+        right:100px;
+        transition:opacity .5s 1s;
+    }
+}
+.routeBlock .routeBlockPart:nth-child(4) .routeAttractionBlock2{
+    transform: translate(-20px,100px);
+    .groupD{
+        opacity: 0;
+    }
+    .storeBlock{
+        // border: 1px solid #ccc;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        overflow: hidden;
+        left: 20px;
+        .store{
+            width: 320px;
+            bottom: 0px;
+            left: -80px;
+            transition:opacity .5s .5s;
+        }
+    }
+    .tree11{
+        width: 100px;
+        bottom:90px;
+        left: 140px;
+        transition:opacity .5s .8s;
+    }
+    .tree18{
+        width: 180px;
+        bottom:40px;
+        right:-10px;
+        filter: blur(.3px);
+    }
+    .plant3{
+        width: 45px;
+        bottom: 40px;
+        left:60px;
+        transition:opacity .5s 1s;
+    }
+    .grass5{
+        width: 200px;
+        top: -25px;
+        right: 20px;
+        transform: rotate(-5deg);
+    }
+}
+
+.routeBlock .routeBlockPart:nth-child(5) .routeAttractionBlock2{
+    transform: translate(10px,80px);
+    .groupE{
+        opacity: 0;
+    }
+    .house2{
+        width: 150px;
+        top: -130px;
+        right: 120px;
+        transform: rotate(-2deg);
+        filter: blur(.5px);
+        transition:opacity .5s .2s;
+    }
+    .grass6{
+        width: 200px;
+        bottom:120px;
+        right: 0;
+    }
+    .tree14{
+        width: 60px;
+        top: -40px;
+        left: 10px;
+    }
+    .tree15{
+        width: 100px;
+        top: -80px;
+        right: 0;
+        transition:opacity .5s .5s;
+    }
+    .tree16{
+        width: 100px;
+        bottom: 60px;
+        left: 20px;
+        transition:opacity .5s .7s;
+    }
+    .tree17{
+        width: 150px;
+        bottom: 40px;
+        right: 0;
+        transition:opacity .5s .9s;
+    }
+
+
+}
+
+// attractionsLightBox 
+.attractionBgImage{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 200;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: auto;    
+}
+.attractionBgImage .arrowLeft,
+.attractionBgImage .arrowRight{
+    width: 80px;
+    cursor: pointer;
+    @media screen and (max-width:820px) {
+        width: 60px;
+    }
+    @media screen and (max-width:$small) {
+        width: 40px;
+    }
+    
+}
+.arrowLeft{
+    margin-right: 10px;
+    filter: grayscale(1);
+    animation:"";
+}
+.arrowRight{
+    margin-left: 10px;
+    animation: moveRight .5s alternate infinite;
+}
+@keyframes moveLeft{
+    from{transform: translateX(0px);}
+    to{transform: translateX(-5px);}
+}
+@keyframes moveRight{
+    from{transform: translateX(0px);}
+    to{transform: translateX(5px);}
+}
+
+.attractionBgImage .attractionMask{
+    width: 1000px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    @media screen and (max-width:1240px) {
+        width: 800px;
+    }
+    @media screen and (max-width:$medium) {
+        width: 600px;
+    }
+    @media screen and (max-width:820px) {
+        width: 450px;
+    }
+    @media screen and (max-width:$small) {
+        width: 300px;
+    }
+    @media screen and (max-width:375px) {
+        width: 280px;
+    }
+    //右上叉叉
+    #closeMoodBtn{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        right: 0px;
+        top: 0px;
+        transition: all 0.8s;
+        &:hover{
+            transform: rotate(180deg);
+        }
+        span.line1,span.line2{
+            display: inline-block;
+            width: 40px;
+            height: 5px;
+            background-color: #646464;
+            border-radius: 8px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        span.line1{
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+        span.line2{
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+    }    
+}
+
+.attractionMask .attractionAll{
+    width:2000px;
+    display: flex;
+    transition:transform 1s linear;
+    @media screen and (max-width:1240px) {
+        width: 1600px;
+    }
+    @media screen and (max-width:$medium) {
+        width: 1200px;
+    }
+    @media screen and (max-width:820px) {
+        width: 900px;
+    }
+    @media screen and (max-width:$small) {
+        width: 600px;
+        transition:transform .5s linear;
+    }
+    @media screen and (max-width:375px) {
+        width: 560px;
+
+    }
+}
+.attractionAll .attractionInfoBlock{
+    width: 1000px;
+    display: flex;
+    @media screen and (max-width:1240px) {
+        width: 800px;
+    }
+    @media screen and (max-width:$medium) {
+        width: 600px;
+        flex-direction: column;
+    }
+    @media screen and (max-width:820px) {
+        width: 450px;
+    }
+    @media screen and (max-width:$small) {
+        width: 300px;
+    }
+    @media screen and (max-width:375px) {
+        width: 280px;
+    }
+}
+.attractionInfoBlock .attractionInfoImage{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // background-image: url(../img/route/hoffman.png);
+    background-color:#ddd;
+    box-shadow: $mediumShadow;
+    @media screen and (max-width:1240px) {
+        width: 60%;
+    }
+    @media screen and (max-width:$medium) {
+        width: unset;
+        height: unset;
+        padding-top: 60px;
+    }
+    @media screen and (max-width:820px) {
+        padding-top: 50px;
+    }
+    img{
+        width: 100%;
+        vertical-align: middle;
+    }
+}
+.attractionInfoBlock .attractionInfoText{
+    width: 40%;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/route/hoffman.png);
+    h2{
+        font-size: $fzTitle;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+    p{
+        width: 80%;
+        margin: 0 10%;
+        font-size: $fzContent;
+        line-height: 1.6;
+        letter-spacing: 1.5px;
+    }
+    @media screen and (max-width:$medium) {
+        width: unset;
+    }
+    @media screen and (max-width:$small) {
+        height:300px;
+        overflow: scroll;
+        justify-content: unset;
+    }
+    @media screen and (max-width:375px) {
+        height: 260px;
+    }
+}
+
+
+//otherLinkBlock
+.otherLinkBlock{
+    width: 100%;
+    max-width: 1200px;
+    margin: 120px auto;
+}
+.otherLink{
+    margin-bottom: 180px;
+}
+.otherLink .otherLinkTitle{
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    font-size: $fzTitle;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom:60px;
+    @media screen and (max-width:767px){
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 20px;  
+        :first-child{
+            display: none;
+        }
+     
+    }
+}
+.otherLinkTitle .routeOtherTitleImage{
+    width: 300px;
+    height: 30px;
+    background-image: url(../img/route/routeOtherTitleBlock.png);
+    @media screen and (max-width:860px) {
+        width: 240px;
+    }
+    @media screen and (max-width:767px){
+        width: 100%;
+        max-width:400px;
+        margin-top: 20px;
+    }
+
+}
+.otherLinkTitle p{
+    margin: 0 40px;
+}
+

@@ -1,0 +1,42 @@
+@import '../base/var.scss';
+
+/* 麵包屑 */
+
+    .breadCrumb {
+        // border: 1px solid skyblue;
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        padding-left: 20px;
+        margin: 20px auto;
+        margin-bottom: 100px;
+        @media screen and (max-width:$medium) {
+            margin-bottom: 60px;
+        }
+        @media screen and (max-width:$small) {
+            margin-bottom: 40px;
+        }
+    }
+    .breadCrumb li {
+        display: inline-block;
+        list-style-type: none;
+    }
+    .breadCrumb li::after{
+        content:'｜';
+    }
+    .breadCrumb li a{
+        color:$fcContent;
+    }
+    .breadCrumb li a:hover{
+        color:$importantColor;
+        font-weight: bold;
+    }
+    .breadCrumb li:last-child::after{
+        content:'';
+    }
+    .breadCrumb li:last-child a {
+        font-weight: bold;
+        color:$importantColor;
+        pointer-events:none;  
+        cursor:default 
+    }

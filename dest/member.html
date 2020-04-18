@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/member.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/getLoginInfo.js"></script>
+    <title>台北散步｜會員中心</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <!-- 1200px上 滿版時，使用的選單 -->
+<header class="fullHeader">
+    <h1>
+        <a href="./main.html">
+            <img src="./img/header/logo272x170.png" alt="">
+        </a>
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="./route.html"><img src="./img/header/navHover.png" class="navHover @@display1"><img
+                        src="./img/header/navIcon1.png" class="navIcon">散步遊台北</a></li>
+            <li><a href="./mapgame.html"><img src="./img/header/navHover.png" class="navHover @@display2"><img
+                        src="./img/header/navIcon2.png" class="navIcon">攻略地圖趣</a></li>
+            <li><a href="./mood.html"><img src="./img/header/navHover.png" class="navHover @@display3"><img
+                        src="./img/header/navIcon3.png" class="navIcon">慢步寫心情</a></li>
+            <li><a href="./postcard.html"><img src="./img/header/navHover.png" class="navHover @@display4"><img
+                        src="./img/header/navIcon4.png" class="navIcon">情繫明信片</a></li>
+            <li><a href="./event.html"><img src="./img/header/navHover.png" class="navHover @@display5"><img
+                        src="./img/header/navIcon5.png" class="navIcon">揪團一起走</a></li>
+        </ul>
+    </nav>
+    <div class="memberIcon">
+        <!-- <div class="navCart"><a><img src="./img/header/navCart.png"></a></div> -->
+        <div class="navMember">
+            <div class="sign">登入</div>
+            <a class="memberPhoto"><img src="./img/header/navMember.png"></a>
+        </div>
+        <div class="navPoint">
+            <div class="point">點數</div>
+            <a><img src="./img/header/navPoint.png"></a>
+        </div>
+    </div>
+</header>
+<!-- 1200px下時，轉乘使用漢堡選單 -->
+
+<header class="hamburgerHeader">
+    <h1>
+        <a href="./main.html">
+            <img src="./img/header/logo272x170.png" alt="">
+        </a>
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="./route.html"><img src="./img/header/navIcon1.png" class="navIcon">散步遊台北</a></li>
+            <li><a href="./mapgame.html"><img src="./img/header/navIcon2.png" class="navIcon">攻略地圖趣</a></li>
+            <li><a href="./mood.html"><img src="./img/header/navIcon3.png" class="navIcon">慢步寫心情</a></li>
+            <li><a href="./postcard.html"><img src="./img/header/navIcon4.png" class="navIcon">情繫明信片</a></li>
+            <li><a href="./event.html"><img src="./img/header/navIcon5.png" class="navIcon">揪團一起走</a></li>
+        </ul>
+    </nav>
+    <div class="memberIcon">
+        <!-- <div class="navCart"><a href=""><img src="./img/header/navCart.png"></a></div> -->
+        <div class="navMember">
+            <a class="memberPhoto"><img src="./img/header/navMember.png"></a>
+            <div class="sign">登入</div>
+        </div>
+        <div class="navPoint">
+            <a><img src="./img/header/navPoint.png"></a>
+            <div class="point">點數</div>
+        </div>
+    </div>
+</header>
+<h1 class="smartPhoneLogo">
+    <a href="./main.html">
+        <img src="./img/header/logo272x170.png" alt="">
+    </a>
+</h1>
+<div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+    </div>
+</div>
+
+<!-- loginBlock -->
+<div class="login" id="loginBlock">
+    <div class="login_all">
+        <div class="login_all_all">
+            <p>會員登入</p>
+            <form action="" id="member_login">
+                <input type="text" placeholder="請輸入帳號" name="login_acc" id="login_acc">
+                <input type="password" placeholder="請輸入密碼" name="login_psw" id="login_psw">
+                <div class="findpsw">忘記密碼</div>
+                <div class="login_bottom">
+                    <div class="login_login btnPink" id="login_login">登入</div>
+                    <div class="login_register btnPink">註冊</div>
+                </div>
+            </form>
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+        <div class="forgetpsw">
+            <p>找回密碼</p>
+            <form action="" id="member_findpsw">
+                <input type="text" placeholder="請輸入註冊帳號" id="find_acc">
+                <input type="text" placeholder="請輸入註冊信箱" id="find_email">
+                <div class="forgetpsw_bottom">
+                    <div class="login_login btnPink" id="login_forgetpsw">發送認證信</div>
+                    <div class="btnBack btnPink">返回</div>
+                </div>
+            </form>
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+        <div class="register">
+            <form action="./php/member/register.php" id="member_register" method="POST">
+                <div class="register_item">
+                    <label for="">帳號：</label>
+                    <input type="text" id="register_acc" name="register_acc">
+                </div>
+                <div class="register_item">
+                    <label for="">暱稱：</label>
+                    <input type="text" id="register_nam" name="register_nam">
+                </div>
+                <div class="register_item">
+                    <label for="">信箱：</label>
+                    <input type="text" id="register_email" name="register_email">
+                </div>
+                <div class="register_item">
+                    <label for="">密碼：</label>
+                    <input type="text" placeholder="請輸入英數字(至少6位數)" id="register_psw" name="register_psw">
+                </div>
+                <div class="register_item">
+                    <label for="">確認密碼：</label>
+                    <input type="text" placeholder="請輸入上述相同密碼" id="register_psw_dou">
+                </div>
+                <div class="register_bottom">
+                    <div class="login_register btnPink" id="login_register">註冊</div>
+                    <div class="btnBack btnPink">返回</div>
+                </div>
+            </form>
+
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="banner_06">
+            <img src="./img/banner/dottedLine1.png" alt="" srcset="" class="dottedLine">
+            <div class="pageBannerTitle">
+                <div class="bannerTitleMoveBlock">
+                    <img src="./img/banner/bannerTitle6.png" class="routeTitleImage1">
+
+                </div>
+            </div>
+            <img src="./img/banner/dottedLine2.png" alt="" srcset="" class="dottedLine">
+        </div>
+        <div class="member_content">
+            <div class="member_all">
+                <!-- 插圖 -->
+                <div class="member_sun">
+                    <img src="./img/member/membersun.png" alt="">
+                </div>
+                <div class="member_ballon">
+                    <img src="./img/member/memberballon.png" alt="">
+                </div>
+                <div class="member_ballon_two">
+                    <img src="./img/member/memberballon.png" alt="">
+                </div>
+                <div class="member_ballon_blue">
+                    <img src="./img/member/memberballonblue.png" alt="">
+                </div>
+                <div class="member_light">
+                    <img src="./img/member/memberlight.png" alt="">
+                </div>
+                <div class="member_clound">
+                    <img src="./img/member/memberclound.png" alt="">
+                </div>
+                <div class="member_clound2">
+                    <img src="./img/member/memberclound.png" alt="">
+                </div>
+                <!-- 插圖結束 -->
+                <!-- <div class="member_bread">
+                    <span>台北散步 / 會員中心 / </span>
+                    <span>我的資料</span>
+                </div> -->
+                <!-- breadCrumb -->
+                <ul class="breadCrumb">
+    <li><a href="./google.com.tw">台北散步</a></li>
+    <li><a href="./google.com.tw">會員中心</a></li>
+    <li><a href="./google.com.tw">會員資料</a></li>
+    <li><a href="./google.com.tw"></a></li>
+    <li><a href="./google.com.tw"></a></li>
+    <li><a href="./google.com.tw"></a></li>
+</ul>
+                <div class="member_point">
+                    <div class="member_point_left">
+                        <img src="./img/member/membergold.png" alt="">
+                    </div>
+                    <div class="member_point_right">
+                        <span>我的點數 : </span>
+                        <span id="member_point_point">0</span>
+                        <span>點</span>
+                    </div>
+
+                </div>
+                <div class="member_info">
+                    <nav class="member_info_nav">
+                        <ul>
+                            <li style="color:#a5361c; ">會員資料
+                                <img src="./img/member/memberstamp.png" style="opacity: .2;" alt="">
+                            </li>
+                            <li>路線紀錄
+                                <img src="./img/member/memberstamp.png" alt="">
+                            </li>
+                            <li>心情紀錄
+                                <img src="./img/member/memberstamp.png" alt="">
+                            </li>
+                            <li>訂單紀錄
+                                <img src="./img/member/memberstamp.png" alt="">
+                            </li>
+                            <li>開團紀錄
+                                <img src="./img/member/memberstamp.png" alt="">
+                            </li>
+                            <li>參團紀錄
+                                <img src="./img/member/memberstamp.png" alt="">
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="member_info_info">
+                        <div class="member_info_info_all" id="member_info_info_all">
+                            <div class="member_info_info_left">
+                                <div>
+                                    <span>我的資料</span>
+                                    <img src="./img/member/memberchange.png" alt="" class="pen">
+                                </div>
+                                <label for="photo_up">
+                                    <div>
+                                        <div>
+                                            <!-- <img src="./img/member/memberphoto.jpg" alt=""> -->
+                                        </div>
+                                        <div>
+                                            <label for="photo_up">上傳大頭照
+                                                <img src="./img/member/membercamera.png" alt="">
+                                            </label>
+                                            <input style="display: none;" type="file" name="" id="photo_up">
+                                        </div>
+                                    </div>
+                                </label>
+
+
+
+                            </div>
+                            <div class="member_info_info_line"></div>
+                            <div class="member_info_info_right">
+                                <div>
+                                    <span>我的資料</span>
+                                    <img src="./img/member/memberchange.png" alt="" class="pen">
+
+                                </div>
+                                <div>
+                                    <label for="">帳號 :</label>
+                                    <input type="text" readonly>
+                                </div>
+                                <div>
+                                    <label for="">密碼 :</label>
+                                    <input type="text" readonly>
+                                </div>
+                                <div>
+                                    <label for="">暱稱 :</label>
+                                    <input type="text" readonly>
+                                </div>
+                                <div>
+                                    <label for="">手機 :</label>
+                                    <input type="text" readonly>
+                                </div>
+                                <div>
+                                    <label for="">信箱 :</label>
+                                    <input type="text" readonly>
+                                </div>
+                            </div>
+                            <div class="member_info_info_button ">
+                                <a class="btnPink" style="visibility: hidden;">
+                                    確認
+                                </a>
+                                <!-- <input type="submit" class="btnPinkStop" value="修改確認"> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member_info_line minheightbig " style="display: none;">
+                        <div id="member_info_line_all" class="member_info_line_all minheightmiddle">
+
+                        </div>
+                    </div>
+                    <div class="member_info_share minheightbig" style="display: none;">
+                        <div class="member_info_share_all minheightmiddle" id="member_info_share_all">
+                           
+                        </div>
+                    </div>
+                    <div class="member_info_order minheightbig" style="display: none;">
+                        <div class="minheightmiddle" id="memberorder">
+                           
+                        </div>
+                    </div>
+                    <div class="member_info_open minheightbig" style="display: none;">
+                        <div class="member_info_open_all minheightmiddle" id="member_info_open_all">
+
+                        </div>
+                    </div>
+                    <div class="member_info_join minheightbig" style="display: none;">
+                        <div class="member_info_join_all minheightmiddle" id="member_info_join_all">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer // -->
+        
+            <!-- chatbot -->
+<div class="chatBot" id="chatBot">
+    <img src="./img/index/botBird.gif" class="bird">
+    <img src="./img/index/birdChat.gif" class="birdChat">
+    <div class="openBtn" id="openBot">
+        <img src="./img/index/chatBotOpen.png"> 
+    </div>
+    <div id="chatContent"> <!-- 對話內容區塊 -->
+        
+    </div>
+    <div class="keywordBar" id="keywordBar"> <!-- 關鍵字標籤 -->
+        
+    </div>
+    <div class="inputBar">
+        <input type="text" id="botInput" placeholder="和台灣藍鵲聊聊...">
+        <div id="botInputBtn">發送</div>
+    </div>
+
+</div>
+<footer>
+    <a id="btnGoTop"></a>
+    <div class="footerCloud">
+        <img src="./img/footer/footerCloud170.png" class="footerCloud170">
+        <img src="./img/footer/footerCloud122.png" class="footerCloud122">
+    </div>
+    <div class="footerLogo">
+        <img src="./img/footer/logo320x200.png">
+    </div>
+    <div class="footerText">
+        <p>Copyright (C) 2020 TAIPEI WALKING All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+        <script src="./js/jquery-3.4.1.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxHAzDuEADlkr21Aqm0ng4BqfQ3LfmD6c"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/member.js"></script>
+        <script src="./js/memberinfoupdate.js"></script>
+</body>
+
+</html>

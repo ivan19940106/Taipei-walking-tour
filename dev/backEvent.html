@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 後台 | 揪團檢舉管理</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/back.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include("./layout/backHeader.html",{
+        "nowPage0": "",
+        "nowPage1": "",
+        "nowPage2": "",
+        "nowPage3": "",
+        "nowPage4": "",
+        "nowPage5": "",
+        "nowPage6": "nowPage",
+        "nowPage7": "",
+        "nowPage8": "",
+        "nowPage9": ""
+        })
+        <main class="col-md-10">
+            <h2>揪團檢舉管理</h2>
+            <div class="content">
+                <!-- 揪團檢舉清單 -->
+                <table class="table table-responsive-sm table-striped">
+                    <thead>
+                        <tr class="row">
+                            <th class="col-1">檢舉編號</th>
+                            <th class="col-2">被檢舉揪團編號</th>
+                            <th class="col-2">被檢舉人編號</th>
+                            <th class="col-3">被檢舉揪團名稱</th>
+                            <th class="col-2">檢舉原因</th>
+                            <th class="col-2">處理方式</th>
+                        </tr>
+                    </thead>
+                    <!-- 要帶入檢舉資料的容器 -->
+                    <tbody id="eventReportList">
+                        <!-- 撈資料 -->
+                        <!-- <tr class="row ">
+                            <td class="col-1">1</td>
+                            <td class="col-2">2</td>
+                            <td class="col-2">3</td>
+                            <td class="col-3">信義一日遊</td>
+                            <td class="col-2">色情暴力等不當內容</td>
+                            <td class="col-2">
+                                <button class="btn btn-outline-success btn-sm updateBtn">保留</button>
+                                <button class="btn btn-outline-danger btn-sm deleteBtn">屏蔽</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- 隱藏的表單，用來傳送資料到PHP -->
+    <form id="myForm" style="display:hidden">
+        <input type="hidden" name="event_report_number" id="event_report_number">
+        <input type="hidden" name="event_number" id="event_number">
+        <input type="hidden" name="event_report_reason" id="event_report_reason">
+    </form>
+
+    <!-- ------------ js ------------ -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/backNav.js"></script>
+    <script src="./js/backEventLightReportList.js"></script>
+    <script src="./js/backEventReportStay.js"></script>
+    <script src="./js/backEventReportDelete.js"></script>
+
+    <script>
+        function $id(id) {
+            return document.getElementById(id);
+        }
+
+        let member;
+        window.addEventListener("load", function () {
+            // 抓取session的資料填入頁面中
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                member = JSON.parse(xhr.responseText);
+                // console.log(member);
+                $id("managerId").innerHTML = member.memName;
+            }
+            xhr.open("get", "./php/loginInfoForBack.php", true);
+            xhr.send(null);
+            // 註冊登出按鈕，回到後台登陸頁面
+            $id("btnLogout").onclick = function () {
+                let xhr = new XMLHttpRequest();
+
+                xhr.open("get", "./php/logout.php", true);
+                xhr.send(null);
+                location.href = "./backLogin.html";
+            };
+        }, false);
+    </script>
+</body>
+
+</html>

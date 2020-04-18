@@ -1,0 +1,193 @@
+div.chatBot{
+    // border: 1px solid red;
+    z-index: 50;
+    width: (366*0.85)+ px;
+    height: (623*0.85) + px;
+    background-image: url(../img/index/chatBoxBg.png);
+    background-size: contain;
+    background-position: bottom;
+    position: fixed;
+    bottom: -550px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 1s;
+
+    div.openBtn{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: -180px;
+        left: 140px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(1.5);
+        }
+        transition: all .5s;
+
+
+        img{
+            display: inline-block;
+            width: 100%;
+        }
+    }
+    div.-closeBtn{
+        transform: rotate(180deg);
+    }
+
+    img.bird{
+        width: 300px;
+        position: absolute;
+        right: -80px;
+        top: -210px;
+    }
+    img.birdChat{
+        width: 150px;
+        position: absolute;
+        left: 0px;
+        top: -150px;
+    }
+    #chatContent{
+        // border: 1px solid blue;
+        width: 250px;
+        height: 315px;
+        margin-top: 50px;
+        margin-right: 5px;
+
+        overflow: hidden;
+        overflow-y: scroll;
+
+        div.chatBox{
+            // border: 1px solid red;
+            vertical-align: bottom;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            div.userSay{
+                border-radius: 5px;
+                background-color: rgb(196, 219, 148);
+                padding: 5px;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                line-height: 1.5;
+                display: inline-block;
+                align-self: flex-end;
+                margin: 5px 3px 5px 20px;
+            }
+
+            div.botSay{
+                // border: 2px dashed #136592;
+                border-radius: 5px;
+                background-color: rgb(231, 231, 231);
+                padding: 5px;
+                line-height: 1.5;
+                letter-spacing: 0.5px;
+                font-size: 16px;
+                display: inline-block;
+                align-self: flex-start;
+                margin: 5px 20px 5px 0px;
+            }
+        }
+    }
+    
+    div.keywordBar{
+        // border: 1px solid green;
+        height: 50px;
+        width: 250px;
+        margin-top: 5px;
+        margin-right: 5px;
+        white-space: nowrap;
+        overflow: scroll;
+        overflow-x: auto;
+        overflow-y: hidden;
+        span.keywordSpan{
+            display: inline-block;
+            border-radius: 3px;
+            background-color: #A5361C;
+            font-size: 18px;
+            color: #fff;
+            margin-right:5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+    ::-webkit-scrollbar{
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track{
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        background-color: #136592;
+    }
+
+    div.inputBar{
+        // border: 1px solid blue;
+        height: 45px;
+        width: 250px;
+        margin-top: 5px;
+        margin-right: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        #botInput{
+            width: 200px;
+            height: 100%;
+            font-size: 18px;
+            color: #1e1e1e;
+            font-family: $fontFamily;
+        }
+        #botInputBtn{
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #136592;
+            line-height: 45px;
+            color: #fff;
+        }
+    }
+}
+
+div.-chatBotOpen{
+    bottom: 10px;
+}
+
+@media screen and (max-width:767px){
+    div.chatBot{
+        z-index: 50;
+        bottom: -530px;
+
+        div.openBtn{
+            // border: 1px solid red;
+            width: 60px;
+            height: 60px;
+            top: -60px;
+            left: 260px;
+            img{
+                display: none; 
+            }
+        }
+        img.bird{
+            width: 120px;
+            right: -40px;
+            top: -80px;
+        }
+        img.birdChat{
+            display: none;
+        }
+    }
+
+    div.-chatBotOpen{
+        bottom: -50px;
+        }
+}
+

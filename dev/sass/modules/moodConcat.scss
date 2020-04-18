@@ -1,0 +1,246 @@
+@import '../layout/card.scss';
+
+    div.moodCardsWrap{
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-around;
+    }
+    @media screen and (max-width:767px){
+        div.moodCardsWrap{
+            flex-direction: column;
+            align-items: center;
+        }
+        
+    }
+
+    //-----------------------卡片---------------------------
+    div.moodCard{
+        @include card(unset);
+        background-image: url(../img/index/moodCardsBg.png);
+        border: 1px solid #c9bb88;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+
+        //卡片上方資訊bar
+        div.cardInfoBar{
+            width: 300px;
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            //會員大頭貼
+            div.moodMemberPhoto{
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 100%;
+                    vertical-align: middle;
+                }
+            }
+            //分類、會員帳號
+            div.infoTextWrap{
+                width: 210px;
+                padding-left: 10px;
+                letter-spacing: 1px;
+                display: flex;
+                flex-direction: column;
+                span.moodClass{
+                    color: #1e1e1e;
+                    line-height: 1.5;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                span.moodMemId{
+                    color: #646464;
+                    line-height: 1.5;
+                    font-size: 16px;
+                }
+            }
+            //右上點點按鈕
+            div.dotWrap{
+                width: 40px;
+                height: 40px;
+                align-self: flex-end;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                align-self: center;
+                cursor: pointer;
+
+                span.dot{
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 100%;
+                    background-color: #646464;
+                }
+            }
+        }
+
+
+        //圖片容器
+        div.moodPicWrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            margin:5px auto;
+            overflow: hidden;
+            img.moodPic{
+                height: 100%;
+                vertical-align: middle;
+            }
+        }
+
+        //愛心、留言icon bar
+        div.heartBar{
+            width: 300px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 5px;
+            img.moodIcon{
+                width: 35px;
+                cursor: pointer;
+            }
+            span{
+                color: #646464;
+                font-size: 16px;
+                margin: 0px 10px 0px 5px;
+            }
+        }
+
+        //文字容器
+        div.cardText {
+            width: 300px;
+            height: 140px;
+            margin: 0 auto;
+            text-align: center;
+            letter-spacing: 1.5px;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            p {
+                font-size: $fzContent;
+                color: $fcInfo;
+                text-align: left;
+                overflow: hidden;
+            }
+            span {
+                color: $fcInfo;
+                font-size: $fzInfo;
+                display: inline-block;
+                margin: 5px 0px 20px 0px;
+                cursor: pointer;
+                &:hover{
+                    color: #A5361C;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1199px){
+        div.moodCard{
+            width: 300px;
+            //資訊bar
+            div.cardInfoBar{
+                width: 270px;
+                div.infoTextWrap{
+                    width: 180px;
+                }
+            }
+            //圖片容器
+            div.moodPicWrap {
+                width: 270px;
+                height: 270px;
+            }
+            //愛心留言bar
+            div.heartBar{
+                width: 270px;
+            }
+
+            //文字容器
+            div.cardText {
+                width: 270px;
+            }
+        }
+    }
+    @media screen and (max-width:1023px){
+        div.moodCard{
+            width: 230px;
+            //資訊bar
+            div.cardInfoBar{
+                width: 200px;
+                div.infoTextWrap{
+                    width: 110px;
+                    span.moodClass{
+                        font-size: 16px;
+                    }
+                }
+                }
+            //圖片容器
+            div.moodPicWrap {
+                width: 200px;
+                height: 200px;
+            }
+            //愛心留言bar
+            div.heartBar{
+                width: 200px;
+            }
+            //文字容器
+            div.cardText {
+                width: 200px;
+
+                h1{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:767px){
+        div.moodCard{
+            width: 300px;
+            margin: 7px 0px;
+            //資訊bar
+            div.cardInfoBar{
+                width: 270px;
+                div.infoTextWrap{
+                    width: 180px;
+                }
+            }
+            //圖片容器
+            div.moodPicWrap {
+                width: 270px;
+                height: 270px;
+            }
+            //愛心留言bar
+            div.heartBar{
+                width: 270px;
+            }
+
+            //文字容器
+            div.cardText {
+                width: 270px;
+            }
+        }
+    }
+
+@media screen and (max-width:767px){
+    div.moodWrap{
+        margin-top: 130px;
+    }
+}

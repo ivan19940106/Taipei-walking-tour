@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <script src="./js/getLoginInfo.js"></script>
+    <title>台北散步｜自訂路線</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        @@include('./layout/header.html',{
+        "display1":"show"
+        })
+
+        <!-- banner -->
+        <div class="banner_01">
+            <img src="./img/banner/dottedLine1.png" alt="" srcset="" class="dottedLine">
+            <div class="pageBannerTitle">
+                <div class="bannerTitleMoveBlock">
+                    <img src="./img/route/routeTitle1.png" class="routeTitleImage1">
+                    <img src="./img/route/routeTitle2.png" class="routeTitleImage2">
+                </div>
+            </div>
+            <img src="./img/banner/dottedLine2.png" alt="" srcset="" class="dottedLine">
+        </div>
+        <!-- breadCrumb -->
+        @@include('./layout/breadCrumb.html',{
+        "link1":"./index.html",
+        "innerText1":"台北散步",
+        "link2":"./route.html",
+        "innerText2":"散步遊台北",
+        "link3":"./customRoute.html",
+        "innerText3":"自訂路線",
+        "link4":"./google.com.tw",
+        "innerText4":"",
+        "link5":"./google.com.tw",
+        "innerText5":"",
+        "link6":"./google.com.tw",
+        "innerText6":""
+        })
+
+        <div class="pic-container">
+            <div class="customForm">
+                <div class="fieldBlock">
+                    <div class="customRouteTitle">
+                        <img src="./img/route/customRouteTitle.png">
+                    </div>
+                </div>
+                <!-- <img src="./img/mapgame/customBubble.png" alt="" class="bubble">
+                     <h1 class="title">選擇自訂景點</h1> -->
+                <div class="fieldBlock">
+                    <label for="routeName">自訂路線名稱：</label>
+                    <input type="text" class="routeName" id="routeName">
+                </div>
+                <div class="fieldBlock">
+                    <label for="routeDesc">自訂路線簡介：</label>
+                    <textarea class="routeDesc" id="routeDesc"></textarea>
+                </div>
+                <div class="fieldBlock">
+                    <label for="searchBlock">加入景點：</label>
+                    <input type="text" id="searchBlock" class="search">
+                    <input type="button" class="btnPink addSpot" value="加入景點">
+                </div>
+                <div class="fieldBlock">
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                    <div class="saveBtn">
+                        <input type="button" class="btnPink removeSpot" value="清除地點">
+                        <input type="button" class="btnPink plan" value="規劃路線">
+                    </div>
+                </div>
+                <div class="fieldBlock">
+                    <div class="confirmBtn">
+                        <input type="button" class="btnRed confirm" value="儲存路線">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img src="./img/mapgame/campus.png" alt="" class="campus"> -->
+        <!-- footer // -->
+        @@include('./layout/footer.html')
+        <!-- <div class="image"></div> -->
+    </div>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxHAzDuEADlkr21Aqm0ng4BqfQ3LfmD6c"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>

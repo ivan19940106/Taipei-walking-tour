@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 後台</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/back.css">
+    <style>
+        .btnAddRoute {
+            border: 1px solid rgba(0, 0, 0, .1);
+            margin-top: 5px;
+            background-color: #A5361C;
+            color: #fff;
+            border: unset;
+        }
+
+        .btnAddRoute:hover {
+            filter: brightness(1.1);
+        }
+
+        .btnAddRoute:focus {
+            outline: none;
+        }
+
+        .btnDel,
+        .btnSave {
+            border: 1px solid rgba(0, 0, 0, .1);
+        }
+
+        .titleColor {
+            font-weight: bold;
+            color: #A5361C;
+        }
+
+        .titleBlock {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .titleBlock h3 {
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+
+        .privateBlock {
+            margin-top: 80px;
+        }
+
+        .routeNameBlock input {
+            width: 180px;
+            margin: auto;
+        }
+
+        .routeInfoBlock textarea {
+            height: 120px;
+        }
+
+        .routePhotoBlock .routePhoto {
+            width: 150px;
+        }
+
+        .fieldBlock {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .fieldBlock label {
+            margin-right: 10px;
+        }
+
+        .fieldBlock:nth-child(3) {
+            flex-direction: column;
+        }
+
+        .fieldBlock:nth-child(3) .showPhoto {
+            width: 200px;
+        }
+
+        .fieldBlock:nth-child(4) {
+            flex-direction: column;
+        }
+
+        .fieldBlock:nth-child(4) .optionsBlock {
+            width: 300px;
+            height: 300px;
+            overflow: auto;
+        }
+
+        .optionsBlock .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .options input[type='checkbox'] {
+            margin-right: 10px;
+        }
+        table{
+            text-align: center;
+        }
+        #routeTable .routeAttrName {
+            margin-bottom: 5px;
+        }
+
+        #routeTable .routeAttrName:last-child {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include("./layout/backHeader.html",{
+        "nowPage0": "",
+        "nowPage1": "",
+        "nowPage2": "nowPage",
+        "nowPage3": "",
+        "nowPage4": "",
+        "nowPage5": "",
+        "nowPage6": "",
+        "nowPage7": "",
+        "nowPage8": "",
+        "nowPage9": ""
+        })
+        <main class="col-md-10">
+            <h2>路線管理</h2>
+            <div class="content">
+                <div class="titleBlock officalBlock">
+                    <h3>官方路線</h3>
+                    <button type="button" class="btnAddRoute btn-sm" data-toggle="modal"
+                        data-target="#exampleModalCenter">新增路線</button>
+                </div>
+                <!-- 燈箱 -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title titleColor" id="exampleModalCenterTitle">新增路線</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div class="fieldBlock">
+                                        <label for="routeName">路線名稱</label>
+                                        <input type="text" name="routeName" id="routeName">
+                                    </div>
+                                    <div class="fieldBlock">
+                                        <label for="routeInfo">路線介紹</label>
+                                        <textarea name="routeInfo" id="routeInfo" cols="" rows=""></textarea>
+                                    </div>
+                                    <div class="fieldBlock">
+                                        <label for="routePhoto">路線照片</label><input type="file" name="routePhoto"
+                                            id="routePhoto" class="btn-sm btnShow">
+                                        <img class="showPhoto">
+                                    </div>
+                                    <div class="fieldBlock">
+                                        <label for="routeAttr">路線景點</label>
+                                        <div class="optionsBlock">
+                                            <div class="options" id="options"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fieldBlock">
+                                        <label for="routeStatus">路線狀態</label>
+                                        <input type="text" name="routeStatus" id="routeStatus" placeholder="未開放:0 開放:1">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary btn-sm btnAdd">新增</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 隱藏表單 -->
+                <form id="editForm" style="visibility: hidden;width: 0;height: 0;">
+                    <input type="text" name="editNumber" id="editNumber">
+                    <input type="text" name="editName" id="editName">
+                    <textarea name="editInfo" id="editInfo"></textarea>
+                    <input type="text" name="editStatus" id="editStatus">
+                </form>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">路線編號</th>
+                            <th scope="col">路線名稱</th>
+                            <th scope="col">路線介紹</th>
+                            <th scope="col">路線照片</th>
+                            <th scope="col">路線景點</th>
+                            <th scope="col">路線狀態</th>
+                            <th scope="col">會員編號</th>
+                            <th scope="col">路線設定</th>
+                        </tr>
+                    </thead>
+                    <tbody id="routeTable">
+                        <!-- <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <div>日式舊屋行</div>
+                            </td>
+                            <td>
+                                <div>路線的簡介</div>
+                            </td>
+                            <td>
+                                <div>路線照片</div>
+                            </td>
+                            <td>
+                                <div>路線各景點名稱</div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">上架</label>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-light btn-sm btnDel">刪除</button></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <div class="titleBlock privateBlock">
+                    <h3>自訂路線</h3>
+                </div>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">路線編號</th>
+                            <th scope="col">路線名稱</th>
+                            <th scope="col">路線介紹</th>
+                            <th scope="col">路線景點</th>
+                            <th scope="col">路線狀態</th>
+                            <th scope="col">會員編號</th>
+                            <th scope="col">路線設定</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customTable"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- ------------ js ------------ -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/backNav.js"></script>
+    <script src="./js/backRouteGet.js"></script>
+    <script src="./js/backRouteEdit.js"></script>
+    <script src="./js/backRouteAdd.js"></script>
+    <script src="./js/backRouteDel.js"></script>
+    <script>
+        function $id(id) {
+            return document.getElementById(id);
+        }
+
+        let member;
+        window.addEventListener("load", function () {
+            // 抓取session的資料填入頁面中
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                member = JSON.parse(xhr.responseText);
+                // console.log(member);
+                $id("managerId").innerHTML = member.memName;
+            }
+            xhr.open("get", "./php/loginInfoForBack.php", true);
+            xhr.send(null);
+            // 註冊登出按鈕，回到後台登陸頁面
+            $id("btnLogout").onclick = function () {
+                let xhr = new XMLHttpRequest();
+
+                xhr.open("get", "./php/logout.php", true);
+                xhr.send(null);
+                location.href = "./backLogin.html";
+            };
+        }, false);
+    </script>
+</body>
+
+</html>

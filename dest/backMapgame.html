@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 後台</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/back.css">
+    <style>
+        table, tr, td {
+            text-align: center;
+            border: 1px solid #454d55;
+            border-collapse: collapse;
+        }
+        thead {
+            color: #fff;
+            background-color: #343a40;
+            border-color: #454d55;
+        }
+        table, tr {
+            width: 100%;
+        }
+        td {
+            padding: 5px;
+            width: 10%;
+        }
+        tr.addRow {
+            width: 100%;
+            border-collapse:separate;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="./img/index/LOGO.svg" width="100" class="d-inline-block align-top">
+        </a>
+        <div>
+            <span id="managerId">撈取管理者ID</span>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnLogout">登出</button>
+        </div>
+    </nav>
+</header>
+
+<nav class="col-md-2  d-md-block bg-light sideNav">
+    <div class="sidebarContent">
+        <ul class="nav flex-column">
+            <li class="navItem"><a href="" class="">帳號管理</a></li>
+            <li class="navItem"><a href="" class="">心理測驗管理</a></li>
+            <li class="navItem"><a href="./backRoute.html" class="">路線管理</a></li>
+            <li class="navItem"><a href="./backAttraction.html" class="">景點管理</a></li>
+            <li class="navItem"><a href="./backMapgame.html" class="nowPage">地圖攻略管理</a></li>
+            <li class="navItem"><a href="" class="">心情檢舉管理</a></li>
+            <li class="navItem"><a href="" class="">揪團檢舉管理</a></li>
+            <li class="navItem"><a href="" class="">客製化管理</a></li>
+            <li class="navItem"><a href="" class="">訂單管理</a></li>
+            <li class="navItem"><a href="" class="">機器人管理</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="sideNavBtn">
+    <svg class="bi bi-chevron-right arrow" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg%22%3E">
+        <path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+    </svg>
+</div>
+        <main class="col-md-10">
+            <h2>小遊戲題目管理</h2>
+            <div class="content">
+                <table class="quizzes">
+                    <thead class="thead-dark">
+                        <tr>
+                            <td>quiz_number<br>題目編號</td>
+                            <td>route_number<br>路線編號</td>
+                            <td>attraction_name<br>景點名稱</td>
+                            <td>quiz_content<br>題目內容</td>
+                            <td>option1_content<br>選項一內容</td>
+                            <td>option2_content<br>選項二內容</td>
+                            <td>option3_content<br>選項三內容</td>
+                            <td>answer_item<br>題目答案</td>
+                            <td class="edit">Edit<br>編輯</td>
+                            <td class="delete">Delete<br>刪除</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <tfoot>
+                        <tr class="addRow">
+                            <td colspan="10" class="add">+</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+    <!-- ------------ js ------------ -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/backNav.js"></script>
+    <script>
+        function $id(id) {
+            return document.getElementById(id);
+        }
+
+        let member;
+        window.addEventListener("load", function () {
+            // 抓取session的資料填入頁面中
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                member = JSON.parse(xhr.responseText);
+                // console.log(member);
+                $id("managerId").innerHTML = member.memName;
+            }
+            xhr.open("get", "./php/loginInfoForBack.php", true);
+            xhr.send(null);
+            // 註冊登出按鈕，回到後台登陸頁面
+            $id("btnLogout").onclick = function () {
+                let xhr = new XMLHttpRequest();
+
+                xhr.open("get", "./php/logout.php", true);
+                xhr.send(null);
+                location.href = "./backLogin.html";
+            };
+        }, false);
+    </script>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', './php/getQuizzes.php', true);
+        xhr.send(null);
+        xhr.onload = function(){
+            if(xhr.status == 200){
+                var tests = JSON.parse(xhr.responseText);
+                for(var i=0;i<tests.length;i++){
+                    var testRow = tests[i];
+                    $('tbody').append(`
+                        <tr>
+                            <td class="quiz_number"><input type="text" value="${tests[i]['quiz_number']}" name="quiz_number"></td>
+                            <td class="route_number"><input type="text" value="${tests[i]['route_number']}" name="route_number"></td>
+                            <td class="attraction_name"><input type="text" value="${tests[i]['attraction_name']}" name="attraction_name"></td>
+                            <td class="quiz_content"><input type="text" value="${tests[i]['quiz_content']}" name="quiz_content"></td>
+                            <td class="option1_content"><input type="text" value="${tests[i]['option1_content']}" name="option1_content"></td>
+                            <td class="option2_content"><input type="text" value="${tests[i]['option2_content']}" name="option2_content"></td>
+                            <td class="option3_content"><input type="text" value="${tests[i]['option3_content']}" name="option3_content"></td>
+                            <td class="answer_item"><input type="text" value="${tests[i]['answer_item']}" name="answer_item"></td>
+                            <td class="edit"><input type="button" name="send" class="send" value="送出"></td>
+                            <td class="delete"><input type="button" name="delete" class="delete" value="刪除"></td>
+                        </tr>
+                    `);
+                }
+            } else {
+                alert('抱歉，有東西出錯了，Server未回傳關卡題目。請聯繫客服人員！！');
+            }
+        }
+        //edit
+        $('.send').click(function(){
+            var quiz_number = $(this).parent().siblings('quiz_number').find('input').val();
+            var route_number = $(this).parent().siblings('route_number').find('input').val();
+            var attraction_name = $(this).parent().siblings('attraction_name').find('input').val();
+            var quiz_content = $(this).parent().siblings('quiz_content').find('input').val();
+            var option1_content = $(this).parent().siblings('option1_content').find('input').val();
+            var option2_content = $(this).parent().siblings('option2_content').find('input').val();
+            var option3_content = $(this).parent().siblings('option3_content').find('input').val();
+            var answer_item = $(this).parent().siblings('answer_item').find('input').val();
+            //AJAX
+            var editForm = new FormData();
+            editForm.append('quiz_number', quiz_number);
+            editForm.append('route_number', route_number);
+            editForm.append('attraction_name', attraction_name);
+            editForm.append('quiz_content', quiz_content);
+            editForm.append('option1_content', option1_content);
+            editForm.append('option2_content', option2_content);
+            editForm.append('option3_content', option3_content);
+            editForm.append('answer_item', answer_item);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', './php/editQuizzes.php', true);
+            xhr.send(editForm);
+            xhr.onload = function(){
+                if(xhr.status == 200){
+                    // console.log('成功修改小遊戲關卡資料！');
+                } else {
+                    // console.log('失敗了！ＱＱ');
+                }
+            }
+        });
+        //delete
+        $('.delete').click(function(){
+            var quiz_number = $(this).parent().siblings('quiz_number').find('input').val();
+            //AJAX
+            var deleteForm = new FormData();
+            editForm.append('quiz_number', quiz_number);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', './php/editQuizzes.php', true);
+            xhr.send(deleteForm);
+            xhr.onload = function(){
+                if(xhr.status == 200){
+                    // console.log('成功修改小遊戲關卡資料！');
+                } else {
+                    // console.log('失敗了！ＱＱ');
+                }
+            }
+        });
+        //add
+        $('.add').click(function(){
+            $('tbody').append(`
+                <tr>
+                    <td class="quiz_number"><input type="text" value="" name="quiz_number"></td>
+                    <td class="route_number"><input type="text" value="" name="route_number"></td>
+                    <td class="attraction_name"><input type="text" value="" name="attraction_name"></td>
+                    <td class="quiz_content"><input type="text" value="" name="quiz_content"></td>
+                    <td class="option1_content"><input type="text" value="" name="option1_content"></td>
+                    <td class="option2_content"><input type="text" value="" name="option2_content"></td>
+                    <td class="option3_content"><input type="text" value="" name="option3_content"></td>
+                    <td class="answer_item"><input type="text" value="" name="answer_item"></td>
+                    <td class="edit"><input type="button" name="send" class="send" value="送出"></td>
+                    <td class="delete"><input type="button" name="delete" class="delete" value="刪除"></td>
+                </tr>
+            `);
+            var quiz_number = $(this).parent().siblings('quiz_number').find('input').val();
+            var route_number = $(this).parent().siblings('route_number').find('input').val();
+            var attraction_name = $(this).parent().siblings('attraction_name').find('input').val();
+            var quiz_content = $(this).parent().siblings('quiz_content').find('input').val();
+            var option1_content = $(this).parent().siblings('option1_content').find('input').val();
+            var option2_content = $(this).parent().siblings('option2_content').find('input').val();
+            var option3_content = $(this).parent().siblings('option3_content').find('input').val();
+            var answer_item = $(this).parent().siblings('answer_item').find('input').val();
+            //AJAX
+            var addForm = new FormData();
+            addForm.append('quiz_number', quiz_number);
+            addForm.append('route_number', route_number);
+            addForm.append('attraction_name', attraction_name);
+            addForm.append('quiz_content', quiz_content);
+            addForm.append('option1_content', option1_content);
+            addForm.append('option2_content', option2_content);
+            addForm.append('option3_content', option3_content);
+            addForm.append('answer_item', answer_item);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', './php/addQuizzes.php', true);
+            xhr.send(addForm);
+            xhr.onload = function(){
+                if(xhr.status == 200){
+                    // console.log('成功修改小遊戲關卡資料！');
+                } else {
+                    // console.log('失敗了！ＱＱ');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

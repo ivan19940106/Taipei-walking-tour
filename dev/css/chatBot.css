@@ -1,0 +1,160 @@
+div.chatBot {
+  z-index: 100;
+  width: 311.1px;
+  height: 529.55px;
+  background-image: url(../img/index/chatBoxBg.png);
+  background-size: contain;
+  background-position: bottom;
+  position: fixed;
+  bottom: -550px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+div.chatBot div.openBtn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -180px;
+  left: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+div.chatBot div.openBtn:hover {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+}
+
+div.chatBot div.openBtn img {
+  display: inline-block;
+  width: 100%;
+}
+
+div.chatBot div.-closeBtn {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+div.chatBot img.bird {
+  width: 300px;
+  position: absolute;
+  right: -80px;
+  top: -210px;
+}
+
+div.chatBot img.birdChat {
+  width: 150px;
+  position: absolute;
+  left: 0px;
+  top: -150px;
+}
+
+div.chatBot div.chatContent {
+  width: 250px;
+  height: 300px;
+  margin-top: 50px;
+  margin-right: 5px;
+}
+
+div.chatBot div.keywordBar {
+  height: 60px;
+  width: 250px;
+  margin-top: 5px;
+  margin-right: 5px;
+  white-space: nowrap;
+  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+div.chatBot div.keywordBar span {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #A5361C;
+  font-size: 24px;
+  color: #fff;
+  margin-right: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+div.chatBot ::-webkit-scrollbar {
+  border-radius: 10px;
+  border: 2px solid #646464;
+  background-color: #646464;
+}
+
+div.chatBot ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  border: 2px solid #646464;
+  background-color: #646464;
+}
+
+div.chatBot ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 2px solid #646464;
+  background-color: #A5361C;
+}
+
+div.chatBot div.inputBar {
+  height: 45px;
+  width: 250px;
+  margin-top: 5px;
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.chatBot div.inputBar input.botInput {
+  width: 200px;
+  height: 100%;
+}
+
+div.chatBot div.inputBar div.botInputBtn {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #136592;
+  line-height: 45px;
+  color: #fff;
+}
+
+div.-chatBotOpen {
+  bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  div.chatBot {
+    display: none;
+  }
+}
+/*# sourceMappingURL=chatBot.css.map */

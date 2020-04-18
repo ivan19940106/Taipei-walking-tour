@@ -1,0 +1,96 @@
+@import './base/var.scss';
+// @import './layout/loadingPage.scss';
+
+body{
+    background-image: $bgImage;
+}
+
+//-----header 收合
+header.fullHeader{
+    transform: translateY(-210px);
+    transition: all .8s;
+}
+header.showHeader{
+    transform: translateY(0px);
+}
+
+//-----第一屏
+@import './layout/index/firstScreen.scss';
+
+
+//-----各單元區間 共用
+div.wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+section{
+    // border: 1px solid red;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img.sectionTitle{
+        width: 40%;
+    }
+    @media screen and (max-width:575px){
+        img.sectionTitle{
+            width: 65%;
+        }
+    }
+}
+@media screen and (max-width:1023px){
+    section{
+        margin: 50px auto;
+    }
+}
+@media screen and (max-width:767px){
+    section{
+        margin: 30px auto 70px auto;
+    }
+}
+
+
+//手機板副標題
+div.sectionSubTitleMobile{
+    margin: 20px 0px;
+    padding: 10px;
+    letter-spacing: 3px;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: #116491;
+    color: #fff;
+}
+@media screen and (min-width:768px){
+    div.sectionSubTitleMobile{
+        display: none;
+    }
+}
+
+//-----散步遊台北
+@import './layout/index/routeSection.scss';
+
+//-----攻略地圖趣
+@import './layout/index/mapSection.scss';
+
+//-----慢步寫心情
+@import './layout/index/moodSection.scss';
+
+//-----情繫明信片
+@import './layout/index/postSection.scss';
+
+//-----揪團一起走
+@import './layout/index/eventSection.scss';
+
+@import './modules/eventConcat.scss';
+
+
+
+
+// // --- 遷入心情有燈箱版
+// @import './modules/moodConcat.scss';
+// // --- 遷入揪團有燈箱版
+// @import './modules/eventConcat.scss';

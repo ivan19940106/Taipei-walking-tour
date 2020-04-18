@@ -1,0 +1,687 @@
+.fullHeader {
+  z-index: 2;
+}
+
+.title {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 195px;
+}
+
+.manual-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  font-size: 30px;
+}
+
+.manual-modal .arrow {
+  position: absolute;
+  top: 60%;
+  right: 25%;
+  width: 200px;
+}
+
+.manual-modal .switch-button {
+  position: absolute;
+  top: 18%;
+  right: 12%;
+  color: #eee;
+}
+
+.manual-modal .select-route {
+  position: absolute;
+  top: 17%;
+  left: 35%;
+  color: #eee;
+}
+
+.manual-modal .start {
+  position: absolute;
+  top: 64%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  color: #eee;
+}
+
+.manual-modal .direction-control {
+  position: absolute;
+  top: 74%;
+  right: 20%;
+  color: #eee;
+}
+
+.manual-modal .status-info {
+  position: absolute;
+  top: 45%;
+  left: 15%;
+  color: #eee;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.header-backward {
+  z-index: 0;
+}
+
+.hide-manual-modal {
+  display: none;
+}
+
+.pic-container {
+  margin: 100px auto 200px;
+  width: 1200px;
+  position: relative;
+}
+
+.bubble {
+  width: 150px;
+  top: -30px;
+  left: 30px;
+  position: absolute;
+}
+
+.fuda-container {
+  top: 390px;
+  left: 140px;
+  position: absolute;
+  z-index: 1;
+}
+
+.fuda-container table {
+  top: 90px;
+  left: 14px;
+  position: absolute;
+}
+
+.fuda-container tr {
+  line-height: 2;
+  font-size: 14px;
+}
+
+.fuda-container .spot {
+  width: 100px;
+}
+
+.fuda-container .check {
+  width: 20px;
+  display: none;
+}
+
+.fuda-container .show-check {
+  display: block;
+}
+
+.fuda-container .progress-bar {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.fuda-container .progress-bar .progress {
+  width: 0%;
+  border: 2px solid #c45c5c;
+  border-radius: 5px;
+}
+
+.fuda-container .progress-bar .index:nth-child(2) {
+  position: absolute;
+  top: -4px;
+  left: -1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #c45c5c;
+}
+
+.fuda-container .progress-bar .index:nth-child(3) {
+  position: absolute;
+  top: -4px;
+  left: 20%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.fuda-container .progress-bar .index:nth-child(4) {
+  position: absolute;
+  top: -4px;
+  left: 43%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.fuda-container .progress-bar .index:nth-child(5) {
+  position: absolute;
+  top: -4px;
+  left: 67%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.fuda-container .progress-bar .index:nth-child(6) {
+  position: absolute;
+  top: -4px;
+  right: -1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.fuda-container .indicator {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.fuda-container .fuda {
+  width: 150px;
+}
+
+.campus {
+  width: 200px;
+  right: 40px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  position: absolute;
+}
+
+.select {
+  margin: 0 auto;
+  width: 63%;
+}
+
+.select .option {
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.select .option .route-name {
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-23%, -50%);
+          transform: translate(-23%, -50%);
+  letter-spacing: 4px;
+  height: 1.2em;
+  position: absolute;
+}
+
+.select .option .label {
+  width: 100%;
+}
+
+.select .option .hide-label {
+  visibility: hidden;
+}
+
+.select .switch {
+  top: -15px;
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+  border: 2px solid #B3523A;
+  border-radius: 15px;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.select .switch .button {
+  width: 35px;
+  height: 35px;
+  background-color: #B3523A;
+  border: 2px solid #B3523A;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  left: -2px;
+}
+
+.select .switch .on {
+  left: 74px;
+}
+
+.select .switch .mapMode, .select .switch .gameMode {
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.select .switch .mapMode {
+  margin-left: 9px;
+  line-height: 1.9;
+  text-align-last: left;
+}
+
+.select .switch .gameMode {
+  margin-right: 14px;
+  line-height: 1.9;
+  text-align: right;
+}
+
+.select .switch .off {
+  display: none;
+}
+
+.select .hr {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.game-container {
+  margin: 0 auto;
+  width: 63%;
+  height: 550px;
+  border: 6px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.game-container .game-map-container {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-2110px, -2442px);
+          transform: translate(-2110px, -2442px);
+  position: absolute;
+}
+
+.game-container .game-map-container .map {
+  width: 4500px;
+}
+
+.game-container .game-map-container .spot1 {
+  position: absolute;
+  top: 1317px;
+  left: 2186px;
+  width: 250px;
+  height: 250px;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.game-container .game-map-container .spot2 {
+  position: absolute;
+  top: 1051px;
+  left: 1534px;
+  width: 250px;
+  height: 250px;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.game-container .game-map-container .spot3 {
+  position: absolute;
+  top: 1028px;
+  left: 2727px;
+  width: 250px;
+  height: 250px;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.game-container .game-map-container .spot4 {
+  position: absolute;
+  top: 1707px;
+  left: 2696px;
+  width: 250px;
+  height: 250px;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.game-container .game-map-container .spot5 {
+  position: absolute;
+  top: 1688px;
+  left: 1458px;
+  width: 250px;
+  height: 250px;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.game-container .btnRed {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  position: absolute;
+}
+
+.game-container .walking {
+  width: 170px;
+  top: 38%;
+  left: 39%;
+  position: absolute;
+}
+
+.game-container .game-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-container .test-area {
+  width: 70%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url(../img/mapgame/graphy_@2X.png);
+  position: relative;
+  border: 4px solid #eee;
+  border-radius: 8px;
+}
+
+.game-container .close-modal {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.game-container .test {
+  padding: 30px;
+}
+
+.game-container .opt1, .game-container .opt2, .game-container .opt3 {
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.game-container .opt1:hover, .game-container .opt2:hover, .game-container .opt3:hover {
+  background-color: #D3E9F0;
+  border: 1px solid #D3E9F0;
+  border-radius: 5px;
+}
+
+.game-container .right {
+  background-color: #D3E9F0;
+  border: 1px solid #D3E9F0;
+  border-radius: 5px;
+}
+
+.game-container .wrong {
+  background-color: #A9381D;
+  border: 1px solid #A9381D;
+  border-radius: 5px;
+}
+
+.game-container .hide-game-modal {
+  display: none;
+}
+
+.game-container .full-screen-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.game-container .normal-screen-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.click-disabled {
+  pointer-events: none;
+}
+
+.hide-full-screen-btn {
+  display: none;
+}
+
+.map-container {
+  margin: 0 auto;
+  width: 63%;
+  height: 550px;
+  border: 6px solid #ccc;
+  border-radius: 6px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.hide-container {
+  display: none;
+}
+
+.progress-container-mobile {
+  display: none;
+}
+
+.progress-container-mobile .progress-bar {
+  position: relative;
+  margin-top: 22px;
+  width: 100%;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.progress-container-mobile .progress-bar .progress {
+  width: 0%;
+  border: 2px solid #c45c5c;
+  border-radius: 5px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.progress-container-mobile .progress-bar .index:nth-child(2) {
+  position: absolute;
+  top: -4px;
+  left: -1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.progress-container-mobile .progress-bar .index:nth-child(3) {
+  position: absolute;
+  top: -4px;
+  left: 20%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.progress-container-mobile .progress-bar .index:nth-child(4) {
+  position: absolute;
+  top: -4px;
+  left: 43%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.progress-container-mobile .progress-bar .index:nth-child(5) {
+  position: absolute;
+  top: -4px;
+  left: 67%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.progress-container-mobile .progress-bar .index:nth-child(6) {
+  position: absolute;
+  top: -4px;
+  right: -1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.progress-container-mobile .indicator {
+  margin-top: 20px;
+  color: #444;
+}
+
+@media (max-width: 576px) {
+  .pic-container {
+    width: 90%;
+  }
+  .select {
+    width: 100%;
+  }
+  .select .option {
+    width: 32%;
+  }
+  .select .option .route-name {
+    -webkit-transform: translate(-36%, -50%);
+            transform: translate(-36%, -50%);
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .select .switch {
+    top: 134px;
+    right: 3%;
+    position: absolute;
+    display: block;
+  }
+  .bubble {
+    margin-bottom: 60px;
+    position: relative;
+  }
+  .progress-container-mobile {
+    display: block;
+  }
+  .fuda-container {
+    display: none;
+  }
+  .campus {
+    right: 20px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .game-container {
+    width: 100%;
+  }
+  .map-container {
+    width: 100%;
+  }
+  .manual-modal {
+    font-size: 18px;
+  }
+  .manual-modal .arrow {
+    position: absolute;
+    top: 70%;
+    right: 25%;
+    width: 200px;
+  }
+  .manual-modal .switch-button {
+    position: absolute;
+    top: 14%;
+    right: 2%;
+    color: #eee;
+  }
+  .manual-modal .select-route {
+    position: absolute;
+    top: 18%;
+    left: 24%;
+    color: #eee;
+  }
+  .manual-modal .start {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    color: #eee;
+  }
+  .manual-modal .direction-control {
+    position: absolute;
+    width: 55%;
+    top: 87%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    color: #eee;
+  }
+  .manual-modal .status-info {
+    position: absolute;
+    top: 95%;
+    left: 42%;
+    color: #eee;
+  }
+}
+/*# sourceMappingURL=mapgame.css.map */

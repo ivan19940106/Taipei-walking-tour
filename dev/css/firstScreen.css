@@ -1,0 +1,762 @@
+div.bannerWrap {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.13);
+  z-index: 6;
+}
+
+div.bannerWrap .bannerSlider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  overflow: hidden;
+}
+
+div.bannerWrap .bannerSlider img.slider01 {
+  width: 119%;
+  position: relative;
+  -webkit-animation: banner_dilute01 24s;
+          animation: banner_dilute01 24s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  opacity: 0;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+div.bannerWrap .bannerSlider img.slider02 {
+  width: 119%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: banner_dilute02 24s;
+          animation: banner_dilute02 24s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  opacity: 0;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+div.bannerWrap .bannerSlider img.slider03 {
+  width: 119%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: banner_dilute03 24s;
+          animation: banner_dilute03 24s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  opacity: 0;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes banner_dilute01 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1.19);
+            transform: scale(1.19);
+  }
+  28% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  68% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  98% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1.19);
+            transform: scale(1.19);
+  }
+}
+
+@keyframes banner_dilute01 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1.19);
+            transform: scale(1.19);
+  }
+  28% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  68% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  98% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1.19);
+            transform: scale(1.19);
+  }
+}
+
+@-webkit-keyframes banner_dilute02 {
+  0% {
+    opacity: 0;
+  }
+  28% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  33% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  93% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes banner_dilute02 {
+  0% {
+    opacity: 0;
+  }
+  28% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  33% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  93% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes banner_dilute03 {
+  0% {
+    opacity: 0;
+  }
+  61% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  66% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes banner_dilute03 {
+  0% {
+    opacity: 0;
+  }
+  61% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  66% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+div.bannerWrap div.bannerBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+div.bannerWrap div.bannerBox img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  div.bannerWrap div.bannerBox {
+    display: none;
+  }
+}
+
+div.bannerWrap img.bannerLogo {
+  width: 400px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 6;
+}
+
+@media screen and (max-width: 1450px) {
+  div.bannerWrap img.bannerLogo {
+    width: 300px;
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  div.bannerWrap img.bannerLogo {
+    width: 30%;
+  }
+}
+
+div.bannerWrap div.bannerLinkBox {
+  width: 1200px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 7;
+}
+
+div.bannerWrap div.bannerLinkBox a.link01 {
+  border: 4px solid #fff;
+  border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 8;
+  -webkit-animation: linkAni01 2.5s linear infinite alternate;
+          animation: linkAni01 2.5s linear infinite alternate;
+}
+
+div.bannerWrap div.bannerLinkBox a.link01:hover {
+  background-color: rgba(247, 215, 215, 0.4);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+div.bannerWrap div.bannerLinkBox a.link01 img {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes linkAni01 {
+  0% {
+    border-radius: 50% 60% 45% 55% / 50% 50% 60% 50%;
+  }
+  50% {
+    border-radius: 60% 45% 55% 50% / 60% 40% 70% 45%;
+  }
+  100% {
+    border-radius: 65% 50% 50% 60% / 50% 50% 60% 50%;
+  }
+}
+
+@keyframes linkAni01 {
+  0% {
+    border-radius: 50% 60% 45% 55% / 50% 50% 60% 50%;
+  }
+  50% {
+    border-radius: 60% 45% 55% 50% / 60% 40% 70% 45%;
+  }
+  100% {
+    border-radius: 65% 50% 50% 60% / 50% 50% 60% 50%;
+  }
+}
+
+div.bannerWrap div.bannerLinkBox a.link02 {
+  border: 4px solid #fff;
+  border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 8;
+  -webkit-animation: linkAni02 2.5s linear infinite alternate;
+          animation: linkAni02 2.5s linear infinite alternate;
+}
+
+div.bannerWrap div.bannerLinkBox a.link02:hover {
+  background-color: rgba(235, 221, 160, 0.4);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+div.bannerWrap div.bannerLinkBox a.link02 img {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes linkAni02 {
+  0% {
+    border-radius: 50% 65% 60% 50% / 50% 50% 60% 50%;
+  }
+  50% {
+    border-radius: 45% 60% 50% 65% / 60% 40% 70% 45%;
+  }
+  100% {
+    border-radius: 55% 60% 40% 60% / 50% 50% 60% 50%;
+  }
+}
+
+@keyframes linkAni02 {
+  0% {
+    border-radius: 50% 65% 60% 50% / 50% 50% 60% 50%;
+  }
+  50% {
+    border-radius: 45% 60% 50% 65% / 60% 40% 70% 45%;
+  }
+  100% {
+    border-radius: 55% 60% 40% 60% / 50% 50% 60% 50%;
+  }
+}
+
+div.bannerWrap div.bannerLinkBox a.link03 {
+  border: 4px solid #fff;
+  border-radius: 55% 45% 50% 60% / 50% 50% 60% 40%;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  position: absolute;
+  top: 150px;
+  left: 500px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 8;
+  -webkit-animation: linkAni03 2.5s linear infinite alternate;
+          animation: linkAni03 2.5s linear infinite alternate;
+}
+
+div.bannerWrap div.bannerLinkBox a.link03:hover {
+  background-color: rgba(197, 238, 194, 0.4);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+div.bannerWrap div.bannerLinkBox a.link03 img {
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-45%, -50%);
+          transform: translate(-45%, -50%);
+}
+
+@-webkit-keyframes linkAni03 {
+  0% {
+    border-radius: 55% 65% 50% 60% / 50% 50% 60% 50%;
+  }
+  50% {
+    border-radius: 50% 55% 60% 45% / 50% 45% 60% 70%;
+  }
+  100% {
+    border-radius: 45% 60% 55% 50% / 50% 50% 60% 50%;
+  }
+}
+
+@keyframes linkAni03 {
+  0% {
+    border-radius: 55% 65% 50% 60% / 50% 50% 60% 50%;
+  }
+  50% {
+    border-radius: 50% 55% 60% 45% / 50% 45% 60% 70%;
+  }
+  100% {
+    border-radius: 45% 60% 55% 50% / 50% 50% 60% 50%;
+  }
+}
+
+div.bannerWrap div.bannerLinkBox a.link04 {
+  border: 4px solid #fff;
+  border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  position: absolute;
+  top: 300px;
+  left: 750px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 8;
+  -webkit-animation: linkAni01 2.5s linear infinite alternate;
+          animation: linkAni01 2.5s linear infinite alternate;
+}
+
+div.bannerWrap div.bannerLinkBox a.link04:hover {
+  background-color: rgba(215, 237, 247, 0.4);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+div.bannerWrap div.bannerLinkBox a.link04 img {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+div.bannerWrap div.bannerLinkBox a.link05 {
+  border: 4px solid #fff;
+  border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 8;
+  -webkit-animation: linkAni02 2.5s linear infinite alternate;
+          animation: linkAni02 2.5s linear infinite alternate;
+}
+
+div.bannerWrap div.bannerLinkBox a.link05:hover {
+  background-color: rgba(174, 160, 235, 0.4);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+div.bannerWrap div.bannerLinkBox a.link05 img {
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-45%, -50%);
+          transform: translate(-45%, -50%);
+}
+
+div.bannerWrap div.bannerLinkBox .dashLine {
+  position: absolute;
+  z-index: 5;
+  top: 45px;
+  left: 95px;
+}
+
+@media screen and (max-width: 1450px) {
+  div.bannerWrap div.bannerLinkBox {
+    top: 10%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  div.bannerWrap div.bannerLinkBox {
+    top: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.bannerWrap div.bannerLinkBox a.link01 {
+    border: 2px solid #fff;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 140px;
+    height: 150px;
+  }
+  div.bannerWrap div.bannerLinkBox a.link02 {
+    border: 2px solid #fff;
+    position: relative;
+    top: 30px;
+    left: 0px;
+    width: 140px;
+    height: 150px;
+  }
+  div.bannerWrap div.bannerLinkBox a.link03 {
+    border: 2px solid #fff;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 140px;
+    height: 150px;
+  }
+  div.bannerWrap div.bannerLinkBox a.link04 {
+    border: 2px solid #fff;
+    position: relative;
+    top: 30px;
+    left: 0px;
+    width: 140px;
+    height: 150px;
+  }
+  div.bannerWrap div.bannerLinkBox a.link05 {
+    border: 2px solid #fff;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 140px;
+    height: 150px;
+  }
+  div.bannerWrap div.bannerLinkBox .dashLine {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  div.bannerWrap {
+    width: 100%;
+    height: 100%;
+    padding-top: 100%;
+    background-image: url(../img/index/taipei101-1.jpg);
+    background-size: cover;
+    background-position: right;
+  }
+  div.bannerWrap .bannerSlider {
+    display: none;
+  }
+  div.bannerWrap img.bannerLogo {
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  div.bannerWrap div.bannerLinkBox {
+    display: none;
+  }
+}
+
+#scene {
+  width: 100%;
+  height: 900px;
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: 6;
+}
+
+#scene img.cloud01 {
+  width: 320px;
+  position: absolute !important;
+  top: 8% !important;
+  left: 6% !important;
+}
+
+#scene img.cloud02 {
+  width: 370px;
+  position: absolute !important;
+  top: 5% !important;
+  left: 80% !important;
+}
+
+#scene img.cloud03 {
+  width: 350px;
+  position: absolute !important;
+  top: 75% !important;
+  left: 8% !important;
+}
+
+#scene img.bird01 {
+  width: 150px;
+  position: absolute !important;
+  top: 33% !important;
+  left: 62% !important;
+}
+
+#scene img.bird02 {
+  width: 250px;
+  position: absolute !important;
+  top: 17% !important;
+  left: 60% !important;
+}
+
+#scene img.airplane {
+  width: 200px;
+  position: absolute !important;
+  top: 80% !important;
+  left: 90% !important;
+}
+
+@media screen and (max-width: 1450px) {
+  #scene {
+    height: 600px;
+  }
+  #scene img.cloud01 {
+    width: 200px;
+  }
+  #scene img.cloud02 {
+    width: 250px;
+  }
+  #scene img.cloud03 {
+    width: 300px;
+  }
+  #scene img.bird01 {
+    width: 100px;
+  }
+  #scene img.bird02 {
+    width: 150px;
+  }
+  #scene img.airplane {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #scene {
+    height: 350px;
+  }
+  #scene img.cloud01 {
+    width: 200px;
+    -webkit-animation: cloudAni01 3s infinite alternate linear;
+            animation: cloudAni01 3s infinite alternate linear;
+  }
+  @-webkit-keyframes cloudAni01 {
+    from {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+    to {
+      -webkit-transform: translateX(15%);
+              transform: translateX(15%);
+    }
+  }
+  @keyframes cloudAni01 {
+    from {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+    to {
+      -webkit-transform: translateX(15%);
+              transform: translateX(15%);
+    }
+  }
+  #scene img.cloud02 {
+    width: 250px;
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+    -webkit-animation: cloudAni02 2s infinite alternate linear;
+            animation: cloudAni02 2s infinite alternate linear;
+  }
+  @-webkit-keyframes cloudAni02 {
+    from {
+      -webkit-transform: translateX(15%);
+              transform: translateX(15%);
+    }
+    to {
+      -webkit-transform: translateX(5%);
+              transform: translateX(5%);
+    }
+  }
+  @keyframes cloudAni02 {
+    from {
+      -webkit-transform: translateX(15%);
+              transform: translateX(15%);
+    }
+    to {
+      -webkit-transform: translateX(5%);
+              transform: translateX(5%);
+    }
+  }
+  #scene img.cloud03 {
+    display: none !important;
+  }
+  #scene img.bird01 {
+    width: 80px;
+    top: 33% !important;
+  }
+  #scene img.bird02 {
+    width: 140px;
+    top: 50% !important;
+  }
+  #scene img.airplane {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #scene img.cloud01 {
+    width: 100px;
+    left: 0.3% !important;
+    top: 25% !important;
+  }
+  #scene img.cloud02 {
+    width: 150px;
+    left: 65% !important;
+  }
+  #scene img.bird01 {
+    display: none !important;
+  }
+  #scene img.bird02 {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=firstScreen.css.map */

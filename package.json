@@ -1,0 +1,27 @@
+{
+  "name": "dd105-g2",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bourbon-neat": "^4.0.0",
+    "browser-sync": "^2.26.7",
+    "gulp-cache": "^1.1.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-file-include": "^2.1.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "description": ""
+}

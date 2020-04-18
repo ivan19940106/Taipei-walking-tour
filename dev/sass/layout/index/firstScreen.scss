@@ -1,0 +1,521 @@
+//============ banner =============
+div.bannerWrap{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    position: relative;
+    box-shadow: 0px 5px 10px 10px rgba($color: #000000, $alpha: 0.13);
+    z-index: 6;
+    //==================================101幻燈片
+    .bannerSlider{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 1920px;
+        overflow: hidden;
+        img.slider01{
+            width: 119%;
+            position: relative;
+            animation: banner_dilute01 24s;
+            animation-timing-function: linear;
+            opacity: 0;
+            animation-iteration-count: infinite;
+        }
+        img.slider02{
+            width: 119%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: banner_dilute02 24s;
+            animation-timing-function: linear;
+            opacity: 0;
+            animation-iteration-count: infinite;
+        }
+        img.slider03{
+            width: 119%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: banner_dilute03 24s;
+            animation-timing-function: linear;
+            opacity: 0;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes banner_dilute01 {
+            0%{ opacity: 1;transform: scale(1.19); }
+            28%{ opacity: 1; }
+            33%{ opacity: 1;transform: scale(1);  }
+            68%{ opacity: 1;transform: scale(1.2); }
+            98%{ opacity: 1 ;transform: scale(1.2);}
+            100%{ opacity: 1;transform: scale(1.19); }
+        }
+        @keyframes banner_dilute02 {
+            0%{ opacity: 0; }
+            28%{ opacity: 0;transform: scale(1.2); }
+            33%{ opacity: 1;  }
+            68%{ opacity: 1;transform: scale(1); }
+            93%{ opacity: 0 ;}
+            100%{ opacity: 0; }
+        }
+        @keyframes banner_dilute03 {
+            0%{ opacity: 0; }
+            61%{ opacity: 0;transform: scale(1.2); }
+            66%{ opacity: 1; }
+            99%{ opacity: 1;transform: scale(1); }
+            100%{ opacity: 0;transform: scale(1); }
+        }
+    }
+
+    //==================================幻燈片遮罩
+    div.bannerBox{        
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+    div.bannerBox img{
+        width: 100%;
+        height: 100%;
+    }
+    @media screen and (max-width: 1199px){
+        div.bannerBox{
+            display: none;
+        }
+    }
+
+    //================================== LOGO
+    img.bannerLogo{
+        width: 400px;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 6;
+    }
+    @media screen and (max-width: 1450px){
+        img.bannerLogo{
+            width: 300px;
+            top: 10px;
+        }
+    }
+    @media screen and (max-width: 1199px){
+        img.bannerLogo{
+            width: 30%;   
+        }
+    }
+
+    //===================================  單元連結
+    div.bannerLinkBox{
+        // border: 1px solid red;
+        width: 1200px;
+        // height: 53.5%;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 7;
+        
+        //--------散步遊台北
+        a.link01{
+            border: 4px solid #fff;
+            border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            position: absolute;
+            top: 150px;
+            left: 0px;
+            transition: all 0.5s;
+            z-index: 8;
+            &:hover{
+                background-color: rgba($color: rgb(247, 215, 215), $alpha: 0.4);
+                box-shadow: 0px 0px 5px 5px rgba($color: #fff, $alpha: 0.5);
+            }
+            animation: linkAni01 2.5s linear infinite alternate;
+            img{
+                width: 80%;
+                position: absolute;
+                top: 50%;
+                bottom: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        @keyframes linkAni01 {
+            0% {
+                border-radius: 50% 60% 45% 55% / 50% 50% 60% 50%
+            }
+            50% {
+                border-radius: 60% 45% 55% 50% / 60% 40% 70% 45%
+            }
+            100% {
+                border-radius: 65% 50% 50% 60% / 50% 50% 60% 50%		
+            }
+        }
+        //--------攻略地圖趣
+        a.link02{
+            border: 4px solid #fff;
+            border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            position: absolute;
+            top: 0px;
+            left: 250px;
+            transition: all 0.5s;
+            z-index: 8;
+            &:hover{
+                background-color: rgba($color: rgb(235, 221, 160), $alpha: 0.4);
+                box-shadow: 0px 0px 5px 5px rgba($color: #fff, $alpha: 0.5);
+            }
+            animation: linkAni02 2.5s linear infinite alternate;
+            img{
+                width: 70%;
+                position: absolute;
+                top: 50%;
+                bottom: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        @keyframes linkAni02 {
+            0% {
+                border-radius: 50% 65% 60% 50% / 50% 50% 60% 50%
+                
+            }
+            50% {
+                border-radius: 45% 60% 50% 65% / 60% 40% 70% 45%
+                
+            }
+            100% {
+                
+                border-radius: 55% 60% 40% 60% / 50% 50% 60% 50%	
+            }
+        }
+        //--------慢步寫心情
+        a.link03{
+            border: 4px solid #fff;
+            border-radius: 55% 45% 50% 60% / 50% 50% 60% 40%;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            position: absolute;
+            top: 150px;
+            left: 500px;
+            transition: all 0.5s;
+            z-index: 8;
+            &:hover{
+                background-color: rgba($color: rgb(197, 238, 194), $alpha: 0.4);
+                box-shadow: 0px 0px 5px 5px rgba($color: #fff, $alpha: 0.5);
+            }
+            animation: linkAni03 2.5s linear infinite alternate;
+            img{
+                width: 85%;
+                position: absolute;
+                top: 50%;
+                bottom: 50%;
+                transform: translate(-45%,-50%);
+            }
+        }
+        @keyframes linkAni03 {
+            0% {
+                border-radius: 55% 65% 50% 60% / 50% 50% 60% 50%
+                
+            }
+            50% {
+                border-radius: 50% 55% 60% 45% / 50% 45% 60% 70%
+                
+            }
+            100% {
+                
+                border-radius: 45% 60% 55% 50% / 50% 50% 60% 50%	
+            }
+        }
+        //--------情繫明信片
+        a.link04{
+            border: 4px solid #fff;
+            border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            position: absolute;
+            top: 300px;
+            left: 750px;
+            transition: all 0.5s;
+            z-index: 8;
+            &:hover{
+                background-color: rgba($color: rgb(215, 237, 247), $alpha: 0.4);
+                box-shadow: 0px 0px 5px 5px rgba($color: #fff, $alpha: 0.5);
+            }
+            animation: linkAni01 2.5s linear infinite alternate;
+            img{
+                width: 70%;
+                position: absolute;
+                top: 50%;
+                bottom: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        //--------揪團一起走
+        a.link05{
+            border: 4px solid #fff;
+            border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            position: absolute;
+            top: 150px;
+            right: 0px;
+            transition: all 0.5s;
+            z-index: 8;
+            &:hover{
+                background-color: rgba($color: rgb(174, 160, 235), $alpha: 0.4);
+                box-shadow: 0px 0px 5px 5px rgba($color: #fff, $alpha: 0.5);
+            }
+            animation: linkAni02 2.5s linear infinite alternate;
+            img{
+                width: 85%;
+                position: absolute;
+                top: 50%;
+                bottom: 50%;
+                transform: translate(-45%,-50%);
+            }
+        }
+        //--------虛線
+        .dashLine{
+            // width: 100%;
+            position: absolute;
+            z-index: 5;
+            top: 45px;
+            left: 95px;
+        }
+    }
+    @media screen and (max-width: 1450px){
+        div.bannerLinkBox{
+            top: 10%;
+        }
+    }
+    @media screen and (max-width: 1199px){
+        div.bannerLinkBox{
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            //--------散步遊台北
+            a.link01{
+                border: 2px solid #fff;
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 140px;
+                height: 150px;
+            }
+           
+            //--------攻略地圖趣
+            a.link02{
+                border: 2px solid #fff;
+                position: relative;
+                top: 30px;
+                left: 0px;
+                width: 140px;
+                height: 150px;
+            }
+            
+            //--------慢步寫心情
+            a.link03{
+                border: 2px solid #fff;
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 140px;
+                height: 150px;
+            }
+            
+            //--------情繫明信片
+            a.link04{
+                border: 2px solid #fff;
+                position: relative;
+                top: 30px;
+                left: 0px;
+                width: 140px;
+                height: 150px;
+            }
+            //--------揪團一起走
+            a.link05{
+                border: 2px solid #fff;
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 140px;
+                height: 150px;
+            }
+            //--------虛線
+            .dashLine{
+               display: none;
+            }
+        }
+    }
+}
+//========= 手機板的banner ==========
+@media screen and (max-width: 767px){
+    div.bannerWrap{
+        width: 100%;
+        height: 100%;
+        padding-top: 100%;
+        background-image: url(../img/index/taipei101-1.jpg);
+        background-size: cover;
+        background-position: right;
+        //==================================101幻燈片
+        .bannerSlider{
+            display: none;
+        }
+        //================================== LOGO
+        img.bannerLogo{
+            width: 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        //===================================  單元連結
+        div.bannerLinkBox{
+            display: none;
+        }
+    }
+    
+}
+
+//===========視差特效圖=============
+#scene{
+    width: 100%;
+    height: 900px;
+    position: absolute !important;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    z-index: 6;
+    img.cloud01{
+        width: 320px;
+        position: absolute !important;
+        top: 8% !important;
+        left: 6% !important;
+    }
+    img.cloud02{
+        width: 370px;
+        position: absolute !important;
+        top: 5% !important;
+        left: 80% !important;
+    }
+    img.cloud03{
+        width: 350px;
+        position: absolute !important;
+        top: 75% !important;
+        left: 8% !important;
+    }
+    img.bird01{
+        width: 150px;
+        position: absolute !important;
+        top: 33% !important;
+        left: 62% !important;
+    }
+    img.bird02{
+        width: 250px;
+        position: absolute !important;
+        top: 17% !important;
+        left: 60% !important;
+    }
+    img.airplane{
+        width: 200px;
+        position: absolute !important;
+        top: 80% !important;
+        left: 90% !important;
+    }
+}
+@media screen and (max-width: 1450px){
+    #scene{
+        height: 600px;
+        img.cloud01{
+            width: 200px;
+        }
+        img.cloud02{
+            width: 250px;
+        }
+        img.cloud03{
+            width: 300px;
+        }
+        img.bird01{
+            width: 100px;
+        }
+        img.bird02{
+            width: 150px;
+        }
+        img.airplane{
+            width: 120px;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px){
+    #scene{
+        height: 350px;
+        img.cloud01{
+            width: 200px;
+            animation: cloudAni01 3s infinite alternate linear;
+        }
+        @keyframes cloudAni01 {
+            from{transform: translateX(0%);}
+            to{transform: translateX(15%);}
+        }
+        img.cloud02{
+            width: 250px;
+            transform: translateX(15%);
+            animation: cloudAni02 2s infinite alternate linear;
+        }
+        @keyframes cloudAni02 {
+            from{transform: translateX(15%);}
+            to{transform: translateX(5%);}
+        }
+        img.cloud03{
+            display: none !important;
+        }
+        img.bird01{
+            width: 80px;
+            top: 33% !important;
+        }
+        img.bird02{
+            width: 140px;
+            top: 50% !important;
+        }
+        img.airplane{
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    #scene{
+        img.cloud01{
+            width: 100px;
+            left: 0.3% !important;
+            top: 25% !important;
+        }
+        img.cloud02{
+            width: 150px;
+            left: 65% !important;
+        }
+        img.bird01{
+            display: none !important;
+        }
+        img.bird02{
+            display: none !important;
+        }
+    }
+}
+
+

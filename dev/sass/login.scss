@@ -1,0 +1,186 @@
+@import "base/var.scss";
+.login{
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: none;
+    bottom: 0;
+    width: 100%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, .6);
+}
+.login_all{
+    border-radius: $radius;
+    position: relative;
+    // background-image: url(../img/member/photography.png);
+    //  background-repeat: no-repeat;
+    //  background-size: cover;
+    background-color: #fff;
+    width: 450px ; //25%
+    margin: 10% auto 0% auto;  
+}
+.login_all_all{
+    height: 426px; 
+    padding: 8% 0;
+    p{
+        text-align: center;
+        font-size: $fzTitle;
+        font-weight: bold;
+        color: $importantColor;
+    }
+    input{ 
+        border:unset;
+        border-bottom: 1px solid rgba(0, 0, 0, .3); 
+        width: 75%;
+        padding: 3%;
+        display: block;
+        font-size: $fzContent;
+        margin: 10% auto 0 auto;
+    }
+    input:nth-child(2){
+        margin-top: 5%;
+    }
+    input::placeholder{
+        font-family: $fontFamily;
+    }
+}
+.findpsw{
+    padding: 1% 2% 1% 1%;
+    text-align: right;
+    width: 18%;
+    display: inline-block;
+    margin-left: 69.5%;
+    font-size: $fzInfo;
+    color: $fcInfo;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.forgetpsw{
+    height: 426px; 
+    padding: 8% 0;
+    display: none;
+    p{
+        text-align: center;
+        font-size: $fzTitle;
+        font-weight: bold;
+        color: $importantColor;
+        margin-bottom: 6%;
+    }
+    input{
+        border: unset;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+        width: 75%;
+        padding: 3%;
+        display: block;
+        font-size: $fzContent;
+        margin: 10% auto 0 auto;
+    }
+    input:nth-child(2){
+        margin-top: 5%;
+    }
+    input::placeholder{
+        font-family: $fontFamily;
+    }
+}
+.forgetpsw_bottom{
+    text-align: center;
+    margin-top:18.5%; // 8%
+}
+
+@media screen and (max-width:$small) {
+    .forgetpsw{
+        height: 400px; 
+    }
+}
+@media screen and (max-width:$small) {
+    .login_all{
+        width: 350px;
+    }
+    .login_all_all a:nth-child(3){
+       width: 26%;
+       margin-left: 61.5%;
+    }
+    .login_all_all{
+        height: 400px;
+    }
+    .findpsw{
+        width: 26%;
+        margin-left: 61.5%;
+    }
+
+}
+.login_bottom{
+    text-align: center;
+    margin-top: 8%;
+}
+.login_register{
+    margin-left: 3%;
+
+}
+.login_close{
+    // background-image: url(../img/element/closedBlock.png);
+    background-size: cover;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width:40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img{
+        width: 75%;
+    }
+}
+// 返回按鈕
+.btnBack{
+    margin-left: 3%;
+}
+.register{
+    padding:8% 0;
+    display: none;
+    p{
+        text-align: center;
+        font-size: $fzTitle;
+        font-weight: bold;
+        color: $importantColor;
+        margin-bottom: 6%;
+    }
+}
+.register_item {
+    label{
+        text-align: right;
+        height: 46px;
+        display: inline-block;
+        font-size: $fzContent;
+        width: 25%;
+    }
+    input{
+        border: unset;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+        width: 60%;
+        padding: 3% 0;
+        display: inline-block;
+        font-size: $fzContent;
+    }
+    input::placeholder{
+        font-family: $fontFamily;
+    }
+}
+.register_bottom{
+    text-align: center;
+    margin-top: 8%;
+}
+@media screen and (max-width:$small) {
+    .register_item label{
+        width: 30%;
+        font-size: $fzInfo;
+    }
+    .register_item input{
+        width: 55%;
+        font-size: $fzInfo;
+    }
+}

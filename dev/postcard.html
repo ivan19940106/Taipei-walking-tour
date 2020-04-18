@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/stylepostcard.css">
+    <script src="./js/getLoginInfo.js"></script>
+    <title>情繫明信片</title>
+</head>
+
+<body><a name="GoTop"></a>
+    <header>
+        @@include('./layout/header.html',{
+        "display1":"",
+        "display2":"",
+        "display3":"",
+        "display4":"show",
+        "display5":""
+        })
+    </header>
+    <!-- banner // 各自的banner，直接套class
+            順序，以導覽列（不含頁首）的順序依序-->
+    <div class="banner_04">
+        <img src="./img/banner/dottedLine1.png" class="dottedLine">
+        <div class="pageBannerTitle">
+            <div class="bannerTitleMoveBlock">
+                <!-- 這裡的圖片改成自己分頁的圖片，在想想要怎麼動，不一定要一樣，也可以直接參考 -->
+                <img src="./img/banner/bannerTitle4.png" class="">
+            </div>
+        </div>
+        <img src="./img/banner/dottedLine2.png" class="dottedLine">
+    </div>
+    <!-- breadCrumb // breadCrumb
+    link：依序填入連結位子
+    src：放上圖片的路徑
+    -->
+    @@include('./layout/breadCrumb.html',{
+    "link1":"./google.com.tw",
+    "innerText1":"台北散步",
+    "link2":"./google.com.tw",
+    "innerText2":"情繫明信片",
+    "link3":"./google.com.tw",
+    "innerText3":"",
+    "link4":"./google.com.tw",
+    "innerText4":"",
+    "link5":"./google.com.tw",
+    "innerText5":"",
+    "link6":"./google.com.tw",
+    "innerText6":""
+    })
+    <!--1.1明信片中間大區域-->
+
+    <section class="postcardcontent">
+        <div class="postcardimg1"><img class="postcardimg" src="./img/postcard/postcard1.png"></div>
+        <div class="postcardimg2"><img class="postcardimg" src="./img/postcard/postcard2.png"></div>
+        <div class="postcardimg3"><img class="postcardimg" src="./img/postcard/airplane.png"></div>
+        <div class="postcardimg4"><img class="postcardimg camera" src="./img/postcard/camera.png"></div>
+        <!--1.2明信片步驟-->
+        <div class="postcardStepbox">
+            <span class=" step1 " id="step1">
+                <p class="stepname">STEP.1<br>選擇材質</p>
+            </span>
+            <span class="arrow1"></span>
+            <span class=" step2 " id="step2">
+                <p class="stepname">STEP.2<br>上傳照片</p>
+                <p class="arrow2"></p>
+            </span>
+            <span class="arrow1"></span>
+            <span class=" step3 " id="step3">
+                <p class="stepname">STEP.3<br>增加插圖</p>
+                <p class="arrow3"></p>
+            </span>
+            <span class="arrow1"></span>
+            <span class=" step4 " id="step4">
+                <p class="stepname">STEP.4<br>輸入內文</p>
+                <p class="arrow4"></p>
+            </span>
+            <span class="arrow1"></span>
+            <span class=" step5 " id="step5">
+                <p class="stepname">STEP.5<br>寄給朋友</p>
+            </span>
+        </div>
+        <!--1.3明信片客製畫面-->
+        <div class="postcardMain">
+            <!-- <canvas id="postcardCanvas2"></canvas> -->
+            <!--2.1明信片左邊預覽畫面-->
+            <div class="postLeft">
+                <div class="postWhiteBack" id="postWhiteBack">
+                    <canvas class="postcardCanvas" id="postcardCanvas"></canvas>
+                    <canvas id="postcardback"></canvas>
+                </div>
+            </div>
+            <!--2.2明信片右邊編輯畫面-->
+            <div class="postRight">
+                <!-- ==============(3-1)操作畫面.postRight_1(選明信片材質)============== -->
+                <div class="postRight_1" id="postRight_1">
+                    <div class="postRightDIY">
+                        <h1 class="post_text">選個喜歡的材質</h1>
+                        <!-- (1)3個可選用背景 -->
+                        <div class="BGCchoose">
+                            <div class="postBGC_1 " id="postBGC_1">
+                                古風格線
+                                <!-- <div class="postBGC_name1">古風格線</div> -->
+                                <img class="postBGC_1_foucs" id="postBGC_1_foucs" src="./img/postcard/line.png"
+                                    alt="postBGC1">
+                            </div>
+                            <div class="postBGC_2 " id="postBGC_2">
+                                花樣水藍
+                                <!-- <div class="postBGC_name2">花樣水藍</div> -->
+                                <img src="./img/postcard/blue.png" alt="postBGC2">
+                            </div>
+                            <div class="postBGC_3 " id="postBGC_3">
+                                櫻花粉紅
+                                <!-- <div class="postBGC_name3">櫻花粉紅</div> -->
+                                <img src="./img/postcard/pink.png" alt="postBGC3">
+                            </div>
+
+                        </div>
+                        <div class="step_btnbox1">
+                            <button class="btnPinkStop" id="step_btn">上一步</button>
+                            <button class="btnPink" id="step_btn1">下一步</button>
+                        </div>
+                    </div><!-- .postRightDIY_1結束div -->
+                </div><!-- .postRight_1結束div -->
+                <!-- ==============(3-2)操作畫面.postRight_2(上傳照片)============== -->
+                <div class="postRight_2" id="postRight_2">
+                    <div class="postRightDIY">
+                        <h1 class="post_text">選個封面照片</h1>
+                        <div>
+                            <!-- (1) 上傳照片-->
+                            <div class="photochoose">
+                                <div class="postphoto_1" id="postphoto_1">
+                                    <img src="./img/postcard/taipei101-1.jpg" alt="photo1">
+                                </div>
+                                <div class="postphoto_2" id="postphoto_2">
+                                    <img src="./img/postcard/taipei101-2.jpg" alt="photo2">
+                                </div>
+                                <div class="postphoto_3" id="postphoto_3">
+                                    <img src="./img/postcard/taipei101-3.jpg" alt="photo3">
+                                </div>
+                                <div class="postphoto_4" id="postphoto_4">
+                                    <input type="file" name="file" id="file" style="display:none">
+                                    <label for="file"> <img id="img" src="./img/postcard/images.png"></label>
+                                </div>
+                            </div>
+                            <div class="step_btnbox2">
+                                <button class="btnPink" id="step_btn2">上一步</button>
+                                <button class="btnPink" id="step_btn3">下一步</button>
+                            </div>
+                        </div>
+                    </div><!-- .postRightDIY結束div -->
+
+                </div><!-- .postRight_2結束div -->
+                <!-- ==============(3-3)操作畫面.postRight_3(插圖)============== -->
+                <div class="postRight_3" id="postRight_3">
+                    <div class="manual-modal">
+                        <div class="about">
+                            <img src="./img/postcard/AboutIconpng.png" alt="">
+                            <div class="icontext">
+                                1.點擊貼圖移動<br>
+                                2.點擊邊框縮放<br>
+                                3.點擊最上面旋轉<br>
+                                4.點擊兩下刪除<br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="postRightDIY">
+                        <h1 class="post_text">放些可愛插圖裝飾一下</h1>
+                        <div>
+                            <div class="iconchoose" id="iconchoose">
+                                <!-- <div class="icon" id="icon_1">
+                                    <img src="${ iconTable[i].customized_product_url}">
+                                </div> -->
+                            </div>
+                            <div class="step_btnbox3">
+                                <button class="btnPink" id="step_btn4">上一步</button>
+                                <button class="btnPink" id="step_btn5">下一步</button>
+                            </div>
+                        </div>
+                    </div><!-- .postRightDIY結束div -->
+                </div><!-- .postRight_3結束div -->
+                <!-- ==============(3-4)操作畫面.postRight_4(寫文字)============== -->
+                <div class="postRight_4" id="postRight_4">
+                    <div class="postRightDIY4">
+                        <h1 class="post_text1">寫些話傳達你的心意</h1>
+                        <div class="textwrite">
+                            <textarea id="postcardText" placeholder="請在這裡輸入文字"></textarea>
+                            <h1 class="post_text2">選擇文字顏色</h1>
+                            <div class="postcardTextColorBox">
+                                <span class="postcardTextColor postcardTextColor1 postcardTextColorSelected"
+                                    id="postcardTextColor1">
+                                    <span></span>
+                                </span>
+                                <span class="postcardTextColor postcardTextColor2" id="postcardTextColor2">
+                                    <span></span>
+                                </span>
+                                <span class="postcardTextColor postcardTextColor3" id="postcardTextColor3">
+                                    <span></span>
+                                </span>
+                                <span class="postcardTextColor postcardTextColor4" id="postcardTextColor4">
+                                    <span></span>
+                                </span>
+                                <div class="leafButton">
+                                    <button class="btnPink leafButton" id="newTextBtn">生成文字</button>
+                                </div>
+                            </div>
+                            <div class="step_btnbox4">
+                                <button class="btnPink" id="step_btn6">上一步</button>
+                                <button class="btnPink" id="step_btn7">下一步</button>
+                            </div>
+                        </div>
+                    </div><!-- .postRightDIY結束div -->
+                </div><!-- .postRight_4結束div -->
+                <div class="postRight_5" id="postRight_5">
+                    <div class="postRightDIY5">
+                        <h1 class="post_text">填上目的地就完成</h1>
+                        <div class="info">
+                            <form id="neworderForm">
+                                <label for='name' id="name1">收件人</label><br>
+                                <input type='text' id='name' class='inputform' placeholder="輸入收件人姓名"><br>
+                                <label for="address">收件地址</label><br>
+                                <textarea type='text' id='address' class='inputform' placeholder="輸入收件地址"></textarea>
+                            </form>
+                            <div class="download">
+                                <a href="#" class="btnPink" type="button" download="卡片正面.png"
+                                    onclick="this.href=document.getElementById('postcardCanvas').toDataURL()">正面存圖</a>
+                                <a href="#" class="btnPink" type="button" download="卡片背面.png"
+                                    onclick="this.href=document.getElementById('postcardback').toDataURL()">背面存圖</a>
+                            </div>
+                        </div>
+                        <form method="post" id="form1">
+                            <input name="hidden_data" id="hidden_data" type="hidden" />
+                        </form>
+                        <!-- <input type="button" value="save image" class="btnPink" onclick="saveImage()" /> -->
+                        <!-- <img src="" id="testImg"> -->
+                        <div class="step_btnbox5">
+                            <button class="btnPink" id="step_btn8">上一步</button>
+                            <input type="button" name="btn" value="完成" class="btnPink" id="step_btn9">
+                        </div>
+                    </div>
+                </div><!-- .postRightDIY結束div -->
+            </div><!-- .postRight_5結束div -->
+
+        </div>
+        </div>
+    </section>
+    <!-- footer // -->
+    @@include('./layout/footer.html')
+
+    <!-- manual-modal -->
+
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/fabric.js"></script>
+    <script src="./js/postcard.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="./js/IconList.js"></script>
+</body>
+
+</html>

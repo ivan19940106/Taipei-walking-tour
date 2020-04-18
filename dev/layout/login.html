@@ -1,0 +1,65 @@
+<div class="login" id="loginBlock">
+    <div class="login_all">
+        <div class="login_all_all">
+            <p>會員登入</p>
+            <form action="" id="member_login">
+                <input type="text" placeholder="請輸入帳號" name="login_acc" id="login_acc">
+                <input type="password" placeholder="請輸入密碼" name="login_psw" id="login_psw">
+                <div class="findpsw">忘記密碼</div>
+                <div class="login_bottom">
+                    <div class="login_login btnPink" id="login_login">登入</div>
+                    <div class="login_register btnPink">註冊</div>
+                </div>
+            </form>
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+        <div class="forgetpsw">
+            <p>找回密碼</p>
+            <form action="" id="member_findpsw">
+                <input type="text" placeholder="請輸入註冊帳號" id="find_acc">
+                <input type="text" placeholder="請輸入註冊信箱" id="find_email">
+                <div class="forgetpsw_bottom">
+                    <div class="login_login btnPink" id="login_forgetpsw">發送認證信</div>
+                    <div class="btnBack btnPink">返回</div>
+                </div>
+            </form>
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+        <div class="register">
+            <form action="./php/member/register.php" id="member_register" method="POST">
+                <div class="register_item">
+                    <label for="">帳號：</label>
+                    <input type="text" id="register_acc" name="register_acc">
+                </div>
+                <div class="register_item">
+                    <label for="">暱稱：</label>
+                    <input type="text" id="register_nam" name="register_nam">
+                </div>
+                <div class="register_item">
+                    <label for="">信箱：</label>
+                    <input type="text" id="register_email" name="register_email">
+                </div>
+                <div class="register_item">
+                    <label for="">密碼：</label>
+                    <input type="text" placeholder="請輸入英數字(至少6位數)" id="register_psw" name="register_psw">
+                </div>
+                <div class="register_item">
+                    <label for="">確認密碼：</label>
+                    <input type="text" placeholder="請輸入上述相同密碼" id="register_psw_dou">
+                </div>
+                <div class="register_bottom">
+                    <div class="login_register btnPink" id="login_register">註冊</div>
+                    <div class="btnBack btnPink">返回</div>
+                </div>
+            </form>
+
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>

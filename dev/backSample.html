@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 後台</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/back.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include("./layout/backHeader.html",{
+        "nowPage0": "nowPage",
+        "nowPage1": "",
+        "nowPage2": "",
+        "nowPage3": "",
+        "nowPage4": "",
+        "nowPage5": "",
+        "nowPage6": "",
+        "nowPage7": "",
+        "nowPage8": "",
+        "nowPage9": ""
+        })
+        <main class="col-md-10">
+            <h2>這裡設標題</h2>
+            <div class="content">
+                這裡是自己的內容 可以自己改class名稱
+            </div>
+            
+        </main>
+    </div>
+
+
+
+
+
+
+    <!-- ------------ js ------------ -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/backNav.js"></script>
+    <script>
+        function $id(id) {
+            return document.getElementById(id);
+        }
+
+        let member;
+        window.addEventListener("load", function () {
+            // 抓取session的資料填入頁面中
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                member = JSON.parse(xhr.responseText);
+                console.log(member);
+                $id("managerId").innerHTML = member.memName;
+            }
+            xhr.open("get", "./php/loginInfoForBack.php", true);
+            xhr.send(null);
+            // 註冊登出按鈕，回到後台登陸頁面
+            $id("btnLogout").onclick = function () {
+                let xhr = new XMLHttpRequest();
+
+                xhr.open("get", "./php/logout.php", true);
+                xhr.send(null);
+                location.href = "./backLogin.html";
+            };
+        }, false);
+    </script>
+</body>
+
+</html>

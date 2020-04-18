@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 後台</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/back.css">
+</head>
+<style>
+    .btnAddIcon {
+        border: 1px solid rgba(0, 0, 0, .1);
+        margin-top: 5px;
+        background-color: #A5361C;
+        color: #fff;
+        border: unset;
+    }
+
+    .btnAddIcon:hover {
+        filter: brightness(1.1);
+    }
+
+    .btnAddIcon:focus {
+        outline: none;
+    }
+
+    .btnDel {
+        border: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    .titleColor {
+        font-weight: bold;
+        color: #A5361C;
+    }
+
+    .titleBlock {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    .titleBlock h3 {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .privateBlock {
+        margin-top: 80px;
+    }
+
+    .fieldBlock {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .fieldBlock label {
+        margin-right: 10px;
+    }
+
+    table {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    tr:first-of-type {
+        background-color: #a5361c;
+        /* color: white; */
+        border-bottom: unset;
+    }
+
+    .trfirst {
+        color: white;
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: 1px solid #646464;
+        width: 300px;
+        text-align: center;
+    }
+
+    td img {
+        width: 100%;
+    }
+
+
+    .icon {
+        margin: 0 auto;
+        overflow: hidden;
+        width: 230px;
+        height: 200px;
+  
+    }
+
+    .showPhoto {
+        width: 150px;
+    }
+    .iconimg{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;  
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        @@include("./layout/backHeader.html",{
+        "nowPage0": "",
+        "nowPage1": "",
+        "nowPage2": "",
+        "nowPage3": "",
+        "nowPage4": "",
+        "nowPage5": "",
+        "nowPage6": "",
+        "nowPage7": "nowPage",
+        "nowPage8": "",
+        "nowPage9": ""
+        })
+        <main class="col-md-10">
+            <h2>客製化管理</h2>
+            <div class="content">
+                <div class="titleBlock officalBlock">
+                    <button type="button" class="btnAddIcon btn-sm" data-toggle="modal"
+                        data-target="#exampleModalCenter">新增商品部件</button>
+                </div>
+                <!-- 燈箱 -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title titleColor" id="exampleModalCenterTitle">新增插圖</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="fieldBlock"><label for="IconNum">商品部件編號</label><input type="text"
+                                            name="IconNum" id="IconNum"></div>
+                                    <div class="fieldBlock"><label for="IconPhoto">插圖圖片</label><input type="file"
+                                            name="upFile" id="upFile" class="btn-sm btnShow"><br>
+                                        
+                                    </div>
+                                    <div><img class="showPhoto"></div>
+                                    <div class="modal-footer">
+                                        <input type="submit" value="儲存" class="btn btn-secondary btn-sm btnAddIcon"
+                                            id="btnAddIcon">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-responsive-sm table-striped" id="mem_product_icon">
+                    <thead>
+                        <tr class="row trfirst">
+                            <th class="col-2">商品部件編號</th>
+                            <th class="col-4">商品部件路徑</th>
+                            <th class="col-4">商品部件插圖</th>
+                            <th class="col-2">編輯</th>
+                        </tr>
+                    </thead>
+                    <tbody id="iconList">
+                        <!-- <tr class="row">
+                            <th class="col-1">${mem_product[i].customized_product_number}</th>
+                           <th class="col-1">${mem_product[i].customized_product_point}</th>
+                            <th class="col-4">${mem_product[i].customized_product_url}</th>
+                            <th class="col-4">
+                                <div class="icon"><img class="iconimg" src="${mem_product[i].customized_product_url}" alt="icon1">
+                                </div>
+                            </th>
+                            <th class="col-2"><button class="btnDelIcon">刪除</button></th>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+            </div>
+            <!-- 隱藏的表單，用來傳送資料到PHP -->
+            <form id="myForm" style="display:hidden">
+                <input type="hidden" name="Icon_num" id="Icon_num">
+            </form>
+
+
+        </main>
+    </div>
+    <!-- ------------ js ------------ -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/backNav.js"></script>
+    <script src="./js/backpostcard.js"></script>
+    <script src="./js/backIconDelete.js"></script>
+    <script>
+        function $id(id) {
+            return document.getElementById(id);
+        }
+
+        let member;
+        window.addEventListener("load", function () {
+            // 抓取session的資料填入頁面中
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                member = JSON.parse(xhr.responseText);
+                // console.log(member);
+                $id("managerId").innerHTML = member.memName;
+            }
+            xhr.open("get", "./php/loginInfoForBack.php", true);
+            xhr.send(null);
+            // 註冊登出按鈕，回到後台登陸頁面
+            $id("btnLogout").onclick = function () {
+                let xhr = new XMLHttpRequest();
+
+                xhr.open("get", "./php/logout.php", true);
+                xhr.send(null);
+                location.href = "./backLogin.html";
+            };
+        }, false);
+    </script>
+</body>
+
+</html>

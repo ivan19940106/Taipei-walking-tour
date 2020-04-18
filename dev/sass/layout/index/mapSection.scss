@@ -1,0 +1,378 @@
+//=======小遊戲模式========
+
+div.gameWrap{
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    div.gameMapWrap{
+        border: 3px solid #ccc;
+        border-radius: 5px;
+        width: 700px;
+        height: 450px;
+        overflow: hidden;
+        position: relative;
+        img.gameMap{
+            width: 400%;
+            position: absolute;
+            bottom: -200px;
+            left: -1000px;
+            animation: mapPlay 10s linear infinite alternate;
+        }
+        @keyframes mapPlay {
+            0%{transform: translate(0px,0px);}
+            20%{transform: translate(200px,200px);}
+            40%{transform: translate(400px,400px);}
+            60%{transform: translate(200px,600px);}
+            80%{transform: translate(0px,400px);}
+            100%{transform: translate(-200px,200px);}
+        }
+        img.gameRole{
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scaleX(-1);
+        }
+
+    }
+
+    img.arrowKey{
+        width: 300px;
+        position: absolute;
+        top: 330px;
+        left: 800px;
+    }
+
+    @media screen and (max-width:1199px){
+        img.arrowKey{
+            left: 630px;
+        }
+    }
+    @media screen and (max-width:1023px){
+        img.arrowKey{
+            left: 460px;
+        }
+    }
+
+    div.playBtn{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width:767px){
+    div.gameWrap{
+        margin-top: 20px;
+
+        div.gameMapWrap{
+            border: 3px solid #ccc;
+            border-radius: 5px;
+            width: 90%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            img.gameMap{
+                width: 1000px;
+                bottom: -100px;
+                left: -300px;
+                animation: mapPlay 5s linear infinite alternate;
+            }
+            @keyframes mapPlay {
+                0%{transform: translate(0px,0px);}
+                20%{transform: translate(50px,50px);}
+                40%{transform: translate(100px,100px);}
+                60%{transform: translate(50px,150px);}
+                80%{transform: translate(0px,100px);}
+                100%{transform: translate(-50px,50px);}
+            }
+            img.gameRole{
+                width: 150px;
+            }
+        }
+        img.arrowKey{
+            width: 200px;
+            top: 220px;
+            left: unset;
+            right: 8%;
+        }
+    }
+}
+
+//=======GPS模式========
+div.gpsWrap{
+    width: 100%;
+    margin-top: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    div.gpsData{
+        width: 650px;
+        margin-right: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        img.gpsText{
+            width: 550px;
+            transform: rotate(-7deg);
+        }
+        img.gpsQrCode{
+            width: 200px;
+            margin-top: 50px;
+        }
+        img.gpsArrowPink{
+            width: 170px;
+            position: absolute;
+            top: 65px;
+            left: 15px;
+            animation: gpsArrowPinkAni .6s infinite alternate;
+        }
+        @keyframes gpsArrowPinkAni {
+            from{transform: translate(20px,20px)}
+            to{transform: translate(0px,0px)}
+        }
+        img.gpsArrow{
+            width: 200px;
+            position: absolute;
+            bottom: 170px;
+            right: -40px;
+            transform: rotate(-15deg);
+            animation: gpsArrowAni .6s infinite alternate;
+        }
+        @keyframes gpsArrowAni {
+            from{transform: translate(-20px,10px) rotate(-15deg);}
+            to{transform: translate(0px,0px) rotate(-15deg);}
+        }
+        div.gpsBtn{
+            display: none;
+        }
+    }
+    @media screen and (max-width:1199px){
+        div.gpsData{
+            width: 500px;
+            margin-right: 50px;
+
+            img.gpsText{
+                width: 500px;
+            }
+            img.gpsArrowPink{
+                width: 150px;
+                top: 70px;
+                left: -20px;
+            }
+            img.gpsArrow{
+                width: 180px;
+                
+            }
+        }
+    }
+    @media screen and (max-width:1025px){
+        div.gpsData{
+            width: 400px;
+            margin-right: 50px;
+
+            img.gpsText{
+                width: 400px;
+            }
+            img.gpsQrCode{
+                display: none;
+            }
+            img.gpsArrowPink{
+                width: 100px;
+                top: 80px;
+                left: -10px;
+            }
+            img.gpsArrow{
+                display: none;
+            }
+            
+            div.gpsBtn{
+                display: block;
+                margin-top: 50px;
+            }
+        }
+    }
+
+    img.gpsPhonePic{
+        width: 300px;
+        transform: rotate(8deg);
+        margin-right: 150px;
+    }
+    @keyframes iPhoneAni {
+        from{transform: rotate(8deg);}
+        to{transform: rotate(5deg);}
+    }
+    @media screen and (max-width:1025px){
+        img.gpsPhonePic{
+            width: 200px;
+            margin-right: 80px;
+        }
+    }
+}
+
+@media screen and (max-width:767px){
+    div.gpsWrap{
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    
+        div.gpsData{
+            width: 100%;
+            margin-right: 0px;
+            margin-top: 30px;
+            img.gpsText{
+                width: 350px;
+            }
+            img.gpsQrCode{
+                display: none;
+            }
+            img.gpsArrowPink{
+                width: 100px;
+                top: 5px;
+                left: 0px;
+            }
+            @keyframes gpsArrowPinkAni {
+                from{transform: translate(10px,10px)}
+                to{transform: translate(0px,0px)}
+            }
+            img.gpsArrow{
+                display: none;
+            }
+            div.gpsBtn{
+                display: block;
+                margin-top: 30px;
+            }
+        }
+        
+        img.gpsPhonePic{
+            width: 200px;
+            margin-right: 0px;
+        }
+    }
+}
+
+
+//========副標泡泡=========
+img.gameSubTitle{
+    position: absolute;
+    right: -5%;
+    top: -100px;
+    z-index: 3;
+    animation: subtitleAni .8s infinite alternate;
+}
+@keyframes subtitleAni{
+    from{transform: translateY(20px);}
+    to{transform: translateY(0px);}
+}
+@media screen and (max-width:1365px){
+    img.gameSubTitle{
+        right: 0%;
+    }
+}
+@media screen and (max-width:1023px){
+    img.gameSubTitle{
+        width: 170px;
+    }
+}
+@media screen and (max-width:767px){
+    img.gameSubTitle{
+        display: none;
+    }
+}
+
+//========裝飾小圖=========
+
+//珍奶
+img.milkTea{
+    width: 100px;
+    position: absolute;
+    right: -200px;
+    top: 900px;
+    transform: rotate(8deg);
+}
+//相機
+img.camera{
+    width: 160px;
+    position: absolute;
+    right: -320px;
+    top: 1050px;
+    transform: rotate(10deg);
+}
+//小星星
+img.star01{
+    width: 40px;
+    position: absolute;
+    right: -325px;
+    top: 990px;
+    animation: starAni .8s infinite alternate;
+}
+//大星星
+img.star02{
+    width: 50px;
+    position: absolute;
+    right: -180px;
+    top: 1120px;
+    animation: starAni 1s infinite alternate-reverse;
+}
+@keyframes starAni{
+    from{transform: scale(.2); opacity: .5;}
+    to{transform: scale(1); opacity: 1;}
+}
+//天燈 (中間2顆)
+img.skyLight01{
+    width: 120px;
+    position: absolute;
+    left: -250px;
+    top: 1350px;
+    animation: skyLightAni 2s infinite alternate-reverse linear;
+}
+//天燈 (外圍2顆
+img.skyLight02{
+    width: 300px;
+    position: absolute;
+    left: -320px;
+    top: 1220px;
+    animation: skyLightAni 1s infinite alternate-reverse linear;
+}
+@keyframes skyLightAni{
+    from{transform: translateY(0);}
+    from{transform: translateY(-10px);}
+}
+//雞蛋仔
+img.eggBread{
+    width: 130px;
+    position: absolute;
+    right: -180px;
+    top: 1650px;
+    animation: skyLightAni 1.2s infinite alternate linear;
+}
+//糖葫蘆
+img.candyFruit{
+    width: 120px;
+    position: absolute;
+    right: -280px;
+    top: 1750px;
+    animation: skyLightAni 1s infinite alternate linear;
+}
+
+@media screen and (max-width:1199px){
+    img.milkTea,
+    img.camera,
+    img.star01,
+    img.star02,
+    img.skyLight01,
+    img.skyLight02,
+    img.eggBread,
+    img.candyFruit{
+        display: none;
+    }
+}

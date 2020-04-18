@@ -1,0 +1,246 @@
+@charset "UTF-8";
+.login {
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: none;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.login_all {
+  border-radius: 6px;
+  position: relative;
+  background-color: #fff;
+  width: 450px;
+  margin: 10% auto 0% auto;
+}
+
+.login_all_all {
+  height: 426px;
+  padding: 8% 0;
+}
+
+.login_all_all p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #a5361c;
+}
+
+.login_all_all input {
+  border: unset;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  width: 75%;
+  padding: 3%;
+  display: block;
+  font-size: 18px;
+  margin: 10% auto 0 auto;
+}
+
+.login_all_all input:nth-child(2) {
+  margin-top: 5%;
+}
+
+.login_all_all input::-webkit-input-placeholder {
+  font-family: "微軟正黑體";
+}
+
+.login_all_all input:-ms-input-placeholder {
+  font-family: "微軟正黑體";
+}
+
+.login_all_all input::-ms-input-placeholder {
+  font-family: "微軟正黑體";
+}
+
+.login_all_all input::placeholder {
+  font-family: "微軟正黑體";
+}
+
+.findpsw {
+  padding: 1% 2% 1% 1%;
+  text-align: right;
+  width: 18%;
+  display: inline-block;
+  margin-left: 69.5%;
+  font-size: 16px;
+  color: #646464;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.forgetpsw {
+  height: 426px;
+  padding: 8% 0;
+  display: none;
+}
+
+.forgetpsw p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #a5361c;
+  margin-bottom: 6%;
+}
+
+.forgetpsw input {
+  border: unset;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  width: 75%;
+  padding: 3%;
+  display: block;
+  font-size: 18px;
+  margin: 10% auto 0 auto;
+}
+
+.forgetpsw input:nth-child(2) {
+  margin-top: 5%;
+}
+
+.forgetpsw input::-webkit-input-placeholder {
+  font-family: "微軟正黑體";
+}
+
+.forgetpsw input:-ms-input-placeholder {
+  font-family: "微軟正黑體";
+}
+
+.forgetpsw input::-ms-input-placeholder {
+  font-family: "微軟正黑體";
+}
+
+.forgetpsw input::placeholder {
+  font-family: "微軟正黑體";
+}
+
+.forgetpsw_bottom {
+  text-align: center;
+  margin-top: 18.5%;
+}
+
+@media screen and (max-width: 575px) {
+  .forgetpsw {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .login_all {
+    width: 350px;
+  }
+  .login_all_all a:nth-child(3) {
+    width: 26%;
+    margin-left: 61.5%;
+  }
+  .login_all_all {
+    height: 400px;
+  }
+  .findpsw {
+    width: 26%;
+    margin-left: 61.5%;
+  }
+}
+
+.login_bottom {
+  text-align: center;
+  margin-top: 8%;
+}
+
+.login_register {
+  margin-left: 3%;
+}
+
+.login_close {
+  background-size: cover;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.login_close img {
+  width: 75%;
+}
+
+.btnBack {
+  margin-left: 3%;
+}
+
+.register {
+  padding: 8% 0;
+  display: none;
+}
+
+.register p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #a5361c;
+  margin-bottom: 6%;
+}
+
+.register_item label {
+  text-align: right;
+  height: 46px;
+  display: inline-block;
+  font-size: 18px;
+  width: 25%;
+}
+
+.register_item input {
+  border: unset;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  width: 60%;
+  padding: 3% 0;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.register_item input::-webkit-input-placeholder {
+  font-family: "微軟正黑體";
+}
+
+.register_item input:-ms-input-placeholder {
+  font-family: "微軟正黑體";
+}
+
+.register_item input::-ms-input-placeholder {
+  font-family: "微軟正黑體";
+}
+
+.register_item input::placeholder {
+  font-family: "微軟正黑體";
+}
+
+.register_bottom {
+  text-align: center;
+  margin-top: 8%;
+}
+
+@media screen and (max-width: 575px) {
+  .register_item label {
+    width: 30%;
+    font-size: 16px;
+  }
+  .register_item input {
+    width: 55%;
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=login.css.map */

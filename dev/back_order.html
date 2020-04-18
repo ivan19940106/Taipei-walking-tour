@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 後台</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/back.css">
+</head>
+<style>
+    table {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    
+
+    tr:first-of-type {
+        background-color: #a5361c;
+        /* color: white; */
+        border-bottom: unset;
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: 1px solid #646464;
+        width: 3000px;
+        text-align: center;
+    }
+
+    td img {
+        width: 100%;
+    }
+
+
+    .icon {
+        margin: 0 auto;
+        overflow: hidden;
+        height: 200px;
+        width: 250px;
+    }
+
+    .icon img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+     thead{
+         color: white;
+     }
+</style>
+
+<body>
+    <div class="wrapper">
+        @@include("./layout/backHeader.html",{
+        "nowPage0": "",
+        "nowPage1": "",
+        "nowPage2": "",
+        "nowPage3": "",
+        "nowPage4": "",
+        "nowPage5": "",
+        "nowPage6": "",
+        "nowPage7": "",
+        "nowPage8": "nowPage",
+        "nowPage9": ""
+        })
+        <main class="col-md-10">
+            <h2>訂單管理</h2>
+            <div class="container-fluid">
+                <!-- 新增關鍵字表單 -->
+                <!-- <form action="" method="GET">
+                    <div class="form-row">
+                        <h3 class="col-2">新增商品部件</h3>
+                        <div class="form-group col-4">
+                            <label>商品部件點數</label>
+                            <input type="text" class="form-control" id="pointInsert">
+                        </div>
+                        <div class="form-group col-4">
+                            <label>商品部件路徑</label>
+                            <input type="text" class="form-control" id="producturlInsert">
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-outline-primary btn-lg" id="insertBtn">新增</button>
+                        </div>
+                    </div>
+                </form> -->
+
+                <!-- 關鍵字清單 -->
+                <table class="table table-responsive-sm table-striped">
+                    <thead>
+                        <tr class="row">
+                            <th class="col-1">訂單編號</th>
+                            <th class="col-1">會員編號</th>
+                            <th class="col-1">訂單成立時間</th>
+                            <th class="col-1">訂單花費點數</th>
+                            <th class="col-2">卡片正面路徑</th>
+                            <th class="col-2">卡片背面路徑</th>
+                            <th class="col-1">收件人姓名</th>
+                            <th class="col-1">收件人地址</th>
+                            <th class="col-1">訂單出貨狀態(1:是 0:否)</th> 
+                            <th class="col-1">編輯</th>
+                        </tr>
+                    </thead>
+                    <tbody id="OrderList">
+                        <!-- <tr class="row">
+                            <th class="col-2">1</th>
+                            <th class="col-2">1599</th>
+                            <th class="col-2">2020-03-25</th>
+                            <th class="col-2">50</th>
+                            <th class="col-2"><select class="form-control" id="satausInsert">
+                                <option value="0">待出貨</option>
+                                <option value="1">已出貨</option>
+                                </select></th>
+                            <th class="col-2"><button>儲存</button></th>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- 隱藏的表單，用來傳送資料到PHP -->
+    <form id="myForm" style="display:hidden">
+        <input type="hidden" name="OrderNo" id="OrderNo">
+        <input type="hidden" name="status" id="status">
+    </form>
+    <!-- ------------ js ------------ -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/backNav.js"></script>
+    <script src="./js/backOrder.js"></script>
+    <script>
+        function $id(id) {
+            return document.getElementById(id);
+        }
+
+        let member;
+        window.addEventListener("load", function () {
+            // 抓取session的資料填入頁面中
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                member = JSON.parse(xhr.responseText);
+                // console.log(member);
+                $id("managerId").innerHTML = member.memName;
+            }
+            xhr.open("get", "./php/loginInfoForBack.php", true);
+            xhr.send(null);
+            // 註冊登出按鈕，回到後台登陸頁面
+            $id("btnLogout").onclick = function () {
+                let xhr = new XMLHttpRequest();
+
+                xhr.open("get", "./php/logout.php", true);
+                xhr.send(null);
+                location.href = "./backLogin.html";
+            };
+        }, false);
+    </script>
+</body>
+
+</html>

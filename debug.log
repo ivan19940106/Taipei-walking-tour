@@ -1,0 +1,3 @@
+[0309/140714.903:ERROR:process_reader_win.cc(151)] SuspendThread: 存取被拒。 (0x5)
+[0309/140714.904:ERROR:exception_snapshot_win.cc(98)] thread ID 15876 not found in process
+[0309/140714.904:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: 嘗試存取現有的處理程序。 (0xc000010a)

@@ -1,0 +1,2429 @@
+@charset "UTF-8";
+body {
+  background-image: url("../img/element/bgImage.png"); }
+
+header.fullHeader {
+  transform: translateY(-210px);
+  transition: all .8s; }
+
+header.showHeader {
+  transform: translateY(0px); }
+
+div.bannerWrap {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  position: relative;
+  box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.13);
+  z-index: 6; }
+  div.bannerWrap .bannerSlider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    overflow: hidden; }
+    div.bannerWrap .bannerSlider img.slider01 {
+      width: 119%;
+      position: relative;
+      animation: banner_dilute01 24s;
+      animation-timing-function: linear;
+      opacity: 0;
+      animation-iteration-count: infinite; }
+    div.bannerWrap .bannerSlider img.slider02 {
+      width: 119%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      animation: banner_dilute02 24s;
+      animation-timing-function: linear;
+      opacity: 0;
+      animation-iteration-count: infinite; }
+    div.bannerWrap .bannerSlider img.slider03 {
+      width: 119%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      animation: banner_dilute03 24s;
+      animation-timing-function: linear;
+      opacity: 0;
+      animation-iteration-count: infinite; }
+
+@keyframes banner_dilute01 {
+  0% {
+    opacity: 1;
+    transform: scale(1.19); }
+  28% {
+    opacity: 1; }
+  33% {
+    opacity: 1;
+    transform: scale(1); }
+  68% {
+    opacity: 1;
+    transform: scale(1.2); }
+  98% {
+    opacity: 1;
+    transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1.19); } }
+
+@keyframes banner_dilute02 {
+  0% {
+    opacity: 0; }
+  28% {
+    opacity: 0;
+    transform: scale(1.2); }
+  33% {
+    opacity: 1; }
+  68% {
+    opacity: 1;
+    transform: scale(1); }
+  93% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes banner_dilute03 {
+  0% {
+    opacity: 0; }
+  61% {
+    opacity: 0;
+    transform: scale(1.2); }
+  66% {
+    opacity: 1; }
+  99% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(1); } }
+  div.bannerWrap div.bannerBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5; }
+  div.bannerWrap div.bannerBox img {
+    width: 100%;
+    height: 100%; }
+  @media screen and (max-width: 1199px) {
+    div.bannerWrap div.bannerBox {
+      display: none; } }
+  div.bannerWrap img.bannerLogo {
+    width: 400px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6; }
+  @media screen and (max-width: 1450px) {
+    div.bannerWrap img.bannerLogo {
+      width: 300px;
+      top: 10px; } }
+  @media screen and (max-width: 1199px) {
+    div.bannerWrap img.bannerLogo {
+      width: 30%; } }
+  div.bannerWrap div.bannerLinkBox {
+    width: 1200px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 7; }
+    div.bannerWrap div.bannerLinkBox a.link01 {
+      border: 4px solid #fff;
+      border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      position: absolute;
+      top: 150px;
+      left: 0px;
+      transition: all 0.5s;
+      z-index: 8;
+      animation: linkAni01 2.5s linear infinite alternate; }
+      div.bannerWrap div.bannerLinkBox a.link01:hover {
+        background-color: rgba(247, 215, 215, 0.4);
+        box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5); }
+      div.bannerWrap div.bannerLinkBox a.link01 img {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-50%, -50%); }
+
+@keyframes linkAni01 {
+  0% {
+    border-radius: 50% 60% 45% 55% / 50% 50% 60% 50%; }
+  50% {
+    border-radius: 60% 45% 55% 50% / 60% 40% 70% 45%; }
+  100% {
+    border-radius: 65% 50% 50% 60% / 50% 50% 60% 50%; } }
+    div.bannerWrap div.bannerLinkBox a.link02 {
+      border: 4px solid #fff;
+      border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      position: absolute;
+      top: 0px;
+      left: 250px;
+      transition: all 0.5s;
+      z-index: 8;
+      animation: linkAni02 2.5s linear infinite alternate; }
+      div.bannerWrap div.bannerLinkBox a.link02:hover {
+        background-color: rgba(235, 221, 160, 0.4);
+        box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5); }
+      div.bannerWrap div.bannerLinkBox a.link02 img {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-50%, -50%); }
+
+@keyframes linkAni02 {
+  0% {
+    border-radius: 50% 65% 60% 50% / 50% 50% 60% 50%; }
+  50% {
+    border-radius: 45% 60% 50% 65% / 60% 40% 70% 45%; }
+  100% {
+    border-radius: 55% 60% 40% 60% / 50% 50% 60% 50%; } }
+    div.bannerWrap div.bannerLinkBox a.link03 {
+      border: 4px solid #fff;
+      border-radius: 55% 45% 50% 60% / 50% 50% 60% 40%;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      position: absolute;
+      top: 150px;
+      left: 500px;
+      transition: all 0.5s;
+      z-index: 8;
+      animation: linkAni03 2.5s linear infinite alternate; }
+      div.bannerWrap div.bannerLinkBox a.link03:hover {
+        background-color: rgba(197, 238, 194, 0.4);
+        box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5); }
+      div.bannerWrap div.bannerLinkBox a.link03 img {
+        width: 85%;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-45%, -50%); }
+
+@keyframes linkAni03 {
+  0% {
+    border-radius: 55% 65% 50% 60% / 50% 50% 60% 50%; }
+  50% {
+    border-radius: 50% 55% 60% 45% / 50% 45% 60% 70%; }
+  100% {
+    border-radius: 45% 60% 55% 50% / 50% 50% 60% 50%; } }
+    div.bannerWrap div.bannerLinkBox a.link04 {
+      border: 4px solid #fff;
+      border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      position: absolute;
+      top: 300px;
+      left: 750px;
+      transition: all 0.5s;
+      z-index: 8;
+      animation: linkAni01 2.5s linear infinite alternate; }
+      div.bannerWrap div.bannerLinkBox a.link04:hover {
+        background-color: rgba(215, 237, 247, 0.4);
+        box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5); }
+      div.bannerWrap div.bannerLinkBox a.link04 img {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-50%, -50%); }
+    div.bannerWrap div.bannerLinkBox a.link05 {
+      border: 4px solid #fff;
+      border-radius: 50% 60% 45% 40% / 50% 50% 60% 40%;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      position: absolute;
+      top: 150px;
+      right: 0px;
+      transition: all 0.5s;
+      z-index: 8;
+      animation: linkAni02 2.5s linear infinite alternate; }
+      div.bannerWrap div.bannerLinkBox a.link05:hover {
+        background-color: rgba(174, 160, 235, 0.4);
+        box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5); }
+      div.bannerWrap div.bannerLinkBox a.link05 img {
+        width: 85%;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-45%, -50%); }
+    div.bannerWrap div.bannerLinkBox .dashLine {
+      position: absolute;
+      z-index: 5;
+      top: 45px;
+      left: 95px; }
+  @media screen and (max-width: 1450px) {
+    div.bannerWrap div.bannerLinkBox {
+      top: 10%; } }
+  @media screen and (max-width: 1199px) {
+    div.bannerWrap div.bannerLinkBox {
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      div.bannerWrap div.bannerLinkBox a.link01 {
+        border: 2px solid #fff;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 140px;
+        height: 150px; }
+      div.bannerWrap div.bannerLinkBox a.link02 {
+        border: 2px solid #fff;
+        position: relative;
+        top: 30px;
+        left: 0px;
+        width: 140px;
+        height: 150px; }
+      div.bannerWrap div.bannerLinkBox a.link03 {
+        border: 2px solid #fff;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 140px;
+        height: 150px; }
+      div.bannerWrap div.bannerLinkBox a.link04 {
+        border: 2px solid #fff;
+        position: relative;
+        top: 30px;
+        left: 0px;
+        width: 140px;
+        height: 150px; }
+      div.bannerWrap div.bannerLinkBox a.link05 {
+        border: 2px solid #fff;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 140px;
+        height: 150px; }
+      div.bannerWrap div.bannerLinkBox .dashLine {
+        display: none; } }
+
+@media screen and (max-width: 767px) {
+  div.bannerWrap {
+    width: 100%;
+    height: 100%;
+    padding-top: 100%;
+    background-image: url(../img/index/taipei101-1.jpg);
+    background-size: cover;
+    background-position: right; }
+    div.bannerWrap .bannerSlider {
+      display: none; }
+    div.bannerWrap img.bannerLogo {
+      width: 60%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    div.bannerWrap div.bannerLinkBox {
+      display: none; } }
+
+#scene {
+  width: 100%;
+  height: 900px;
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: 6; }
+  #scene img.cloud01 {
+    width: 320px;
+    position: absolute !important;
+    top: 8% !important;
+    left: 6% !important; }
+  #scene img.cloud02 {
+    width: 370px;
+    position: absolute !important;
+    top: 5% !important;
+    left: 80% !important; }
+  #scene img.cloud03 {
+    width: 350px;
+    position: absolute !important;
+    top: 75% !important;
+    left: 8% !important; }
+  #scene img.bird01 {
+    width: 150px;
+    position: absolute !important;
+    top: 33% !important;
+    left: 62% !important; }
+  #scene img.bird02 {
+    width: 250px;
+    position: absolute !important;
+    top: 17% !important;
+    left: 60% !important; }
+  #scene img.airplane {
+    width: 200px;
+    position: absolute !important;
+    top: 80% !important;
+    left: 90% !important; }
+
+@media screen and (max-width: 1450px) {
+  #scene {
+    height: 600px; }
+    #scene img.cloud01 {
+      width: 200px; }
+    #scene img.cloud02 {
+      width: 250px; }
+    #scene img.cloud03 {
+      width: 300px; }
+    #scene img.bird01 {
+      width: 100px; }
+    #scene img.bird02 {
+      width: 150px; }
+    #scene img.airplane {
+      width: 120px; } }
+
+@media screen and (max-width: 1199px) {
+  #scene {
+    height: 350px; }
+    #scene img.cloud01 {
+      width: 200px;
+      animation: cloudAni01 3s infinite alternate linear; }
+  @keyframes cloudAni01 {
+    from {
+      transform: translateX(0%); }
+    to {
+      transform: translateX(15%); } }
+    #scene img.cloud02 {
+      width: 250px;
+      transform: translateX(15%);
+      animation: cloudAni02 2s infinite alternate linear; }
+  @keyframes cloudAni02 {
+    from {
+      transform: translateX(15%); }
+    to {
+      transform: translateX(5%); } }
+    #scene img.cloud03 {
+      display: none !important; }
+    #scene img.bird01 {
+      width: 80px;
+      top: 33% !important; }
+    #scene img.bird02 {
+      width: 140px;
+      top: 50% !important; }
+    #scene img.airplane {
+      display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  #scene img.cloud01 {
+    width: 100px;
+    left: 0.3% !important;
+    top: 25% !important; }
+  #scene img.cloud02 {
+    width: 150px;
+    left: 65% !important; }
+  #scene img.bird01 {
+    display: none !important; }
+  #scene img.bird02 {
+    display: none !important; } }
+
+div.wrapper {
+  width: 100%;
+  overflow: hidden; }
+
+section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  section img.sectionTitle {
+    width: 40%; }
+  @media screen and (max-width: 575px) {
+    section img.sectionTitle {
+      width: 65%; } }
+
+@media screen and (max-width: 1023px) {
+  section {
+    margin: 50px auto; } }
+
+@media screen and (max-width: 767px) {
+  section {
+    margin: 30px auto 70px auto; } }
+
+div.sectionSubTitleMobile {
+  margin: 20px 0px;
+  padding: 10px;
+  letter-spacing: 3px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: #116491;
+  color: #fff; }
+
+@media screen and (min-width: 768px) {
+  div.sectionSubTitleMobile {
+    display: none; } }
+
+div.psyTestWrap {
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 1.5px;
+  font-size: 24px;
+  color: #1e1e1e; }
+  div.psyTestWrap #question {
+    width: 60%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #156692;
+    background-image: url(../img/index/questionBg.png);
+    background-size: cover; }
+    div.psyTestWrap #question span {
+      display: inline-block;
+      color: #A5361C;
+      font-size: 46px;
+      font-weight: bold;
+      transform: rotate(-10deg); }
+  div.psyTestWrap div.answerBox {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    margin-top: 50px; }
+    div.psyTestWrap div.answerBox div.ansOption {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 45%; }
+      div.psyTestWrap div.answerBox div.ansOption span.ansText {
+        display: inline-block;
+        align-self: flex-end;
+        text-align: center;
+        line-height: 50px;
+        width: 205px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: #1e1e1e;
+        font-weight: bold;
+        transform: rotate(10deg); }
+      div.psyTestWrap div.answerBox div.ansOption span.blueTag {
+        background-image: url(../img/index/ansTextBlue.png); }
+      div.psyTestWrap div.answerBox div.ansOption span.pinkTag {
+        background-image: url(../img/index/ansTextpink.png); }
+      @media screen and (max-width: 1023px) {
+        div.psyTestWrap div.answerBox div.ansOption span.ansText {
+          width: 150px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 18px; } }
+      div.psyTestWrap div.answerBox div.ansOption div.ansBubble {
+        background-image: url(../img/index/blueWave.png);
+        position: relative;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.13);
+        animation: ansAni 3s infinite linear alternate-reverse; }
+        div.psyTestWrap div.answerBox div.ansOption div.ansBubble:hover img.ansImg {
+          filter: brightness(1.5);
+          opacity: 0.8; }
+        div.psyTestWrap div.answerBox div.ansOption div.ansBubble:hover img.ansCheck {
+          opacity: 1; }
+        div.psyTestWrap div.answerBox div.ansOption div.ansBubble img.ansCheck {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: all 0.3s; }
+        div.psyTestWrap div.answerBox div.ansOption div.ansBubble img.ansImg {
+          width: 95%;
+          animation: ansAni 2s infinite linear alternate-reverse;
+          transition: all 0.3s; }
+
+@keyframes ansAni {
+  0% {
+    border-radius: 35% 40% 22% 42%/ 51% 47% 42% 42%; }
+  33% {
+    border-radius: 29% 45% 30% 31%/ 51% 47% 42% 42%; }
+  66% {
+    border-radius: 40% 50% 32% 27%/ 51% 47% 42% 42%; }
+  100% {
+    border-radius: 31% 40% 24% 38%/ 51% 47% 42% 42%; } }
+  @media screen and (max-width: 767px) {
+    div.psyTestWrap div.answerBox {
+      margin-top: 20px; }
+      div.psyTestWrap div.answerBox div.ansOption {
+        width: 45%; }
+        div.psyTestWrap div.answerBox div.ansOption div.ansBubble {
+          padding: 0px; }
+          div.psyTestWrap div.answerBox div.ansOption div.ansBubble img.ansImg {
+            width: 100%; }
+          div.psyTestWrap div.answerBox div.ansOption div.ansBubble img.ansCheck {
+            display: none; } }
+
+@media screen and (max-width: 767px) {
+  div.psyTestWrap {
+    margin-top: 20px; }
+    div.psyTestWrap #question {
+      width: 95%;
+      font-size: 24px; }
+      div.psyTestWrap #question span {
+        font-size: 30px;
+        transform: rotate(-10deg); } }
+
+div.routeWrap {
+  width: 100%;
+  margin-top: 70px;
+  position: relative;
+  letter-spacing: 1.5px;
+  font-size: 24px;
+  color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  div.routeWrap #slideBoard {
+    width: 100%;
+    overflow: hidden; }
+    div.routeWrap #slideBoard #content {
+      position: relative;
+      display: flex; }
+      div.routeWrap #slideBoard #content .newSliderBox {
+        position: relative;
+        display: flex;
+        justify-content: space-between; }
+        div.routeWrap #slideBoard #content .newSliderBox div.picBubble {
+          width: 48%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-image: url(../img/index/blueWave.png);
+          position: relative;
+          padding: 20px;
+          text-align: center;
+          box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.13);
+          animation: ansAni 3s infinite linear alternate-reverse; }
+          div.routeWrap #slideBoard #content .newSliderBox div.picBubble img.routeImg {
+            width: 95%;
+            animation: ansAni 2s infinite linear alternate-reverse;
+            transition: all 0.3s; }
+
+@keyframes ansAni {
+  0% {
+    border-radius: 35% 40% 22% 42%/ 51% 47% 42% 42%; }
+  33% {
+    border-radius: 29% 45% 30% 31%/ 51% 47% 42% 42%; }
+  66% {
+    border-radius: 40% 50% 32% 27%/ 51% 47% 42% 42%; }
+  100% {
+    border-radius: 31% 40% 24% 38%/ 51% 47% 42% 42%; } }
+        div.routeWrap #slideBoard #content .newSliderBox div.routeDatailText {
+          width: 47%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          div.routeWrap #slideBoard #content .newSliderBox div.routeDatailText span {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1e1e1e;
+            margin-bottom: 15px;
+            letter-spacing: 3px; }
+          div.routeWrap #slideBoard #content .newSliderBox div.routeDatailText p {
+            font-size: 20px;
+            color: #646464;
+            margin: 10px 0px;
+            text-align: center;
+            line-height: 1.5; }
+  @media screen and (max-width: 767px) {
+    div.routeWrap #slideBoard #content .newSliderBox {
+      flex-direction: column;
+      align-items: center; }
+      div.routeWrap #slideBoard #content .newSliderBox div.picBubble {
+        width: 95%; }
+      div.routeWrap #slideBoard #content .newSliderBox div.routeDatailText {
+        width: 95%; }
+        div.routeWrap #slideBoard #content .newSliderBox div.routeDatailText span {
+          font-size: 30px;
+          margin-top: 20px; }
+        div.routeWrap #slideBoard #content .newSliderBox div.routeDatailText p {
+          font-size: 18px;
+          margin: 5px 0px; } }
+  div.routeWrap div.moreRoute {
+    margin: 60px 0px 30px 0px; }
+  @media screen and (max-width: 1024px) {
+    div.routeWrap div.moreRoute {
+      margin: 20px 0px; } }
+  div.routeWrap img.grassLine {
+    width: 50%; }
+  @media screen and (max-width: 1024px) {
+    div.routeWrap img.grassLine {
+      width: 70%; } }
+
+@media screen and (max-width: 767px) {
+  div.routeWrap {
+    margin-top: 0px; } }
+
+img.routeSubTitle {
+  display: inline-block;
+  position: absolute;
+  left: -5%;
+  top: -30%;
+  animation: subtitleAni .8s infinite alternate; }
+
+@keyframes subtitleAni {
+  from {
+    transform: translateY(20px); }
+  to {
+    transform: translateY(0px); } }
+
+@media screen and (max-width: 1365px) {
+  img.routeSubTitle {
+    left: 0%; } }
+
+@media screen and (max-width: 1023px) {
+  img.routeSubTitle {
+    width: 170px; } }
+
+@media screen and (max-width: 767px) {
+  img.routeSubTitle {
+    display: none; } }
+
+@media screen and (max-width: 1024px) {
+  img.-routeTitle {
+    top: -130px;
+    z-index: 3; } }
+
+@media screen and (max-width: 767px) {
+  img.routeSubTitle {
+    width: 180px;
+    left: 15%;
+    top: -150px; }
+  @keyframes subtitleAni {
+    from {
+      transform: translateY(10px); }
+    to {
+      transform: translateY(0px); } } }
+
+img.picSun {
+  position: absolute;
+  width: 200px;
+  top: 100px;
+  right: -300px;
+  animation: rotateSun 33s infinite linear; }
+
+@keyframes rotateSun {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+
+img.picKumo01 {
+  position: absolute;
+  width: 150px;
+  top: 300px;
+  right: -200px;
+  animation: jumpKumo01 3s infinite linear alternate; }
+
+@keyframes jumpKumo01 {
+  from {
+    transform: translate(0, 0); }
+  to {
+    transform: translate(10px, 10px); } }
+
+img.picKumo02 {
+  position: absolute;
+  width: 180px;
+  top: 350px;
+  right: -350px;
+  animation: jumpKumo02 4s infinite linear alternate; }
+
+@keyframes jumpKumo02 {
+  from {
+    transform: translate(0, 0); }
+  to {
+    transform: translate(0px, 13px); } }
+
+img.pic101 {
+  position: absolute;
+  width: 80px;
+  top: 700px;
+  left: -250px;
+  transform: rotate(-8deg); }
+
+img.picKumo03 {
+  position: absolute;
+  width: 130px;
+  top: 600px;
+  left: -170px;
+  animation: jumpKumo02 3s infinite linear alternate; }
+
+img.picKumo04 {
+  position: absolute;
+  width: 170px;
+  top: 530px;
+  left: -300px;
+  animation: jumpKumo01 4s infinite linear alternate; }
+
+img.airBallon01 {
+  position: absolute;
+  width: 150px;
+  top: 950px;
+  right: -300px;
+  animation: airBallon01 2s infinite linear alternate; }
+
+@keyframes airBallon01 {
+  from {
+    transform: translate(0, 0); }
+  to {
+    transform: translate(0, 25px); } }
+
+img.airBallon02 {
+  position: absolute;
+  width: 100px;
+  top: 1100px;
+  right: -160px;
+  animation: airBallon02 5s infinite linear alternate; }
+
+@keyframes airBallon02 {
+  from {
+    transform: translate(0, 0); }
+  to {
+    transform: translate(0px, 35px); } }
+
+img.airBallon03 {
+  position: absolute;
+  width: 100px;
+  top: 1200px;
+  right: -320px;
+  animation: airBallon01 5s infinite alternate; }
+
+img.airBallon04 {
+  position: absolute;
+  width: 150px;
+  top: 1400px;
+  left: -300px;
+  animation: airBallon01 2s infinite alternate; }
+
+img.airBallon05 {
+  position: absolute;
+  width: 110px;
+  top: 1550px;
+  left: -170px;
+  animation: airBallon02 4s infinite alternate; }
+
+img.airBallon06 {
+  position: absolute;
+  width: 110px;
+  top: 1700px;
+  left: -320px;
+  animation: airBallon01 4s infinite alternate linear; }
+
+@media screen and (max-width: 1199px) {
+  img.picSun,
+  img.picKumo01,
+  img.picKumo02,
+  img.pic101,
+  img.picKumo03,
+  img.picKumo04,
+  img.airBallon01,
+  img.airBallon02,
+  img.airBallon03,
+  img.airBallon04,
+  img.airBallon05,
+  img.airBallon06 {
+    display: none; } }
+
+div.gameWrap {
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  div.gameWrap div.gameMapWrap {
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    width: 700px;
+    height: 450px;
+    overflow: hidden;
+    position: relative; }
+    div.gameWrap div.gameMapWrap img.gameMap {
+      width: 400%;
+      position: absolute;
+      bottom: -200px;
+      left: -1000px;
+      animation: mapPlay 10s linear infinite alternate; }
+
+@keyframes mapPlay {
+  0% {
+    transform: translate(0px, 0px); }
+  20% {
+    transform: translate(200px, 200px); }
+  40% {
+    transform: translate(400px, 400px); }
+  60% {
+    transform: translate(200px, 600px); }
+  80% {
+    transform: translate(0px, 400px); }
+  100% {
+    transform: translate(-200px, 200px); } }
+    div.gameWrap div.gameMapWrap img.gameRole {
+      width: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scaleX(-1); }
+  div.gameWrap img.arrowKey {
+    width: 300px;
+    position: absolute;
+    top: 330px;
+    left: 800px; }
+  @media screen and (max-width: 1199px) {
+    div.gameWrap img.arrowKey {
+      left: 630px; } }
+  @media screen and (max-width: 1023px) {
+    div.gameWrap img.arrowKey {
+      left: 460px; } }
+  div.gameWrap div.playBtn {
+    margin-top: 40px; }
+
+@media screen and (max-width: 767px) {
+  div.gameWrap {
+    margin-top: 20px; }
+    div.gameWrap div.gameMapWrap {
+      border: 3px solid #ccc;
+      border-radius: 5px;
+      width: 90%;
+      height: 300px;
+      overflow: hidden;
+      position: relative; }
+      div.gameWrap div.gameMapWrap img.gameMap {
+        width: 1000px;
+        bottom: -100px;
+        left: -300px;
+        animation: mapPlay 5s linear infinite alternate; }
+  @keyframes mapPlay {
+    0% {
+      transform: translate(0px, 0px); }
+    20% {
+      transform: translate(50px, 50px); }
+    40% {
+      transform: translate(100px, 100px); }
+    60% {
+      transform: translate(50px, 150px); }
+    80% {
+      transform: translate(0px, 100px); }
+    100% {
+      transform: translate(-50px, 50px); } }
+      div.gameWrap div.gameMapWrap img.gameRole {
+        width: 150px; }
+    div.gameWrap img.arrowKey {
+      width: 200px;
+      top: 220px;
+      left: unset;
+      right: 8%; } }
+
+div.gpsWrap {
+  width: 100%;
+  margin-top: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center; }
+  div.gpsWrap div.gpsData {
+    width: 650px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; }
+    div.gpsWrap div.gpsData img.gpsText {
+      width: 550px;
+      transform: rotate(-7deg); }
+    div.gpsWrap div.gpsData img.gpsQrCode {
+      width: 200px;
+      margin-top: 50px; }
+    div.gpsWrap div.gpsData img.gpsArrowPink {
+      width: 170px;
+      position: absolute;
+      top: 65px;
+      left: 15px;
+      animation: gpsArrowPinkAni .6s infinite alternate; }
+
+@keyframes gpsArrowPinkAni {
+  from {
+    transform: translate(20px, 20px); }
+  to {
+    transform: translate(0px, 0px); } }
+    div.gpsWrap div.gpsData img.gpsArrow {
+      width: 200px;
+      position: absolute;
+      bottom: 170px;
+      right: -40px;
+      transform: rotate(-15deg);
+      animation: gpsArrowAni .6s infinite alternate; }
+
+@keyframes gpsArrowAni {
+  from {
+    transform: translate(-20px, 10px) rotate(-15deg); }
+  to {
+    transform: translate(0px, 0px) rotate(-15deg); } }
+    div.gpsWrap div.gpsData div.gpsBtn {
+      display: none; }
+  @media screen and (max-width: 1199px) {
+    div.gpsWrap div.gpsData {
+      width: 500px;
+      margin-right: 50px; }
+      div.gpsWrap div.gpsData img.gpsText {
+        width: 500px; }
+      div.gpsWrap div.gpsData img.gpsArrowPink {
+        width: 150px;
+        top: 70px;
+        left: -20px; }
+      div.gpsWrap div.gpsData img.gpsArrow {
+        width: 180px; } }
+  @media screen and (max-width: 1025px) {
+    div.gpsWrap div.gpsData {
+      width: 400px;
+      margin-right: 50px; }
+      div.gpsWrap div.gpsData img.gpsText {
+        width: 400px; }
+      div.gpsWrap div.gpsData img.gpsQrCode {
+        display: none; }
+      div.gpsWrap div.gpsData img.gpsArrowPink {
+        width: 100px;
+        top: 80px;
+        left: -10px; }
+      div.gpsWrap div.gpsData img.gpsArrow {
+        display: none; }
+      div.gpsWrap div.gpsData div.gpsBtn {
+        display: block;
+        margin-top: 50px; } }
+  div.gpsWrap img.gpsPhonePic {
+    width: 300px;
+    transform: rotate(8deg);
+    margin-right: 150px; }
+
+@keyframes iPhoneAni {
+  from {
+    transform: rotate(8deg); }
+  to {
+    transform: rotate(5deg); } }
+  @media screen and (max-width: 1025px) {
+    div.gpsWrap img.gpsPhonePic {
+      width: 200px;
+      margin-right: 80px; } }
+
+@media screen and (max-width: 767px) {
+  div.gpsWrap {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center; }
+    div.gpsWrap div.gpsData {
+      width: 100%;
+      margin-right: 0px;
+      margin-top: 30px; }
+      div.gpsWrap div.gpsData img.gpsText {
+        width: 350px; }
+      div.gpsWrap div.gpsData img.gpsQrCode {
+        display: none; }
+      div.gpsWrap div.gpsData img.gpsArrowPink {
+        width: 100px;
+        top: 5px;
+        left: 0px; }
+  @keyframes gpsArrowPinkAni {
+    from {
+      transform: translate(10px, 10px); }
+    to {
+      transform: translate(0px, 0px); } }
+      div.gpsWrap div.gpsData img.gpsArrow {
+        display: none; }
+      div.gpsWrap div.gpsData div.gpsBtn {
+        display: block;
+        margin-top: 30px; }
+    div.gpsWrap img.gpsPhonePic {
+      width: 200px;
+      margin-right: 0px; } }
+
+img.gameSubTitle {
+  position: absolute;
+  right: -5%;
+  top: -100px;
+  z-index: 3;
+  animation: subtitleAni .8s infinite alternate; }
+
+@keyframes subtitleAni {
+  from {
+    transform: translateY(20px); }
+  to {
+    transform: translateY(0px); } }
+
+@media screen and (max-width: 1365px) {
+  img.gameSubTitle {
+    right: 0%; } }
+
+@media screen and (max-width: 1023px) {
+  img.gameSubTitle {
+    width: 170px; } }
+
+@media screen and (max-width: 767px) {
+  img.gameSubTitle {
+    display: none; } }
+
+img.milkTea {
+  width: 100px;
+  position: absolute;
+  right: -200px;
+  top: 900px;
+  transform: rotate(8deg); }
+
+img.camera {
+  width: 160px;
+  position: absolute;
+  right: -320px;
+  top: 1050px;
+  transform: rotate(10deg); }
+
+img.star01 {
+  width: 40px;
+  position: absolute;
+  right: -325px;
+  top: 990px;
+  animation: starAni .8s infinite alternate; }
+
+img.star02 {
+  width: 50px;
+  position: absolute;
+  right: -180px;
+  top: 1120px;
+  animation: starAni 1s infinite alternate-reverse; }
+
+@keyframes starAni {
+  from {
+    transform: scale(0.2);
+    opacity: .5; }
+  to {
+    transform: scale(1);
+    opacity: 1; } }
+
+img.skyLight01 {
+  width: 120px;
+  position: absolute;
+  left: -250px;
+  top: 1350px;
+  animation: skyLightAni 2s infinite alternate-reverse linear; }
+
+img.skyLight02 {
+  width: 300px;
+  position: absolute;
+  left: -320px;
+  top: 1220px;
+  animation: skyLightAni 1s infinite alternate-reverse linear; }
+
+@keyframes skyLightAni {
+  from {
+    transform: translateY(0); }
+  from {
+    transform: translateY(-10px); } }
+
+img.eggBread {
+  width: 130px;
+  position: absolute;
+  right: -180px;
+  top: 1650px;
+  animation: skyLightAni 1.2s infinite alternate linear; }
+
+img.candyFruit {
+  width: 120px;
+  position: absolute;
+  right: -280px;
+  top: 1750px;
+  animation: skyLightAni 1s infinite alternate linear; }
+
+@media screen and (max-width: 1199px) {
+  img.milkTea,
+  img.camera,
+  img.star01,
+  img.star02,
+  img.skyLight01,
+  img.skyLight02,
+  img.eggBread,
+  img.candyFruit {
+    display: none; } }
+
+/*
+     卡片：首頁、路線、心情、揪團，要使用的sample
+    
+     先用include card(設定height) 在做其他設定，我會再增加卡片的間距
+
+    */
+div.moodWrap {
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  div.moodWrap div.moodBtn {
+    margin-top: 20px; }
+  div.moodWrap div.moodCardsWrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; }
+  @media screen and (max-width: 767px) {
+    div.moodWrap div.moodCardsWrap {
+      flex-direction: column;
+      align-items: center; } }
+  div.moodWrap div.moodCard {
+    width: 340px;
+    height: unset;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(145, 131, 131, 0.4);
+    background-image: url(../img/index/moodCardsBg.png);
+    border: 1px solid #c9bb88;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 0px 26px 50px 27px; }
+    div.moodWrap div.moodCard div.cardInfoBar {
+      width: 300px;
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      div.moodWrap div.moodCard div.cardInfoBar div.moodMemberPhoto {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        div.moodWrap div.moodCard div.cardInfoBar div.moodMemberPhoto img {
+          height: 100%;
+          vertical-align: middle; }
+      div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap {
+        width: 250px;
+        padding-left: 10px;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column; }
+        div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap span.moodClass {
+          color: #1e1e1e;
+          line-height: 1.5;
+          font-size: 18px;
+          font-weight: bold; }
+        div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap div.moodInfoBox {
+          display: flex;
+          justify-content: space-between; }
+          div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap div.moodInfoBox span.moodMemId, div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap div.moodInfoBox span.moodDate {
+            color: #646464;
+            line-height: 1.5;
+            font-size: 16px; }
+    div.moodWrap div.moodCard div.moodPicWrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      margin: 5px auto;
+      overflow: hidden; }
+      div.moodWrap div.moodCard div.moodPicWrap img.moodPic {
+        height: 100%;
+        vertical-align: middle; }
+    div.moodWrap div.moodCard div.heartBar {
+      width: 300px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      div.moodWrap div.moodCard div.heartBar img.heartIcon {
+        width: 35px;
+        cursor: pointer; }
+      div.moodWrap div.moodCard div.heartBar img.chatIcon {
+        width: 35px; }
+      div.moodWrap div.moodCard div.heartBar span {
+        color: #646464;
+        font-size: 16px;
+        margin: 0px 10px 0px 5px; }
+    div.moodWrap div.moodCard div.cardText {
+      width: 300px;
+      margin: 5px auto;
+      text-align: center;
+      letter-spacing: 1.5px;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      div.moodWrap div.moodCard div.cardText p {
+        font-size: 18px;
+        color: #646464;
+        text-align: left;
+        height: 76px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden; }
+      div.moodWrap div.moodCard div.cardText span {
+        color: #646464;
+        font-size: 16px;
+        display: inline-block;
+        margin: 5px 0px 20px 0px;
+        cursor: pointer; }
+        div.moodWrap div.moodCard div.cardText span:hover {
+          color: #A5361C; }
+  @media screen and (max-width: 1199px) {
+    div.moodWrap div.moodCard {
+      width: 300px;
+      margin: 0px 16px 40px 16px; }
+      div.moodWrap div.moodCard div.cardInfoBar {
+        width: 270px; }
+        div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap {
+          width: 220px; }
+      div.moodWrap div.moodCard div.moodPicWrap {
+        width: 270px;
+        height: 270px; }
+      div.moodWrap div.moodCard div.heartBar {
+        width: 270px; }
+      div.moodWrap div.moodCard div.cardText {
+        width: 270px; } }
+  @media screen and (max-width: 1023px) {
+    div.moodWrap div.moodCard {
+      width: 230px;
+      margin: 0px 15px 40px 10px; }
+      div.moodWrap div.moodCard div.cardInfoBar {
+        width: 200px; }
+        div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap {
+          width: 150px; }
+          div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap span.moodClass {
+            font-size: 16px; }
+          div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap div.moodInfoBox {
+            flex-direction: column-reverse; }
+      div.moodWrap div.moodCard div.moodPicWrap {
+        width: 200px;
+        height: 200px; }
+      div.moodWrap div.moodCard div.heartBar {
+        width: 200px; }
+      div.moodWrap div.moodCard div.cardText {
+        width: 200px; }
+        div.moodWrap div.moodCard div.cardText h1 {
+          font-size: 20px; }
+        div.moodWrap div.moodCard div.cardText p {
+          font-size: 16px;
+          letter-spacing: 0.5px; } }
+  @media screen and (max-width: 767px) {
+    div.moodWrap div.moodCard {
+      width: 300px;
+      margin: 15px 0px; }
+      div.moodWrap div.moodCard div.cardInfoBar {
+        width: 270px; }
+        div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap {
+          width: 180px; }
+          div.moodWrap div.moodCard div.cardInfoBar div.infoTextWrap div.moodInfoBox {
+            flex-direction: row; }
+      div.moodWrap div.moodCard div.moodPicWrap {
+        width: 270px;
+        height: 270px; }
+      div.moodWrap div.moodCard div.heartBar {
+        width: 270px; }
+      div.moodWrap div.moodCard div.cardText {
+        width: 270px; } }
+
+@media screen and (max-width: 767px) {
+  div.moodWrap {
+    margin-top: 20px; } }
+
+div.moodLightBox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  div.moodLightBox div.moodDetailBlock {
+    width: 1000px;
+    padding: 40px 0px;
+    position: relative;
+    border-radius: 10px;
+    background-image: url(../img/index/moodCardsBG.png);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around; }
+    div.moodLightBox div.moodDetailBlock #reportBtn {
+      border: 2px solid #a5a5a5;
+      border-radius: 100%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      cursor: pointer;
+      position: absolute;
+      right: 50px;
+      top: 5px; }
+      div.moodLightBox div.moodDetailBlock #reportBtn:hover {
+        border: 2px solid #646464; }
+        div.moodLightBox div.moodDetailBlock #reportBtn:hover span.dot1, div.moodLightBox div.moodDetailBlock #reportBtn:hover span.dot2 {
+          background-color: #646464; }
+      div.moodLightBox div.moodDetailBlock #reportBtn span.dot1 {
+        width: 5px;
+        height: 18px;
+        border-radius: 20px;
+        background-color: #a5a5a5;
+        margin-bottom: 3px; }
+      div.moodLightBox div.moodDetailBlock #reportBtn span.dot2 {
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background-color: #a5a5a5; }
+    div.moodLightBox div.moodDetailBlock #closeMoodBtn {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      transition: all 0.8s; }
+      div.moodLightBox div.moodDetailBlock #closeMoodBtn:hover {
+        transform: rotate(180deg); }
+      div.moodLightBox div.moodDetailBlock #closeMoodBtn span.line1, div.moodLightBox div.moodDetailBlock #closeMoodBtn span.line2 {
+        display: inline-block;
+        width: 40px;
+        height: 5px;
+        background-color: #646464;
+        border-radius: 8px;
+        position: absolute;
+        left: 50%;
+        top: 50%; }
+      div.moodLightBox div.moodDetailBlock #closeMoodBtn span.line1 {
+        transform: translate(-50%, -50%) rotate(45deg); }
+      div.moodLightBox div.moodDetailBlock #closeMoodBtn span.line2 {
+        transform: translate(-50%, -50%) rotate(-45deg); }
+    div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox {
+      width: 63%;
+      max-height: 790px;
+      overflow: auto; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailInfoBar {
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+        div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailInfoBar div.moodDetailMemberPhoto {
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          margin-right: 10px;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailInfoBar div.moodDetailMemberPhoto img {
+            height: 100%;
+            vertical-align: middle; }
+        div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailInfoBar div.moodDetailInfoWrap {
+          width: calc(100% - 60px);
+          letter-spacing: 1px;
+          display: flex;
+          flex-direction: column; }
+          div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailInfoBar div.moodDetailInfoWrap span.moodDetailClass {
+            color: #1e1e1e;
+            line-height: 1.5;
+            font-size: 18px;
+            font-weight: bold; }
+          div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailInfoBar div.moodDetailInfoWrap div.moodDetailInfoBox {
+            display: flex;
+            justify-content: space-between; }
+            div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailInfoBar div.moodDetailInfoWrap div.moodDetailInfoBox span.moodDetailMemId, div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailInfoBar div.moodDetailInfoWrap div.moodDetailInfoBox span.moodDetailDate {
+              color: #646464;
+              line-height: 1.5;
+              font-size: 16px; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailPhotoWrap {
+        width: 100%;
+        margin: 15px 0px; }
+        div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailPhotoWrap img {
+          width: 100%; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailContent {
+        font-size: 18px;
+        color: #646464;
+        line-height: 1.5;
+        letter-spacing: 1.5px; }
+    div.moodLightBox div.moodDetailBlock div.moodDetailRightBox {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailRightBox h2 {
+        font-size: 36px;
+        color: #A5361C;
+        font-weight: bolder;
+        text-align: center;
+        margin: 20px; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailRightBox div.messageWrap {
+        width: 100%;
+        max-height: 610px;
+        padding: 0px 5px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column; }
+        div.moodLightBox div.moodDetailBlock div.moodDetailRightBox div.messageWrap div.messageBox {
+          width: 100%;
+          border-radius: 5px;
+          background-color: rgba(255, 255, 255, 0.7);
+          margin: 10px 0px;
+          padding: 5px;
+          font-size: 18px;
+          color: #646464;
+          line-height: 1.5;
+          letter-spacing: 1.5px; }
+          div.moodLightBox div.moodDetailBlock div.moodDetailRightBox div.messageWrap div.messageBox span {
+            color: #1e1e1e;
+            font-weight: bold;
+            font-size: 20px; }
+          div.moodLightBox div.moodDetailBlock div.moodDetailRightBox div.messageWrap div.messageBox p {
+            word-wrap: break-word; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailRightBox ::-webkit-scrollbar {
+        border-radius: 10px; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailRightBox ::-webkit-scrollbar-track {
+        border-radius: 10px; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailRightBox ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #D89181; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailRightBox #leaveMsgForm {
+        width: 100%; }
+        div.moodLightBox div.moodDetailBlock div.moodDetailRightBox #leaveMsgForm #leaveMsg {
+          width: 100%;
+          font-size: 18px;
+          font-family: "微軟正黑體";
+          margin: 15px 0px; }
+
+@media screen and (max-width: 1023px) {
+  div.moodLightBox div.moodDetailBlock {
+    width: 740px; } }
+
+@media screen and (max-width: 767px) {
+  div.moodLightBox div.moodDetailBlock {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0px 10px 0px;
+    border-radius: 0px;
+    display: block;
+    overflow: auto; }
+    div.moodLightBox div.moodDetailBlock div.dotWrap {
+      position: fixed; }
+    div.moodLightBox div.moodDetailBlock #closeMoodBtn {
+      position: fixed; }
+    div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox {
+      margin: 0 auto;
+      width: 97%;
+      height: unset;
+      max-height: unset;
+      overflow: unset;
+      display: block; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailLeftBox div.moodDetailPhotoWrap {
+        margin: 10px 0px; }
+    div.moodLightBox div.moodDetailBlock div.moodDetailRightBox {
+      width: 100%; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailRightBox h2 {
+        font-size: 24px;
+        margin: 20px 0px 10px 0px; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailRightBox div.messageWrap {
+        width: 97%;
+        max-height: unset;
+        padding: 0px;
+        overflow: unset; }
+        div.moodLightBox div.moodDetailBlock div.moodDetailRightBox div.messageWrap div.messageBox {
+          margin: 5px 0px;
+          font-size: 16px; }
+          div.moodLightBox div.moodDetailBlock div.moodDetailRightBox div.messageWrap div.messageBox span {
+            font-size: 18px; }
+      div.moodLightBox div.moodDetailBlock div.moodDetailRightBox #leaveMsgForm {
+        width: 97%; } }
+
+div.reportLightBox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  div.reportLightBox div.reportBlock {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-image: url(../img/index/linedpaper.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    div.reportLightBox div.reportBlock h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #A5361C;
+      margin: 40px 0px 20px 0px; }
+    div.reportLightBox div.reportBlock form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 20px; }
+      div.reportLightBox div.reportBlock form div {
+        margin: 10px 0px; }
+        div.reportLightBox div.reportBlock form div label {
+          font-size: 20px;
+          color: #1e1e1e; }
+    div.reportLightBox div.reportBlock div button.btnPink {
+      margin: 0px 10px; }
+
+img.moodSubTitle {
+  display: inline-block;
+  position: absolute;
+  left: -5%;
+  top: -150px;
+  animation: subtitleAni .8s infinite alternate; }
+
+@keyframes subtitleAni {
+  from {
+    transform: translateY(20px); }
+  to {
+    transform: translateY(0px); } }
+
+@media screen and (max-width: 1365px) {
+  img.moodSubTitle {
+    top: -180px;
+    left: 0%; } }
+
+@media screen and (max-width: 1199px) {
+  img.moodSubTitle {
+    top: -170px; } }
+
+@media screen and (max-width: 1023px) {
+  img.moodSubTitle {
+    top: -130px;
+    width: 170px; } }
+
+@media screen and (max-width: 767px) {
+  img.moodSubTitle {
+    display: none; } }
+
+img.photoPic {
+  width: 120px;
+  position: absolute;
+  top: 500px;
+  left: -200px;
+  animation: skyLightAni 2s infinite alternate linear; }
+
+img.heartPic {
+  width: 150px;
+  position: absolute;
+  top: 650px;
+  left: -280px;
+  transform: rotate(-8deg);
+  animation: skyLightAni 3s infinite alternate linear; }
+
+img.airplanePic {
+  width: 180px;
+  position: absolute;
+  top: 900px;
+  right: -280px;
+  animation: airplaneAni 2.5s infinite alternate linear; }
+
+@keyframes airplaneAni {
+  from {
+    transform: translate(0, 0); }
+  to {
+    transform: translate(-15px, -15px); } }
+
+@media screen and (max-width: 1199px) {
+  img.photoPic,
+  img.heartPic,
+  img.airplanePic {
+    display: none; } }
+
+div.postWrap {
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  div.postWrap ul.stepBar {
+    width: 800px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; }
+    div.postWrap ul.stepBar li.stepBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 132.8px;
+      height: 152.8px;
+      background-image: url(../img/index/stepBoxWhite.png);
+      background-size: cover;
+      background-repeat: no-repeat; }
+      div.postWrap ul.stepBar li.stepBox span {
+        text-align: center;
+        color: #126591;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 2px; }
+  div.postWrap #showCard {
+    width: 800px; }
+  div.postWrap div.postBtn {
+    margin-top: 20px; }
+
+@media screen and (max-width: 1023px) {
+  div.postWrap {
+    width: 100%;
+    margin-top: 30px; }
+    div.postWrap ul.stepBar {
+      width: 700px;
+      margin-bottom: 20px; }
+      div.postWrap ul.stepBar li.stepBox {
+        width: 116.2px;
+        height: 133.7px; }
+        div.postWrap ul.stepBar li.stepBox span {
+          font-size: 20px; }
+    div.postWrap #showCard {
+      width: 700px; }
+    div.postWrap div.postBtn {
+      margin-top: 20px; } }
+
+@media screen and (max-width: 767px) {
+  div.postWrap {
+    width: 100%;
+    margin-top: 20px; }
+    div.postWrap ul.stepBar {
+      width: 95%;
+      margin-bottom: 10px; }
+      div.postWrap ul.stepBar li.stepBox {
+        width: 69.72px;
+        height: 80.22px; }
+        div.postWrap ul.stepBar li.stepBox span {
+          font-size: 15px;
+          letter-spacing: 1px; }
+    div.postWrap #showCard {
+      width: 95%; }
+    div.postWrap div.postBtn {
+      margin-top: 10px; } }
+
+img.postSubTitle {
+  display: inline-block;
+  position: absolute;
+  left: -5%;
+  top: -100px;
+  animation: subtitleAni .8s infinite alternate; }
+
+@keyframes subtitleAni {
+  from {
+    transform: translateY(20px); }
+  to {
+    transform: translateY(0px); } }
+
+@media screen and (max-width: 1365px) {
+  img.postSubTitle {
+    left: 0%; } }
+
+@media screen and (max-width: 1199px) {
+  img.postSubTitle {
+    top: -150px; } }
+
+@media screen and (max-width: 1023px) {
+  img.postSubTitle {
+    top: -130px;
+    width: 170px; } }
+
+@media screen and (max-width: 767px) {
+  img.postSubTitle {
+    display: none; } }
+
+img.postCartPic01 {
+  width: 250px;
+  position: absolute;
+  top: 480px;
+  left: -110px;
+  transform: rotate(15deg); }
+
+img.postCartPic02 {
+  width: 250px;
+  position: absolute;
+  top: 630px;
+  left: -120px;
+  transform: rotate(-10deg); }
+
+img.postCartPic03 {
+  width: 250px;
+  position: absolute;
+  top: 400px;
+  right: -110px;
+  transform: rotate(-15deg); }
+
+img.postCartPic04 {
+  width: 250px;
+  position: absolute;
+  top: 560px;
+  right: -115px;
+  transform: rotate(5deg); }
+
+img.postCartPic05 {
+  width: 250px;
+  position: absolute;
+  top: 720px;
+  right: -100px;
+  transform: rotate(-5deg); }
+
+@media screen and (max-width: 1199px) {
+  img.postCartPic01 {
+    width: 170px;
+    left: -50px; }
+  img.postCartPic02 {
+    width: 170px;
+    left: -50px; }
+  img.postCartPic03 {
+    width: 170px;
+    right: -50px; }
+  img.postCartPic04 {
+    width: 170px;
+    right: -50px; }
+  img.postCartPic05 {
+    width: 170px;
+    right: -50px; } }
+
+@media screen and (max-width: 1023px) {
+  img.postCartPic01,
+  img.postCartPic02,
+  img.postCartPic03,
+  img.postCartPic04,
+  img.postCartPic05 {
+    display: none; } }
+
+/*
+     卡片：首頁、路線、心情、揪團，要使用的sample
+    
+     先用include card(設定height) 在做其他設定，我會再增加卡片的間距
+
+    */
+div.eventWrap {
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  div.eventWrap div.eventBtn {
+    margin-top: 20px; }
+  div.eventWrap div.eventCardsWrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; }
+  @media screen and (max-width: 767px) {
+    div.eventWrap div.eventCardsWrap {
+      flex-direction: column;
+      align-items: center; } }
+
+@media screen and (max-width: 767px) {
+  div.eventWrap {
+    margin-top: 20px; } }
+
+img.eventSubTitle {
+  display: inline-block;
+  position: absolute;
+  left: -5%;
+  top: -150px;
+  animation: subtitleAni .8s infinite alternate; }
+
+@keyframes subtitleAni {
+  from {
+    transform: translateY(20px); }
+  to {
+    transform: translateY(0px); } }
+
+@media screen and (max-width: 1365px) {
+  img.eventSubTitle {
+    left: 0%; } }
+
+@media screen and (max-width: 1199px) {
+  img.eventSubTitle {
+    top: -150px; } }
+
+@media screen and (max-width: 1023px) {
+  img.eventSubTitle {
+    top: -130px;
+    width: 170px; } }
+
+@media screen and (max-width: 767px) {
+  img.eventSubTitle {
+    display: none; } }
+
+img.baoPic {
+  width: 130px;
+  position: absolute;
+  top: 100px;
+  right: -210px;
+  animation: bagAni 2s infinite alternate linear; }
+
+img.taroPic {
+  width: 150px;
+  position: absolute;
+  top: 250px;
+  right: -320px;
+  animation: bagAni 2s infinite alternate-reverse linear; }
+
+img.backagePic {
+  width: 160px;
+  position: absolute;
+  top: 500px;
+  left: -280px;
+  animation: bagAni 2s infinite alternate linear; }
+
+img.potPic {
+  width: 160px;
+  position: absolute;
+  top: 660px;
+  left: -200px;
+  animation: bagAni 2s infinite alternate-reverse linear; }
+
+@keyframes bagAni {
+  form {
+    transform: rotate(-7deg); }
+  to {
+    transform: rotate(7deg); } }
+
+@media screen and (max-width: 1199px) {
+  img.baoPic,
+  img.taroPic,
+  img.backagePic,
+  img.potPic {
+    display: none; } }
+
+/*
+     卡片：首頁、路線、心情、揪團，要使用的sample
+    
+     先用include card(設定height) 在做其他設定，我會再增加卡片的間距
+
+    */
+div.cardBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+
+div.eventCard {
+  width: 340px;
+  height: unset;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(145, 131, 131, 0.4);
+  background-image: url(../img/event/event_cardback.png);
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  transition: 1s;
+  margin: 25px 30px; }
+  div.eventCard div.dotWrap {
+    width: 40px;
+    height: 40px;
+    margin: 5px 18px 0px 0px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer; }
+    div.eventCard div.dotWrap span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: #646464; }
+  div.eventCard div.eventPicWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 5px auto;
+    overflow: hidden; }
+    div.eventCard div.eventPicWrap img.eventPic {
+      height: 100%;
+      vertical-align: middle; }
+  div.eventCard div.cardText {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    div.eventCard div.cardText h1 {
+      width: 100%;
+      font-size: 24px;
+      color: #1e1e1e;
+      font-weight: 550;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px; }
+    div.eventCard div.cardText p {
+      font-size: 18px;
+      color: #646464;
+      text-align: left; }
+    div.eventCard div.cardText span {
+      color: #646464;
+      font-size: 16px;
+      display: inline-block;
+      margin: 5px 0px 20px 0px;
+      cursor: pointer; }
+      div.eventCard div.cardText span:hover {
+        color: #A5361C; }
+
+@media screen and (max-width: 1210px) {
+  div.eventCard {
+    margin: 25px auto;
+    flex-wrap: wrap; } }
+
+@media screen and (max-width: 767px) {
+  div.eventWrap {
+    margin: 0px auto; }
+  div.eventCard {
+    margin: 35px auto;
+    flex-wrap: wrap; }
+  div.cardBox {
+    justify-content: center; } }
+
+.eventCard:hover {
+  transform: translateY(-10px); }
+
+.cardTop {
+  display: flex; }
+
+.starMark {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  width: 270px;
+  padding-top: 6px;
+  padding-left: 3px;
+  font-size: 18px;
+  color: #646464; }
+
+@media screen and (max-width: 1199px) {
+  .starMark {
+    padding: 5px 0 0px 15px;
+    width: 250px;
+    font-size: 16px; } }
+
+@media screen and (max-width: 1023px) {
+  .starMark {
+    padding: 5px 0 0px 15px;
+    width: 190px;
+    font-size: 16px; } }
+
+@media screen and (max-width: 767px) {
+  .starMark {
+    padding: 5px 0 0px 10px;
+    width: 250px;
+    font-size: 16px; } }
+
+.eventinfo_back {
+  background-color: rgba(24, 24, 24, 0.8);
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  position: fixed; }
+
+.backDrop {
+  background-color: rgba(24, 24, 24, 0.8);
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  position: fixed; }
+
+#eventhold_back {
+  display: none; }
+
+#closeMoodBtn {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: all 0.8s; }
+  #closeMoodBtn:hover {
+    transform: rotate(180deg); }
+  #closeMoodBtn span.line1, #closeMoodBtn span.line2 {
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    background-color: #646464;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%; }
+  #closeMoodBtn span.line1 {
+    transform: translate(-50%, -50%) rotate(45deg); }
+  #closeMoodBtn span.line2 {
+    transform: translate(-50%, -50%) rotate(-45deg); }
+
+.lightbox_detailevent_info {
+  position: relative;
+  background-image: url(../img/index/linedpaper.png);
+  align-items: center;
+  box-shadow: 0px 15px 15px rgba(204, 209, 214, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1000px;
+  border-radius: 15px;
+  padding: 50px 0 25px 0;
+  overflow: hidden; }
+  @media screen and (max-width: 767px) {
+    .lightbox_detailevent_info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto;
+      overflow: auto; } }
+
+.lightbox_holdevent_info {
+  position: relative;
+  background-image: url(../img/index/linedpaper.png);
+  align-items: center;
+  box-shadow: 0px 15px 15px rgba(204, 209, 214, 0.15);
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  border-radius: 15px; }
+  .lightbox_holdevent_info .holdevent_title {
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 1.875px;
+    font-size: 36px;
+    color: #A5361C;
+    font-weight: bolder;
+    text-align: center; }
+    .lightbox_holdevent_info .holdevent_title h2 {
+      font-size: 36px;
+      color: #A5361C; }
+  .lightbox_holdevent_info .stepALL {
+    margin: 25px 0;
+    width: 100%; }
+    @media screen and (max-width: 767px) {
+      .lightbox_holdevent_info .stepALL {
+        margin: 25px 0; } }
+  .lightbox_holdevent_info .holdevent_step {
+    text-align: center;
+    display: flex;
+    justify-content: center; }
+    .lightbox_holdevent_info .holdevent_step div {
+      margin: 0 55px;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      background-size: contain;
+      background-position: center;
+      background-image: url(../img/event/step.png);
+      font-size: 18px; }
+      .lightbox_holdevent_info .holdevent_step div p {
+        margin-bottom: 5px; }
+      .lightbox_holdevent_info .holdevent_step div .stepBox {
+        margin-bottom: 10px; }
+    .lightbox_holdevent_info .holdevent_step .color {
+      background-image: url(../img/event/stepOn.png); }
+    @media screen and (max-width: 767px) {
+      .lightbox_holdevent_info .holdevent_step {
+        display: none; } }
+
+@media screen and (max-width: 767px) {
+  .lightbox_detailevent {
+    width: 100%;
+    height: 100%; }
+  .lightbox_holdevent_info {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: center; } }
+
+.lightReport {
+  border: 2px solid #a5a5a5;
+  border-radius: 100%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
+  position: absolute;
+  right: 50px;
+  top: 6px; }
+  .lightReport:hover {
+    border: 2px solid #646464; }
+    .lightReport:hover span.dot1, .lightReport:hover span.dot2 {
+      background-color: #646464; }
+  .lightReport span.dot1 {
+    width: 5px;
+    height: 18px;
+    border-radius: 20px;
+    background-color: #a5a5a5;
+    margin-bottom: 3px; }
+  .lightReport span.dot2 {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #a5a5a5; }
+
+.detaileventContent {
+  font-size: 18px;
+  width: 100%;
+  color: #1e1e1e;
+  display: flex;
+  letter-spacing: 1.2px;
+  align-items: flex-start;
+  margin: 30px 0;
+  justify-content: center; }
+  @media screen and (max-width: 767px) {
+    .detaileventContent {
+      width: 100%;
+      flex-direction: column;
+      padding: 0;
+      align-items: center;
+      margin: 0; } }
+  .detaileventContent .detaileventPic {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center; }
+    @media screen and (max-width: 767px) {
+      .detaileventContent .detaileventPic {
+        width: 100%;
+        padding: 0; } }
+    .detaileventContent .detaileventPic .dotWrap {
+      right: 25px;
+      width: 40px;
+      height: 40px;
+      align-self: flex-end;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      align-self: center;
+      cursor: pointer;
+      position: absolute; }
+    .detaileventContent .detaileventPic .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: #646464; }
+    .detaileventContent .detaileventPic .detaileventPicbox {
+      width: 360px;
+      height: 360px;
+      border-radius: 5px;
+      overflow: hidden; }
+      @media screen and (max-width: 767px) {
+        .detaileventContent .detaileventPic .detaileventPicbox {
+          width: 240px;
+          height: 240px; } }
+      .detaileventContent .detaileventPic .detaileventPicbox img {
+        height: 100%; }
+  .detaileventContent .detaileventText {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 0 30px; }
+    @media screen and (max-width: 767px) {
+      .detaileventContent .detaileventText {
+        padding: 0;
+        width: 100%;
+        align-items: center;
+        margin-top: 10px; } }
+    .detaileventContent .detaileventText .eventInforow {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center; }
+      @media screen and (max-width: 767px) {
+        .detaileventContent .detaileventText .eventInforow {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          margin-bottom: 10px; } }
+      .detaileventContent .detaileventText .eventInforow .eventrowTitle {
+        background-color: #EDE18B;
+        width: 165px;
+        margin-right: 40px;
+        border-radius: 3px;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        font-size: 18px;
+        color: #646464;
+        letter-spacing: 1.5px;
+        display: flex; }
+        @media screen and (max-width: 767px) {
+          .detaileventContent .detaileventText .eventInforow .eventrowTitle {
+            width: 140px;
+            margin-right: 20px;
+            padding: 10px 5px; } }
+      .detaileventContent .detaileventText .eventInforow div:nth-child(2) {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        color: #646464;
+        letter-spacing: 1.5px;
+        line-height: 1.5; }
+
+.detaileventRoute {
+  font-size: 20px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  margin: 15px 0 5px 0;
+  flex-direction: column; }
+  .detaileventRoute p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #206b95;
+    letter-spacing: 1.5px;
+    line-height: 1.5; }
+  .detaileventRoute .detaileventattr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #646464; }
+    .detaileventRoute .detaileventattr .eventArrow {
+      width: 20px;
+      margin: 0 5px; }
+    @media screen and (max-width: 767px) {
+      .detaileventRoute .detaileventattr {
+        flex-direction: column; }
+        .detaileventRoute .detaileventattr .eventArrow {
+          width: 20px;
+          margin: 5px;
+          transform: rotate(90deg); } }
+  @media screen and (max-width: 767px) {
+    .detaileventRoute {
+      margin: 0px auto 5px auto;
+      width: 100%;
+      justify-content: center; } }
+
+.detaileventTop {
+  display: flex;
+  width: 100%;
+  padding-left: 65px; }
+  @media screen and (max-width: 767px) {
+    .detaileventTop {
+      align-items: center;
+      width: 90%;
+      margin: 15px 0;
+      padding: 0;
+      justify-content: center; }
+      .detaileventTop + div {
+        background-color: #eee;
+        width: 90%;
+        height: 300px;
+        padding: 20px;
+        border-radius: 6px;
+        overflow: scroll; } }
+
+.eventInfotitle {
+  font-weight: bold;
+  color: #A5361C;
+  font-size: 32px;
+  font-weight: bolder; }
+
+.enroll {
+  display: flex; }
+  @media screen and (max-width: 767px) {
+    .enroll {
+      margin: 10px 0 0 0; } }
+
+.lightbox_report_info {
+  position: fixed;
+  background-color: #d4d3d3;
+  background-image: url(../img/index/linedpaper.png);
+  align-items: center;
+  box-shadow: 0px 15px 15px rgba(204, 209, 214, 0.15);
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px; }
+  .lightbox_report_info .reportTitle {
+    font-size: 24px;
+    margin: 30px 0;
+    text-align: center;
+    color: #646464;
+    font-size: bold; }
+  .lightbox_report_info form {
+    font-size: 20px;
+    padding: 0 35px;
+    margin: 35px auto;
+    color: #646464; }
+    .lightbox_report_info form input {
+      margin: 15px; }
+  .lightbox_report_info .reportSent {
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    position: absolute; }
+    .lightbox_report_info .reportSent div {
+      margin: 0px 13px; }

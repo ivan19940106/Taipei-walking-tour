@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 後台</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/back.css">
+    <style>
+        /* #manager>tbody>tr {
+            border: 10px solid red;
+        } */
+
+        table {
+            margin: 0 auto;
+            /* border: 3px solid red; */
+            margin-bottom: 20px;
+        }
+
+        tr:nth-child(1) {
+            background-color: #a5361c;
+            color: white;
+            border-bottom: unset;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #646464;
+            width: 3000px;
+            text-align: center;
+        }
+
+        td img {
+            width: 100%;
+
+        }
+
+        .new_mana_acc {
+            border-radius: 10px;
+            /* background-color: white;
+            z-index: 999;
+            position: absolute;
+            right: 50px;
+            top:50px; */
+            padding: 20px;
+            /* width: 20%; */
+            border: 2px solid #a5361c;
+            /* display: inline-block;
+            margin: 0 auto; */
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .new_mana_acc input {
+            margin-left: 2%;
+            margin-right: 2%;
+            /* margin: 0 auto; */
+            /* border: 1px solid red; */
+            /* display: block; */
+            /* margin-bottom: 10px; */
+        }
+
+        .new_mana_acc button {
+            margin-left: 2%;
+            /* margin: 0 auto; */
+            /* border: 1px solid red; */
+            /* display: block; */
+        }
+
+        @media screen and (max-width:1200px) {
+            .new_mana_acc input {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="./backMember.html">
+            <img src="./img/index/LOGO.svg" width="100" class="d-inline-block align-top">
+        </a>
+        <div>
+            <span id="managerId">撈取管理者ID</span>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnLogout">登出</button>
+        </div>
+    </nav>
+</header>
+
+<nav class="col-md-2  d-md-block bg-light sideNav">
+    <div class="sidebarContent">
+       <ul class="nav flex-column">
+           <li class="navItem"><a href="./backMember.html" class="nowPage">帳號管理</a></li>
+           <!-- <li class="navItem"><a href="" class="">心理測驗管理</a></li> -->
+           <li class="navItem"><a href="./backRoute.html" class="">路線管理</a></li>
+           <li class="navItem"><a href="./backAttraction.html" class="">景點管理</a></li>
+           <li class="navItem"><a href="./backMapgame.html" class="">地圖攻略管理</a></li>
+           <li class="navItem"><a href="./backMood.html" class="">心情檢舉管理</a></li>
+           <li class="navItem"><a href="./backEvent.html" class="">揪團檢舉管理</a></li>
+           <li class="navItem"><a href="./backpostcard.html" class="">客製化管理</a></li>
+           <li class="navItem"><a href="./back_order.html" class="">訂單管理</a></li>
+           <li class="navItem"><a href="./backRobot.html" class="">機器人管理</a></li>
+       </ul>
+    </div>
+</nav>
+
+<div id="sideNavBtn">
+    <svg class="bi bi-chevron-right arrow" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg%22%3E">
+        <path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+    </svg>
+</div>
+        <main class="col-md-10">
+            <h2>管理員管理</h2>
+            <div class="content">
+                <div class="new_mana_acc">
+                    <!-- <form action="./php/member/newma.php" method="POST"> -->
+                    <input type="text" placeholder="暱稱" name="name" id="newma_nam">
+                    <input type="text" placeholder="帳號" name="account" id="newma_acc">
+                    <input type="text" placeholder="密碼" name="password" id="newma_psw">
+                    <button id="newma" class="btn btn-primary">新增管理員帳號</button>
+                    <!-- </form>    -->
+                </div>
+                <table id="manager">
+                </table>
+
+            </div>
+            <h2>會員管理</h2>
+            <div class="content">
+                <table id="memberall">
+                </table>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+    <!-- ------------ js ------------ -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/backNav.js"></script>
+    <script src="./js/backmember.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title的格式，請依以下打上去 -->
+    <title>台北散步｜sample</title>
+    <!-- 每一頁分頁，都需要遷入這隻main.css
+        
+    請將原本有說要遷的reset.css拿掉 -->
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="wrapper">
+        <!-- header
+    在你的分頁的display:"加上show"
+    -->
+
+        @@include('./layout/header.html',{
+        "display1":"",
+        "display2":"",
+        "display3":"",
+        "display4":"",
+        "display5":""
+        })
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- 回到頂端的連結 -->
+        <a name="GoTop"></a>
+
+        <!-- 主要按鈕 // btnRed
+    link：連結的網址
+    innerText：按鈕名稱 -->
+        @@include('./layout/btnRed.html',{
+        "link":"./google.com.tw",
+        "innerText":"More"
+        })
+
+        <!-- 次要要按鈕 // btnPink
+    link：連結的網址
+    innerText：按鈕名稱 -->
+        @@include('./layout/btnPink.html',{
+        "link":"./google.com.tw",
+        "innerText":"More"
+        })
+        <input type="submit" class="btnPink">
+        
+        <!-- 次要按鈕_不能按 // btnPinkStop
+
+    link：連結的網址
+    innerText：按鈕名稱 -->
+        @@include('./layout/btnPinkStop.html',{
+        "link":"./google.com.tw",
+        "innerText":"More"
+        })
+
+
+        <!-- 回到頂端 // btnGoTop -->
+
+        @@include('./layout/btnGoTop.html',{})
+
+        <!-- 自訂按鈕 // btnCust
+
+    link：連結的網址
+    innerText：按鈕名稱 -->
+        @@include('./layout/btnCust.html',{
+        "link":"./google.com.tw",
+        "innerText":"自訂"
+        })
+
+        <!-- breadCrumb // breadCrumb
+    link：依序填入連結位子
+    innerText：為你的麵包屑層級的名稱
+    註：在最後產出dest的HTML那裏要將多出的部分刪除（刪除後不能執行gulp不然會覆蓋）
+    -->
+        @@include('./layout/breadCrumb.html',{
+        "link1":"./google.com.tw",
+        "innerText1":"台北散步",
+        "link2":"./google.com.tw",
+        "innerText2":"散步遊台北",
+        "link3":"./google.com.tw",
+        "innerText3":"",
+        "link4":"./google.com.tw",
+        "innerText4":"",
+        "link5":"./google.com.tw",
+        "innerText5":"",
+        "link6":"./google.com.tw",
+        "innerText6":""
+        })
+
+        <!-- banner // 各自的banner，直接套class
+            順序，以導覽列（不含頁首）的順序依序
+        -->
+        <div class="banner_01">
+            <!-- 各分頁的bannerTitle格式，可以複製貼上再改中間的標題圖片 -->
+            <img src="./img/banner/dottedLine1.png" alt="" srcset="" class="dottedLine">
+            <div class="pageBannerTitle">
+                <div class="bannerTitleMoveBlock">
+                    <!-- 這裡的圖片改成自己分頁的圖片，再想想要怎麼動，不一定要一樣，也可以直接參考 -->
+                    <img src="./img/route/routeTitle1.png" class="routeTitleImage1">
+                    <img src="./img/route/routeTitle2.png" class="routeTitleImage2">
+                </div>
+            </div>
+            <img src="./img/banner/dottedLine2.png" alt="" srcset="" class="dottedLine">
+        </div>
+        <div class="banner_02"></div>
+        <div class="banner_03"></div>
+        <div class="banner_04"></div>
+        <div class="banner_05"></div>
+        <div class="banner_06"></div>
+
+        <!-- filter // tab 篩選器
+            innetText:篩選的名稱，
+            由於不確定個分頁的篩選功能會如何，在此只放上css樣式的格式，可以直接用class套用，不一定要include
+            註：並非每個分頁皆有，需自行在自己的scss中import './modules/filter.scss';
+         -->
+         @@include('./layout/filter.html',{
+            "innerText1":"",
+            "innerText2":"",
+            "innerText3":""
+        })
+
+        <!-- footer // -->
+        @@include('./layout/footer.html')
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/common.js"></script>
+</body>
+</html>

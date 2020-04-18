@@ -1,0 +1,637 @@
+div.gameWrap {
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.gameWrap div.gameMapWrap {
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  width: 700px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+div.gameWrap div.gameMapWrap img.gameMap {
+  width: 400%;
+  position: absolute;
+  bottom: -200px;
+  left: -1000px;
+  -webkit-animation: mapPlay 10s linear infinite alternate;
+          animation: mapPlay 10s linear infinite alternate;
+}
+
+@-webkit-keyframes mapPlay {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  20% {
+    -webkit-transform: translate(200px, 200px);
+            transform: translate(200px, 200px);
+  }
+  40% {
+    -webkit-transform: translate(400px, 400px);
+            transform: translate(400px, 400px);
+  }
+  60% {
+    -webkit-transform: translate(200px, 600px);
+            transform: translate(200px, 600px);
+  }
+  80% {
+    -webkit-transform: translate(0px, 400px);
+            transform: translate(0px, 400px);
+  }
+  100% {
+    -webkit-transform: translate(-200px, 200px);
+            transform: translate(-200px, 200px);
+  }
+}
+
+@keyframes mapPlay {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  20% {
+    -webkit-transform: translate(200px, 200px);
+            transform: translate(200px, 200px);
+  }
+  40% {
+    -webkit-transform: translate(400px, 400px);
+            transform: translate(400px, 400px);
+  }
+  60% {
+    -webkit-transform: translate(200px, 600px);
+            transform: translate(200px, 600px);
+  }
+  80% {
+    -webkit-transform: translate(0px, 400px);
+            transform: translate(0px, 400px);
+  }
+  100% {
+    -webkit-transform: translate(-200px, 200px);
+            transform: translate(-200px, 200px);
+  }
+}
+
+div.gameWrap div.gameMapWrap img.gameRole {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scaleX(-1);
+          transform: translate(-50%, -50%) scaleX(-1);
+}
+
+div.gameWrap img.arrowKey {
+  width: 300px;
+  position: absolute;
+  top: 330px;
+  left: 800px;
+}
+
+@media screen and (max-width: 1199px) {
+  div.gameWrap img.arrowKey {
+    left: 630px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  div.gameWrap img.arrowKey {
+    left: 460px;
+  }
+}
+
+div.gameWrap div.playBtn {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  div.gameWrap {
+    margin-top: 20px;
+  }
+  div.gameWrap div.gameMapWrap {
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    width: 90%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  div.gameWrap div.gameMapWrap img.gameMap {
+    width: 1000px;
+    bottom: -100px;
+    left: -300px;
+    -webkit-animation: mapPlay 5s linear infinite alternate;
+            animation: mapPlay 5s linear infinite alternate;
+  }
+  @-webkit-keyframes mapPlay {
+    0% {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+    20% {
+      -webkit-transform: translate(50px, 50px);
+              transform: translate(50px, 50px);
+    }
+    40% {
+      -webkit-transform: translate(100px, 100px);
+              transform: translate(100px, 100px);
+    }
+    60% {
+      -webkit-transform: translate(50px, 150px);
+              transform: translate(50px, 150px);
+    }
+    80% {
+      -webkit-transform: translate(0px, 100px);
+              transform: translate(0px, 100px);
+    }
+    100% {
+      -webkit-transform: translate(-50px, 50px);
+              transform: translate(-50px, 50px);
+    }
+  }
+  @keyframes mapPlay {
+    0% {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+    20% {
+      -webkit-transform: translate(50px, 50px);
+              transform: translate(50px, 50px);
+    }
+    40% {
+      -webkit-transform: translate(100px, 100px);
+              transform: translate(100px, 100px);
+    }
+    60% {
+      -webkit-transform: translate(50px, 150px);
+              transform: translate(50px, 150px);
+    }
+    80% {
+      -webkit-transform: translate(0px, 100px);
+              transform: translate(0px, 100px);
+    }
+    100% {
+      -webkit-transform: translate(-50px, 50px);
+              transform: translate(-50px, 50px);
+    }
+  }
+  div.gameWrap div.gameMapWrap img.gameRole {
+    width: 150px;
+  }
+  div.gameWrap img.arrowKey {
+    width: 200px;
+    top: 220px;
+    left: unset;
+    right: 8%;
+  }
+}
+
+div.gpsWrap {
+  width: 100%;
+  margin-top: 60px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.gpsWrap div.gpsData {
+  width: 650px;
+  margin-right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+div.gpsWrap div.gpsData img.gpsText {
+  width: 550px;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+}
+
+div.gpsWrap div.gpsData img.gpsQrCode {
+  width: 200px;
+  margin-top: 50px;
+}
+
+div.gpsWrap div.gpsData img.gpsArrowPink {
+  width: 170px;
+  position: absolute;
+  top: 65px;
+  left: 15px;
+  -webkit-animation: gpsArrowPinkAni .6s infinite alternate;
+          animation: gpsArrowPinkAni .6s infinite alternate;
+}
+
+@-webkit-keyframes gpsArrowPinkAni {
+  from {
+    -webkit-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes gpsArrowPinkAni {
+  from {
+    -webkit-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+div.gpsWrap div.gpsData img.gpsArrow {
+  width: 200px;
+  position: absolute;
+  bottom: 170px;
+  right: -40px;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  -webkit-animation: gpsArrowAni .6s infinite alternate;
+          animation: gpsArrowAni .6s infinite alternate;
+}
+
+@-webkit-keyframes gpsArrowAni {
+  from {
+    -webkit-transform: translate(-20px, 10px) rotate(-15deg);
+            transform: translate(-20px, 10px) rotate(-15deg);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px) rotate(-15deg);
+            transform: translate(0px, 0px) rotate(-15deg);
+  }
+}
+
+@keyframes gpsArrowAni {
+  from {
+    -webkit-transform: translate(-20px, 10px) rotate(-15deg);
+            transform: translate(-20px, 10px) rotate(-15deg);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px) rotate(-15deg);
+            transform: translate(0px, 0px) rotate(-15deg);
+  }
+}
+
+div.gpsWrap div.gpsData div.gpsBtn {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  div.gpsWrap div.gpsData {
+    width: 500px;
+    margin-right: 50px;
+  }
+  div.gpsWrap div.gpsData img.gpsText {
+    width: 500px;
+  }
+  div.gpsWrap div.gpsData img.gpsArrowPink {
+    width: 150px;
+    top: 70px;
+    left: -20px;
+  }
+  div.gpsWrap div.gpsData img.gpsArrow {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  div.gpsWrap div.gpsData {
+    width: 400px;
+    margin-right: 50px;
+  }
+  div.gpsWrap div.gpsData img.gpsText {
+    width: 400px;
+  }
+  div.gpsWrap div.gpsData img.gpsQrCode {
+    display: none;
+  }
+  div.gpsWrap div.gpsData img.gpsArrowPink {
+    width: 100px;
+    top: 80px;
+    left: -10px;
+  }
+  div.gpsWrap div.gpsData img.gpsArrow {
+    display: none;
+  }
+  div.gpsWrap div.gpsData div.gpsBtn {
+    display: block;
+    margin-top: 50px;
+  }
+}
+
+div.gpsWrap img.gpsPhonePic {
+  width: 300px;
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+  margin-right: 150px;
+}
+
+@-webkit-keyframes iPhoneAni {
+  from {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  to {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@keyframes iPhoneAni {
+  from {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  to {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  div.gpsWrap img.gpsPhonePic {
+    width: 200px;
+    margin-right: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  div.gpsWrap {
+    width: 100%;
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.gpsWrap div.gpsData {
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 30px;
+  }
+  div.gpsWrap div.gpsData img.gpsText {
+    width: 350px;
+  }
+  div.gpsWrap div.gpsData img.gpsQrCode {
+    display: none;
+  }
+  div.gpsWrap div.gpsData img.gpsArrowPink {
+    width: 100px;
+    top: 5px;
+    left: 0px;
+  }
+  @-webkit-keyframes gpsArrowPinkAni {
+    from {
+      -webkit-transform: translate(10px, 10px);
+              transform: translate(10px, 10px);
+    }
+    to {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+  }
+  @keyframes gpsArrowPinkAni {
+    from {
+      -webkit-transform: translate(10px, 10px);
+              transform: translate(10px, 10px);
+    }
+    to {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+  }
+  div.gpsWrap div.gpsData img.gpsArrow {
+    display: none;
+  }
+  div.gpsWrap div.gpsData div.gpsBtn {
+    display: block;
+    margin-top: 30px;
+  }
+  div.gpsWrap img.gpsPhonePic {
+    width: 200px;
+    margin-right: 0px;
+  }
+}
+
+img.gameSubTitle {
+  position: absolute;
+  right: -5%;
+  top: -100px;
+  z-index: 3;
+  -webkit-animation: subtitleAni .8s infinite alternate;
+          animation: subtitleAni .8s infinite alternate;
+}
+
+@-webkit-keyframes subtitleAni {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes subtitleAni {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  img.gameSubTitle {
+    right: 0%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  img.gameSubTitle {
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  img.gameSubTitle {
+    display: none;
+  }
+}
+
+img.milkTea {
+  width: 100px;
+  position: absolute;
+  right: -200px;
+  top: 900px;
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+img.camera {
+  width: 160px;
+  position: absolute;
+  right: -320px;
+  top: 1050px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+img.star01 {
+  width: 40px;
+  position: absolute;
+  right: -325px;
+  top: 990px;
+  -webkit-animation: starAni .8s infinite alternate;
+          animation: starAni .8s infinite alternate;
+}
+
+img.star02 {
+  width: 50px;
+  position: absolute;
+  right: -180px;
+  top: 1120px;
+  animation: starAni 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes starAni {
+  from {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: .5;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes starAni {
+  from {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: .5;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+img.skyLight01 {
+  width: 120px;
+  position: absolute;
+  left: -250px;
+  top: 1350px;
+  animation: skyLightAni 2s infinite alternate-reverse linear;
+}
+
+img.skyLight02 {
+  width: 300px;
+  position: absolute;
+  left: -320px;
+  top: 1220px;
+  animation: skyLightAni 1s infinite alternate-reverse linear;
+}
+
+@-webkit-keyframes skyLightAni {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  from {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes skyLightAni {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  from {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+img.eggBread {
+  width: 130px;
+  position: absolute;
+  right: -180px;
+  top: 1650px;
+  -webkit-animation: skyLightAni 1.2s infinite alternate linear;
+          animation: skyLightAni 1.2s infinite alternate linear;
+}
+
+img.candyFruit {
+  width: 120px;
+  position: absolute;
+  right: -280px;
+  top: 1750px;
+  -webkit-animation: skyLightAni 1s infinite alternate linear;
+          animation: skyLightAni 1s infinite alternate linear;
+}
+
+@media screen and (max-width: 1199px) {
+  img.milkTea,
+  img.camera,
+  img.star01,
+  img.star02,
+  img.skyLight01,
+  img.skyLight02,
+  img.eggBread,
+  img.candyFruit {
+    display: none;
+  }
+}
+/*# sourceMappingURL=mapSection.css.map */

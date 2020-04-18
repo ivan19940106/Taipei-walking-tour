@@ -1,0 +1,618 @@
+@import '../../base/var.scss';
+
+//-----心理測驗------
+div.psyTestWrap{
+    // border: 1px solid blue;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 1.5px;
+    font-size: $fzTitle;
+    color: $fcContent;
+
+    #question{
+        width: 60%;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: #156692;
+        background-image: url(../img/index/questionBg.png);
+        background-size: cover;
+        span{
+            display: inline-block;
+            color: #A5361C;
+            font-size: 46px;
+            font-weight: bold;
+            transform: rotate(-10deg);
+        }
+    }
+
+    div.answerBox{
+        // border: 1px solid green;
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        div.ansOption{
+            display: flex;
+            flex-direction: column;
+            // border: 1px solid rebeccapurple;
+            position: relative;
+            width: 45%;
+            span.ansText{
+                display: inline-block;
+                align-self: flex-end;
+                text-align: center;
+                line-height: 50px;
+                width: 205px;
+                height: 50px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                // font-size: $fzTitle;
+                color: $fcContent;
+                font-weight: bold;
+                transform: rotate(10deg);
+            }
+            span.blueTag{
+                background-image: url(../img/index/ansTextBlue.png);
+            }
+            span.pinkTag{
+                background-image: url(../img/index/ansTextpink.png);
+            }
+            @media screen and (max-width:1023px){
+                span.ansText{
+                    width: 150px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 18px;
+                }
+            }
+
+
+            div.ansBubble{
+                background-image: url(../img/index/blueWave.png);
+                position: relative;
+                padding: 20px;
+                text-align: center;
+                cursor: pointer;
+                box-shadow: 5px 5px 10px 3px rgba($color: #000000, $alpha: 0.13);
+                animation: ansAni 3s infinite linear alternate-reverse;
+                &:hover img.ansImg{
+                    filter: brightness(1.5);
+                    opacity: 0.8;
+                }
+                &:hover img.ansCheck{
+                    opacity: 1;
+                }
+                
+                img.ansCheck{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    opacity: 0;
+                    transition: all 0.3s;
+                }
+                img.ansImg{
+                    width: 95%;
+                    animation: ansAni 2s infinite linear alternate-reverse;
+                    transition: all 0.3s;
+                }
+            }
+            @keyframes ansAni {
+                0%{border-radius: 35% 40% 22% 42%/ 51% 47% 42% 42%;}
+                33%{border-radius: 29% 45% 30% 31%/ 51% 47% 42% 42%;}
+                66%{border-radius: 40% 50% 32% 27%/ 51% 47% 42% 42%;}
+                100%{border-radius: 31% 40% 24% 38%/ 51% 47% 42% 42%;}
+            }
+
+
+        }
+    }
+    @media screen and (max-width:767px){
+        div.answerBox{
+            margin-top: 20px;
+
+            div.ansOption{
+                width: 45%;
+                div.ansBubble{
+                    padding: 0px;
+                    img.ansImg{
+                        width: 100%;
+                    }
+                    img.ansCheck{
+                        display: none;
+                    }
+                }
+            }    
+        }
+    }
+}
+
+@media screen and (max-width:767px){
+    div.psyTestWrap{
+        margin-top: 20px;
+
+        #question{
+            width: 95%;
+            font-size: 24px;
+            span{
+                font-size: 30px;
+                transform: rotate(-10deg);
+            }
+        }
+    }   
+}
+
+//-----散步路線------
+div.routeWrap{
+    // border: 1px solid blue;
+    width: 100%;
+    margin-top: 70px;
+    position: relative;
+    letter-spacing: 1.5px;
+    font-size: $fzTitle;
+    color: $fcContent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // div.routeBox{
+    //     // border: 1px solid green;
+    //     display: flex;
+    //     justify-content: center;
+    //     position: relative;
+    //     width: 100%;
+        
+    //         div.routeLink{
+    //             // border: 1px solid palevioletred;
+    //             display: inline-block;
+    //             margin: 0px 20px;
+    //             &:hover + div.routeData{
+    //                 opacity: 1;
+    //                 z-index: 5;
+    //             }
+    //         }
+    //         @media screen and (max-width:1199px){
+    //             div.routeLink{
+    //                 margin: 0px;
+    //             }
+    //         }
+    //         div.routeData{
+    //             box-shadow: 5px 5px 10px 0px rgba($color: #000000, $alpha: .13);
+    //             border-radius: 5px;
+    //             background-image: url(../img/index/linedpaper.png);
+    //             display: inline-block;
+    //             padding: 20px 0px;
+    //             width: 700px;
+    //             opacity: 0;
+    //             position: absolute;
+    //             left: 20%;
+    //             bottom: -130px;
+
+    //             img.routeArrow01{
+    //                 position: absolute;
+    //                 top: -100px;
+    //                 left: 0px;
+    //             }
+    //             img.routeArrow02{
+    //                 position: absolute;
+    //                 top: -110px;
+    //                 left: 300px;
+    //                 transform: rotate(65deg);
+    //             }
+    //             img.routeArrow03{
+    //                 position: absolute;
+    //                 top: -100px;
+    //                 left: 600px;
+    //                 transform: rotate(100deg);
+    //             }
+    //             p{
+    //                 text-align: center;
+    //                 font-size: 18px;
+    //                 letter-spacing: 1.5px;
+    //                 line-height: 1.5;
+    //                 color: #1e1e1e;
+    //                 span{
+    //                     font-size: 24px;
+    //                     font-weight: bold;
+    //                 }
+    //             }
+    //         }
+    //         @media screen and (max-width:1199px){
+    //             div.routeData{
+    //                 left: 15%;
+    //             }
+    //         }
+    // }
+
+    #slideBoard {
+        width: 100%;
+        overflow: hidden;
+
+         #content {
+             position: relative;
+             display: flex;
+                 .newSliderBox {
+                     position: relative;
+                     display: flex;
+                     justify-content: space-between;
+
+                     div.picBubble{
+                        width: 48%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-image: url(../img/index/blueWave.png);
+                        position: relative;
+                        padding: 20px;
+                        text-align: center;
+                        box-shadow: 5px 5px 10px 3px rgba($color: #000000, $alpha: 0.13);
+                        animation: ansAni 3s infinite linear alternate-reverse;
+
+                        img.routeImg{
+                            width: 95%;
+                            animation: ansAni 2s infinite linear alternate-reverse;
+                            transition: all 0.3s;
+                        }
+                    }
+                    @keyframes ansAni {
+                        0%{border-radius: 35% 40% 22% 42%/ 51% 47% 42% 42%;}
+                        33%{border-radius: 29% 45% 30% 31%/ 51% 47% 42% 42%;}
+                        66%{border-radius: 40% 50% 32% 27%/ 51% 47% 42% 42%;}
+                        100%{border-radius: 31% 40% 24% 38%/ 51% 47% 42% 42%;}
+                    }
+
+                     div.routeDatailText {
+                        width: 47%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        span{
+                            font-size: 36px;
+                            font-weight: bold;
+                            color: #1e1e1e;
+                            margin-bottom: 15px;
+                            letter-spacing: 3px;
+                        }
+                         p {
+                             font-size: 20px;
+                             color: $fcInfo;
+                             margin: 10px 0px;
+                             text-align: center;
+                             line-height: 1.5;
+                         }
+                     }
+                 }
+                 
+
+         }
+     }
+
+    @media screen and (max-width:767px){
+        #slideBoard {
+            #content {
+                    .newSliderBox {
+                         flex-direction: column;
+                         align-items: center;
+    
+                         div.picBubble{
+                            width: 95%;
+                         }
+                         div.routeDatailText {
+                            width: 95%;
+                            span{
+                                font-size: 30px;
+                                margin-top: 20px;
+                            }
+                             p {
+                                 font-size: 18px;
+                                 margin: 5px 0px;
+                             }
+                         }
+                    }
+            }
+        }
+    }
+
+
+
+    div.moreRoute{
+        margin: 60px 0px 30px 0px;
+    }
+    @media screen and (max-width:1024px){
+        div.moreRoute{
+            margin: 20px 0px;
+        }
+    }
+    img.grassLine{
+        width: 50%;
+    }
+    @media screen and (max-width:1024px){
+        img.grassLine{
+            width: 70%;
+        }
+    }
+    
+}
+
+@media screen and (max-width:767px){
+    div.routeWrap{
+        margin-top: 0px
+    }
+}
+
+// @media screen and (max-width:1024px){
+//     div.routeBox{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         position: relative;
+//         width: 100%;
+//         div.routePaper{
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: space-around;
+            
+//             div.routeLink{
+//                 width: 30%;
+//                 display: inline-block;
+//                 img{
+//                     width: 100%;
+//                 }
+//             }          
+//             div.routeData{
+//                 align-self: center;
+//                 width: 65%;
+//                 position: relative;
+//                 opacity: 1;
+//                 left: 0px;
+//                 top: 0px;
+//                 bottom: unset;
+
+//                 img.routeArrow01{
+//                     width: 60px;
+//                     top: -0px;
+//                     left: -30px;
+//                     transform: rotate(-20deg);
+//                 }
+//                 img.routeArrow02{
+//                     width: 60px;
+//                     top: -0px;
+//                     left: unset;
+//                     right: -30px;
+//                     transform: rotate(130deg);
+//                 }
+//                 img.routeArrow03{
+//                     width: 60px;
+//                     top: -0px;
+//                     left: -30px;
+//                     transform: rotate(-20deg);
+//                 }
+//                 p{
+//                     font-size: 16px;
+//                 }
+//             }
+//         }    
+//     }
+//     //-----第二條路線反向排列
+//     div.routeBox div:nth-child(2) a{
+//         order: 2;
+//     }
+// }
+
+// @media screen and (max-width:767px){
+//     div.routeBox{
+        
+//         div.routePaper{
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: space-around;
+            
+//             div.routeLink{
+//                 width: 100%;
+//                 display: inline-block;
+//                 text-align: center;
+//                 img{
+//                     max-width: 335px;
+//                 }
+//             }          
+//             div.routeData{
+//                 display: none;
+//             }
+//         }    
+//     }
+// }
+
+
+//-----共用小標題泡泡-----
+img.routeSubTitle{
+    display: inline-block;
+    position: absolute;
+    left: -5%;
+    top: -30%;
+    animation: subtitleAni .8s infinite alternate;
+}
+
+@keyframes subtitleAni{
+    from{transform: translateY(20px);}
+    to{transform: translateY(0px);}
+}
+
+@media screen and (max-width:1365px){
+    img.routeSubTitle{
+        left: 0%;
+    }
+}
+@media screen and (max-width:1023px){
+    img.routeSubTitle{
+        width: 170px;
+    }
+}
+@media screen and (max-width:767px){
+    img.routeSubTitle{
+        display: none;
+    }
+}
+
+
+    //--調整路線的提示泡泡--//
+@media screen and (max-width:1024px){
+    img.-routeTitle{
+        top: -130px;
+        z-index: 3;
+    }
+}
+@media screen and (max-width:767px){
+    img.routeSubTitle{
+        width: 180px;
+        left: 15%;
+        top: -150px;
+    }
+    @keyframes subtitleAni{
+        from{transform: translateY(10px);}
+        to{transform: translateY(0px);}
+    }
+}
+
+
+
+//========= 裝 飾 小 圖 ==========
+
+//太陽
+img.picSun{
+    position: absolute;
+    width: 200px;
+    top: 100px;
+    right: -300px;
+    animation: rotateSun 33s infinite linear;
+}
+@keyframes rotateSun{
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}
+//雲 01
+img.picKumo01{
+    position: absolute;
+    width: 150px;
+    top: 300px;
+    right: -200px;
+    animation: jumpKumo01 3s infinite linear alternate;
+}
+@keyframes jumpKumo01{
+    from{transform: translate(0,0);}
+    to{transform: translate(10px,10px);}
+}
+//雲 02
+img.picKumo02{
+    position: absolute;
+    width: 180px;
+    top: 350px;
+    right: -350px;
+    animation: jumpKumo02 4s infinite linear alternate;
+}
+@keyframes jumpKumo02{
+    from{transform: translate(0,0);}
+    to{transform: translate(0px,13px);}
+}
+//手繪101
+img.pic101{
+    position: absolute;
+    width: 80px;
+    top: 700px;
+    left: -250px;
+    transform: rotate(-8deg);
+}
+//101上的小雲
+img.picKumo03{
+    position: absolute;
+    width: 130px;
+    top: 600px;
+    left: -170px;
+    animation: jumpKumo02 3s infinite linear alternate;
+}
+//101上的大雲
+img.picKumo04{
+    position: absolute;
+    width: 170px;
+    top: 530px;
+    left: -300px;
+    animation: jumpKumo01 4s infinite linear alternate;
+}
+//右邊大紅色熱氣球
+img.airBallon01{
+    position: absolute;
+    width: 150px;
+    top: 950px;
+    right: -300px;
+    animation: airBallon01 2s infinite linear alternate;
+}
+@keyframes airBallon01{
+    from{transform: translate(0,0)}
+    to{transform: translate(0,25px)}
+}
+//右邊中綠色熱氣球
+img.airBallon02{
+    position: absolute;
+    width: 100px;
+    top: 1100px;
+    right: -160px;
+    animation: airBallon02 5s infinite linear alternate;
+}
+@keyframes airBallon02{
+    from{transform: translate(0,0)}
+    to{transform: translate(0px,35px)}
+}
+//右邊小熱氣球們
+img.airBallon03{
+    position: absolute;
+    width: 100px;
+    top: 1200px;
+    right: -320px;
+    animation: airBallon01 5s infinite alternate;
+}
+//左邊大橘色熱氣球
+img.airBallon04{
+    position: absolute;
+    width: 150px;
+    top: 1400px;
+    left: -300px;
+    animation: airBallon01 2s infinite alternate;
+}
+//左邊中粉紅熱氣球
+img.airBallon05{
+    position: absolute;
+    width: 110px;
+    top: 1550px;
+    left: -170px;
+    animation: airBallon02 4s infinite alternate;
+}
+//左邊小熱氣球們
+img.airBallon06{
+    position: absolute;
+    width: 110px;
+    top: 1700px;
+    left: -320px;
+    animation: airBallon01 4s infinite alternate linear;
+}
+
+@media screen and (max-width:1199px){
+    img.picSun,
+    img.picKumo01,
+    img.picKumo02,
+    img.pic101,
+    img.picKumo03,
+    img.picKumo04,
+    img.airBallon01,
+    img.airBallon02,
+    img.airBallon03,
+    img.airBallon04,
+    img.airBallon05,
+    img.airBallon06{
+        display: none;
+    }
+}

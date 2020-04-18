@@ -1,0 +1,229 @@
+@charset "UTF-8";
+body {
+  font-family: "微軟正黑體";
+  font-size: 18px;
+  color: #1e1e1e;
+}
+
+div.loginPageWrapper {
+  background-image: url("../img/element/bgImage.png");
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.loginPageWrapper img.logo {
+  width: 300px;
+  margin-top: 50px;
+}
+
+div.loginPageWrapper div.loginWrap {
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.13);
+          box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.13);
+  width: 400px;
+  height: 320px;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.loginPageWrapper div.loginWrap h2 {
+  font-size: 30px;
+  color: #A5361C;
+  font-weight: bold;
+  margin: 20px auto 10px auto;
+}
+
+div.loginPageWrapper div.loginWrap form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.loginPageWrapper div.loginWrap form .loginInput {
+  width: 300px;
+  height: 45px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #ccc;
+}
+
+div.loginPageWrapper div.loginWrap form .btnPink {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  div.loginPageWrapper div.loginWrap {
+    width: 350px;
+    height: 320px;
+    margin-top: 20px;
+  }
+}
+
+div.wrapper {
+  width: 100%;
+  max-width: 1920px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  width: 100%;
+  max-width: 1920px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13);
+}
+
+#managerId {
+  margin-right: 20px;
+  color: #A5361C;
+}
+
+nav.sideNav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 100px;
+  z-index: 10;
+}
+
+nav.sideNav li.navItem {
+  display: block;
+}
+
+nav.sideNav li.navItem a {
+  display: block;
+  text-align: center;
+  padding: 20px 0px;
+  color: #1e1e1e;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+nav.sideNav li.navItem a:hover {
+  text-decoration: none;
+  background-color: #A5361C;
+  color: #fff;
+  border-radius: 5px;
+}
+
+nav.sideNav li.navItem a.nowPage {
+  text-decoration: none;
+  background-color: #A5361C;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#sideNavBtn {
+  border: 2px solid #A5361C;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+#sideNavBtn svg.arrow {
+  font-size: 50px;
+  color: #A5361C;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+#sideNavBtn svg.-turnArrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 767px) {
+  nav.sideNav {
+    left: -100%;
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+  }
+  nav.sideNav li.navItem a {
+    padding: 12px 0px;
+  }
+  nav.-sideNavOn {
+    left: 0;
+  }
+  #sideNavBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+main {
+  padding: 100px 25px 0px 25px;
+  margin-left: auto;
+}
+
+main h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #A5361C;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+}
+/*# sourceMappingURL=back.css.map */

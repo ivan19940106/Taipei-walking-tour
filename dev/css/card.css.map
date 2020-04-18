@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AAAI;;;;;MAKE",
+    "sources": [
+        "../sass/layout/card.scss"
+    ],
+    "names": [],
+    "file": "card.css"
+}

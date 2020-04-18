@@ -1,0 +1,131 @@
+@import '../base/var';
+
+
+/* btnClass */
+.btnRed {       /*主要按鈕*/
+    width: 175px;
+    height: 60px;
+    border: unset;
+    position: relative;
+    display: inline-block;
+    border-radius: 25px;
+    font-family: $fontFamily;
+    font-size: $fzTitle;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    background-image: url("../img/element/btnRed.png");
+    background-size: contain;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, .3);
+    transition: filter .1s;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(1.09);
+    }
+}
+
+
+.btnPink {      /*次要按鈕*/
+    width: 120px;
+    height: 40px;
+    border: unset;
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    font-family: $fontFamily;
+    font-size: $fzContent;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    background-image: url("../img/element/btnPink.png");
+    background-size: contain;
+    transition: filter .1s;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(1.05);
+    }
+}
+
+.btnPinkStop {      /*次要按鈕_不能按*/
+    width: 120px;
+    height: 40px;
+    border: unset;
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    font-family: $fontFamily;
+    font-size: $fzContent;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    background-image: url("../img/element/btnPink.png");
+    background-size: contain;
+    filter: grayscale(1.1);
+}
+
+#btnGoTop {     /*回到頂端*/
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    top:-200px;
+    right: 40px;
+    display: inline-block;
+    background-image: url("../img/element/btnGoTop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: filter .1s;
+    cursor: pointer;
+    @media screen and (max-width:$medium) {
+        width: 45px;
+        right:10px
+    }
+    @media screen and (max-width:$small) {
+        width: 40px;
+        top:40px
+    }
+}
+
+.btnCust {      /*自訂按鈕*/
+    width: 105px;
+    height: 105px;
+    border: unset;
+    font-size: $fzInfo;
+    color: $fcContent;
+    font-weight: bold;
+    text-align: center;
+    line-height: 130px;
+    position: fixed;
+    z-index: 10;
+    right: 15%;
+    bottom:30%;
+    display: inline-block;
+    border-radius: 50%;
+    background-image: url("../img/element/btnCust.png");
+    background-size: contain;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+    transition: filter .1s;
+    animation: flutter .8s cubic-bezier(.04,.49,.94,.44) alternate infinite;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(1.05);
+    }
+    @media screen and( max-width:$medium ){
+        right: 5%;
+        bottom:40%;
+    }
+    @media screen and( max-width:$small ){
+        font-size: $fzInfo / 1.15;
+        line-height: 110px;
+        width: 85px;
+        height: 85px;
+
+    }
+}
+@keyframes flutter{
+    from{transform: translateY(0px);}
+    to{transform: translateY(-5px);}   
+}
+

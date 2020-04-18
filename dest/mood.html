@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 慢步寫心情</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/mood.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/getLoginInfo.js"></script>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <!-- 1200px上 滿版時，使用的選單 -->
+<header class="fullHeader">
+    <h1>
+        <a href="./main.html">
+            <img src="./img/header/logo272x170.png" alt="">
+        </a>
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="./route.html"><img src="./img/header/navHover.png" class="navHover "><img
+                        src="./img/header/navIcon1.png" class="navIcon">散步遊台北</a></li>
+            <li><a href="./mapgame.html"><img src="./img/header/navHover.png" class="navHover "><img
+                        src="./img/header/navIcon2.png" class="navIcon">攻略地圖趣</a></li>
+            <li><a href="./mood.html"><img src="./img/header/navHover.png" class="navHover show"><img
+                        src="./img/header/navIcon3.png" class="navIcon">慢步寫心情</a></li>
+            <li><a href="./postcard.html"><img src="./img/header/navHover.png" class="navHover "><img
+                        src="./img/header/navIcon4.png" class="navIcon">情繫明信片</a></li>
+            <li><a href="./event.html"><img src="./img/header/navHover.png" class="navHover "><img
+                        src="./img/header/navIcon5.png" class="navIcon">揪團一起走</a></li>
+        </ul>
+    </nav>
+    <div class="memberIcon">
+        <!-- <div class="navCart"><a><img src="./img/header/navCart.png"></a></div> -->
+        <div class="navMember">
+            <div class="sign">登入</div>
+            <a class="memberPhoto"><img src="./img/header/navMember.png"></a>
+        </div>
+        <div class="navPoint">
+            <div class="point">點數</div>
+            <a><img src="./img/header/navPoint.png"></a>
+        </div>
+    </div>
+</header>
+<!-- 1200px下時，轉乘使用漢堡選單 -->
+
+<header class="hamburgerHeader">
+    <h1>
+        <a href="./main.html">
+            <img src="./img/header/logo272x170.png" alt="">
+        </a>
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="./route.html"><img src="./img/header/navIcon1.png" class="navIcon">散步遊台北</a></li>
+            <li><a href="./mapgame.html"><img src="./img/header/navIcon2.png" class="navIcon">攻略地圖趣</a></li>
+            <li><a href="./mood.html"><img src="./img/header/navIcon3.png" class="navIcon">慢步寫心情</a></li>
+            <li><a href="./postcard.html"><img src="./img/header/navIcon4.png" class="navIcon">情繫明信片</a></li>
+            <li><a href="./event.html"><img src="./img/header/navIcon5.png" class="navIcon">揪團一起走</a></li>
+        </ul>
+    </nav>
+    <div class="memberIcon">
+        <!-- <div class="navCart"><a href=""><img src="./img/header/navCart.png"></a></div> -->
+        <div class="navMember">
+            <a class="memberPhoto"><img src="./img/header/navMember.png"></a>
+            <div class="sign">登入</div>
+        </div>
+        <div class="navPoint">
+            <a><img src="./img/header/navPoint.png"></a>
+            <div class="point">點數</div>
+        </div>
+    </div>
+</header>
+<h1 class="smartPhoneLogo">
+    <a href="./main.html">
+        <img src="./img/header/logo272x170.png" alt="">
+    </a>
+</h1>
+<div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+    </div>
+</div>
+
+<!-- loginBlock -->
+<div class="login" id="loginBlock">
+    <div class="login_all">
+        <div class="login_all_all">
+            <p>會員登入</p>
+            <form action="" id="member_login">
+                <input type="text" placeholder="請輸入帳號" name="login_acc" id="login_acc">
+                <input type="password" placeholder="請輸入密碼" name="login_psw" id="login_psw">
+                <div class="findpsw">忘記密碼</div>
+                <div class="login_bottom">
+                    <div class="login_login btnPink" id="login_login">登入</div>
+                    <div class="login_register btnPink">註冊</div>
+                </div>
+            </form>
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+        <div class="forgetpsw">
+            <p>找回密碼</p>
+            <form action="" id="member_findpsw">
+                <input type="text" placeholder="請輸入註冊帳號" id="find_acc">
+                <input type="text" placeholder="請輸入註冊信箱" id="find_email">
+                <div class="forgetpsw_bottom">
+                    <div class="login_login btnPink" id="login_forgetpsw">發送認證信</div>
+                    <div class="btnBack btnPink">返回</div>
+                </div>
+            </form>
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+        <div class="register">
+            <form action="./php/member/register.php" id="member_register" method="POST">
+                <div class="register_item">
+                    <label for="">帳號：</label>
+                    <input type="text" id="register_acc" name="register_acc">
+                </div>
+                <div class="register_item">
+                    <label for="">暱稱：</label>
+                    <input type="text" id="register_nam" name="register_nam">
+                </div>
+                <div class="register_item">
+                    <label for="">信箱：</label>
+                    <input type="text" id="register_email" name="register_email">
+                </div>
+                <div class="register_item">
+                    <label for="">密碼：</label>
+                    <input type="text" placeholder="請輸入英數字(至少6位數)" id="register_psw" name="register_psw">
+                </div>
+                <div class="register_item">
+                    <label for="">確認密碼：</label>
+                    <input type="text" placeholder="請輸入上述相同密碼" id="register_psw_dou">
+                </div>
+                <div class="register_bottom">
+                    <div class="login_register btnPink" id="login_register">註冊</div>
+                    <div class="btnBack btnPink">返回</div>
+                </div>
+            </form>
+
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- banner-->
+    <div class="banner_03">
+        <img src="./img/banner/dottedLine1.png" alt="" srcset="" class="dottedLine">
+        <div class="pageBannerTitle">
+            <div class="bannerTitleMoveBlock">
+                <img src="./img/banner/bannerTitle3.png" class="">
+            </div>
+        </div>
+        <img src="./img/banner/dottedLine2.png" alt="" srcset="" class="dottedLine">
+    </div>
+
+    <!-- 寫心情按鈕-->
+    <div class="btnCust" id="newMoodBtn">寫心情</div>
+
+    <!-- breadCrumb // breadCrumb -->
+    <ul class="breadCrumb">
+    <li><a href="./index.html">台北散步</a></li>
+    <li><a href="./mood.html">慢步寫心情</a></li>
+    <li><a href="javascript: void(0)">慢</a></li>
+    <li><a href="javascript: void(0)">慢</a></li>
+    <li><a href="javascript: void(0)">慢</a></li>
+    <li><a href="javascript: void(0)">慢</a></li>
+</ul>
+
+    <!-- filter 心情分類篩選器 -->
+    <div class="filterBlock">
+        <div class="filterMask">
+            <ul class="filterAll">
+                <li id="filter1" class="filter showFilter" value="all">全部<input type="hidden" name="" value="all"></li>
+                <li id="filter2" class="filter"><input type="hidden" name="" value="隨筆心情">隨筆心情</li>
+                <li id="filter3" class="filter"><input type="hidden" name="" value="散步日記">散步日記</li>
+                <li id="filter4" class="filter"><input type="hidden" name="" value="吃貨手札">吃貨手札</li>
+            </ul>
+        </div>
+        <img src="./img/route/filterBgimage.png" class="filterBgImage">
+    </div>
+
+
+    <div class="wrapper">
+        <section>
+            <!-- 下拉選單 -->
+            <div class="selector">
+                排序方式：
+                <form>
+                    <select name="switchingBtn" id="orderSelect">
+                        <option value="mood_number">最新貼文</option>
+                        <option value="mood_heart">最多愛心</option>
+                    </select>
+                </form>
+            </div>
+            <!-- 卡片撈資料容器 -->
+            <div class="moodCardsWrap" id="moodCardsWrap">
+
+            </div>
+        </section>
+    </div>
+
+    <!-- 新增心情 燈箱 -->
+    <div class="newMoodLightBox" id="newMoodLightBox">
+        <div class="newMoodBlock">
+            <div id="closeNewMoodBtn">
+                <span class="line1"></span>
+                <span class="line2"></span>
+            </div>
+            <h2>寫心情</h2>
+            <form id="newMoodForm">
+                <div class="moodBox">
+                    <label>上傳圖片</label>
+                    <div class="picWrap">
+                        <img src="./img/mood/newMoodPic.png" id="viewImg">
+                    </div>
+                    <input type="file" name="moodPic" id="inputImg">
+                </div>
+                <div class="moodBox">
+                    <label>選擇分類</label>
+                    <select name="moodClass" id="moodClass">
+                        <option value="隨筆心情">隨筆心情</option>
+                        <option value="散步日記">散步日記</option>
+                        <option value="吃貨手札">吃貨手札</option>
+                    </select>
+                    <label>寫下心情</label>
+                    <textarea name="moodContent" id="moodContent"></textarea>
+                </div>
+            </form>
+            <button class="btnPink" id="newMoodPostBtn">送出</button>
+        </div>
+    </div>
+
+    <!-- 心情詳細 燈箱 -->
+    <div class="moodLightBox" id="moodLightBox">
+
+    </div>
+
+    <form id="moodNumForm" style="display: none;">
+        <input type="text" name="moodNumFormInput" id="moodNumFormInput">
+    </form>
+
+
+    <!-- footer -->
+    <!-- chatbot -->
+<div class="chatBot" id="chatBot">
+    <img src="./img/index/botBird.gif" class="bird">
+    <img src="./img/index/birdChat.gif" class="birdChat">
+    <div class="openBtn" id="openBot">
+        <img src="./img/index/chatBotOpen.png"> 
+    </div>
+    <div id="chatContent"> <!-- 對話內容區塊 -->
+        
+    </div>
+    <div class="keywordBar" id="keywordBar"> <!-- 關鍵字標籤 -->
+        
+    </div>
+    <div class="inputBar">
+        <input type="text" id="botInput" placeholder="和台灣藍鵲聊聊...">
+        <div id="botInputBtn">發送</div>
+    </div>
+
+</div>
+<footer>
+    <a id="btnGoTop"></a>
+    <div class="footerCloud">
+        <img src="./img/footer/footerCloud170.png" class="footerCloud170">
+        <img src="./img/footer/footerCloud122.png" class="footerCloud122">
+    </div>
+    <div class="footerLogo">
+        <img src="./img/footer/logo320x200.png">
+    </div>
+    <div class="footerText">
+        <p>Copyright (C) 2020 TAIPEI WALKING All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <!-- ------------  js  ------------ -->
+    <script src="./js/common.js"></script>
+    <script src="./js/mood.js"></script>
+    <script src="./js/mood_message.js"></script>
+    <script src="./js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

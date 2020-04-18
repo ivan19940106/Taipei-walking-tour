@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 慢步寫心情</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/mood.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/getLoginInfo.js"></script>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    @@include('./layout/header.html',{
+    "display1":"",
+    "display2":"",
+    "display3":"show",
+    "display4":"",
+    "display5":""
+    })
+
+    <!-- banner-->
+    <div class="banner_03">
+        <img src="./img/banner/dottedLine1.png" alt="" srcset="" class="dottedLine">
+        <div class="pageBannerTitle">
+            <div class="bannerTitleMoveBlock">
+                <img src="./img/banner/bannerTitle3.png" class="">
+            </div>
+        </div>
+        <img src="./img/banner/dottedLine2.png" alt="" srcset="" class="dottedLine">
+    </div>
+
+    <!-- 寫心情按鈕-->
+    <div class="btnCust" id="newMoodBtn">寫心情</div>
+
+    <!-- breadCrumb // breadCrumb -->
+    @@include('./layout/breadCrumb.html',{
+    "link1":"./index.html",
+    "innerText1":"台北散步",
+    "link2":"./mood.html",
+    "innerText2":"慢步寫心情",
+    "link3":"javascript: void(0)",
+    "innerText3":"慢",
+    "link4":"javascript: void(0)",
+    "innerText4":"慢",
+    "link5":"javascript: void(0)",
+    "innerText5":"慢",
+    "link6":"javascript: void(0)",
+    "innerText6":"慢"
+    })
+
+    <!-- filter 心情分類篩選器 -->
+    <div class="filterBlock">
+        <div class="filterMask">
+            <ul class="filterAll">
+                <li id="filter1" class="filter showFilter" value="all">全部<input type="hidden" name="" value="all"></li>
+                <li id="filter2" class="filter"><input type="hidden" name="" value="隨筆心情">隨筆心情</li>
+                <li id="filter3" class="filter"><input type="hidden" name="" value="散步日記">散步日記</li>
+                <li id="filter4" class="filter"><input type="hidden" name="" value="吃貨手札">吃貨手札</li>
+            </ul>
+        </div>
+        <img src="./img/route/filterBgimage.png" class="filterBgImage">
+    </div>
+
+
+    <div class="wrapper">
+        <section>
+            <!-- 下拉選單 -->
+            <div class="selector">
+                排序方式：
+                <form>
+                    <select name="switchingBtn" id="orderSelect">
+                        <option value="mood_number">最新貼文</option>
+                        <option value="mood_heart">最多愛心</option>
+                    </select>
+                </form>
+            </div>
+            <!-- 卡片撈資料容器 -->
+            <div class="moodCardsWrap" id="moodCardsWrap">
+
+            </div>
+        </section>
+    </div>
+
+    <!-- 新增心情 燈箱 -->
+    <div class="newMoodLightBox" id="newMoodLightBox">
+        <div class="newMoodBlock">
+            <div id="closeNewMoodBtn">
+                <span class="line1"></span>
+                <span class="line2"></span>
+            </div>
+            <h2>寫心情</h2>
+            <form id="newMoodForm">
+                <div class="moodBox">
+                    <label>上傳圖片</label>
+                    <div class="picWrap">
+                        <img src="./img/mood/newMoodPic.png" id="viewImg">
+                    </div>
+                    <input type="file" name="moodPic" id="inputImg">
+                </div>
+                <div class="moodBox">
+                    <label>選擇分類</label>
+                    <select name="moodClass" id="moodClass">
+                        <option value="隨筆心情">隨筆心情</option>
+                        <option value="散步日記">散步日記</option>
+                        <option value="吃貨手札">吃貨手札</option>
+                    </select>
+                    <label>寫下心情</label>
+                    <textarea name="moodContent" id="moodContent"></textarea>
+                </div>
+            </form>
+            <button class="btnPink" id="newMoodPostBtn">送出</button>
+        </div>
+    </div>
+
+    <!-- 心情詳細 燈箱 -->
+    <div class="moodLightBox" id="moodLightBox">
+
+    </div>
+
+    <form id="moodNumForm" style="display: none;">
+        <input type="text" name="moodNumFormInput" id="moodNumFormInput">
+    </form>
+
+
+    <!-- footer -->
+    @@include('./layout/footer.html')
+
+    <!-- ------------  js  ------------ -->
+    <script src="./js/common.js"></script>
+    <script src="./js/mood.js"></script>
+    <script src="./js/mood_message.js"></script>
+    <script src="./js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+body {
+  background-image: url("../img/element/bgImage.png");
+}
+
+div.wrapper {
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.wrapper img.sakura {
+  position: absolute;
+  left: 0;
+  top: -100px;
+  width: 46.8%;
+}
+
+div.wrapper img.sakura2 {
+  width: 31.25%;
+  position: absolute;
+  right: -50px;
+  bottom: 80px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  z-index: 1;
+}
+
+div.wrapper img.hall {
+  position: absolute;
+  right: 70px;
+  bottom: 0px;
+}
+
+div.wrapper img.logo {
+  width: 350px;
+  margin-top: 50px;
+  z-index: 3;
+}
+
+div.wrapper div.linkWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.wrapper div.linkWrap a.linkBox {
+  display: inline-block;
+  position: relative;
+  margin: 50px 100px 0px 100px;
+  width: 320px;
+  height: 320px;
+  border-radius: 100%;
+  z-index: 10;
+}
+
+div.wrapper div.linkWrap a.linkBox img.linkText {
+  width: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+div.wrapper div.linkWrap a.linkBox:hover {
+  background-color: rgba(199, 209, 191, 0.5);
+}
+
+div.wrapper div.linkWrap a.linkBox:hover img.circle1 {
+  -webkit-animation: circle1 20s linear infinite;
+          animation: circle1 20s linear infinite;
+}
+
+@-webkit-keyframes circle1 {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes circle1 {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+div.wrapper div.linkWrap a.linkBox img.circle1 {
+  width: 110%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 10s;
+  transition: all 10s;
+}
+
+div.wrapper div.linkWrap a.linkBox:hover img.circle2 {
+  -webkit-animation: circle2 20s linear infinite;
+          animation: circle2 20s linear infinite;
+}
+
+@-webkit-keyframes circle2 {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(-180deg);
+            transform: translate(-50%, -50%) rotate(-180deg);
+  }
+}
+
+@keyframes circle2 {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(-180deg);
+            transform: translate(-50%, -50%) rotate(-180deg);
+  }
+}
+
+div.wrapper div.linkWrap a.linkBox img.circle2 {
+  width: 110%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+          transform: translate(-50%, -50%) rotate(180deg);
+  -webkit-transition: all 10s;
+  transition: all 10s;
+}
+
+@media screen and (max-width: 1023px) {
+  div.wrapper img.sakura {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 46.8%;
+  }
+  div.wrapper img.sakura2 {
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    bottom: 80px;
+  }
+  div.wrapper img.hall {
+    width: 300px;
+    position: absolute;
+    right: 100px;
+    bottom: 0px;
+  }
+  div.wrapper img.logo {
+    width: 350px;
+    margin-top: 100px;
+  }
+  div.wrapper div.linkWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  div.wrapper div.linkWrap a.linkBox {
+    margin: 50px 50px 0px 50px;
+    width: 300px;
+    height: 300px;
+  }
+  div.wrapper div.linkWrap a.linkBox img.linkText {
+    width: 160px;
+  }
+  div.wrapper div.linkWrap a.linkBox img.circle1 {
+    -webkit-animation: circle1 40s linear infinite;
+            animation: circle1 40s linear infinite;
+  }
+  div.wrapper div.linkWrap a.linkBox img.circle2 {
+    -webkit-animation: circle2 40s linear infinite;
+            animation: circle2 40s linear infinite;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  div.wrapper img.sakura {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 65%;
+  }
+  div.wrapper img.sakura2 {
+    width: 70%;
+    position: absolute;
+    right: 0px;
+    bottom: 80px;
+  }
+  div.wrapper img.hall {
+    width: 120px;
+    position: absolute;
+    right: unset;
+    left: 20px;
+    bottom: 0px;
+  }
+  div.wrapper img.logo {
+    width: 280px;
+    margin-top: 30px;
+  }
+  div.wrapper div.linkWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  div.wrapper div.linkWrap a.linkBox {
+    margin: 30px 0px 0px 0px;
+    width: 180px;
+    height: 180px;
+  }
+  div.wrapper div.linkWrap a.linkBox img.linkText {
+    width: 100px;
+  }
+}
+/*# sourceMappingURL=welcome.css.map */

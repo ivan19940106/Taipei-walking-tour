@@ -1,0 +1,13 @@
+    /*
+     卡片：首頁、路線、心情、揪團，要使用的sample
+    
+     先用include card(設定height) 在做其他設定，我會再增加卡片的間距
+
+    */
+
+    @mixin card($height,) {
+        width: 340px;
+        height: $height;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(145, 131, 131, 0.4);
+    }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/mapForIndex.css">
+    <title>小遊戲、地圖首頁的部分～</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        @@include('./layout/header.html',{
+            "display2":"show"
+        })
+        <!-- breadCrumb -->
+        <!-- @@include('./layout/breadCrumb.html',{
+            "link1":"./google.com.tw",
+            "src1":"./img/123",
+            "link2":"./google.com.tw",
+            "src2":"./img/123",
+            "link3":"./google.com.tw",
+            "src3":"./img/123",
+            "link4":"./google.com.tw",
+            "src4":"./img/123"
+        }) -->
+        <!-- banner -->
+        <div class="banner_02">
+            <img src="./img/mapgame/title-game.png" alt="" class="title">
+        </div>
+        <div class="pic-container">
+            <div class="fuda-container">
+                <table>
+                    <tr>
+                        <td class="spot">青田六七</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check"></td>
+                    </tr>
+                    <tr>
+                        <td class="spot">梁實秋故居</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check hide-check"></td>
+                    </tr>
+                    <tr>
+                        <td class="spot">長慶廟</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check hide-check"></td>
+                    </tr>
+                    <tr>
+                        <td class="spot">野草居食堂</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check hide-check"></td>
+                    </tr>
+                    <tr>
+                        <td class="spot">紀州庵</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check hide-check"></td>
+                    </tr>
+                    <tr class="progress-container-row">
+                        <td class="progress-container" colspan="2">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                                <div class="index"></div>
+                                <div class="index"></div>
+                                <div class="index"></div>
+                                <div class="index"></div>
+                                <div class="index"></div>
+                            </div>
+                            <div class="indicator">闖關進度：20％</div>
+                        </td>
+                    </tr>
+                </table>
+                <img src="./img/mapgame/fuda.png" alt="" class="fuda">
+            </div>
+            <div class="game-container">
+                <img src="./img/mapgame/map.jpg" alt="" id="map">
+                @@include('./layout/btnRed.html',{
+                    "link":"#",
+                    "innerText":"start"
+                })
+                <img src="./img/mapgame/gou.gif" alt="" class="walking">
+            </div>
+            <div class="map-container">
+                <iframe src="" frameborder="0" id="google-map"></iframe>
+                <img src="./img/mapgame/iphone.png" alt="" class="iphone">
+            </div>
+            <img src="./img/mapgame/campus.png" alt="" class="campus">
+        </div>
+
+        <!-- footer // -->
+        @@include('./layout/footer.html')
+        <div class="image"></div>
+    </div>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/mapForIndex.js"></script>
+</body>
+</html>

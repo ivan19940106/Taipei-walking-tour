@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/mapgame.css">
+    <script src="./js/getLoginInfo.js"></script>
+    <title>攻略地圖趣</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <!-- 1200px上 滿版時，使用的選單 -->
+<header class="fullHeader">
+    <h1>
+        <a href="./main.html">
+            <img src="./img/header/logo272x170.png" alt="">
+        </a>
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="./route.html"><img src="./img/header/navHover.png" class="navHover @@display1"><img
+                        src="./img/header/navIcon1.png" class="navIcon">散步遊台北</a></li>
+            <li><a href="./mapgame.html"><img src="./img/header/navHover.png" class="navHover show"><img
+                        src="./img/header/navIcon2.png" class="navIcon">攻略地圖趣</a></li>
+            <li><a href="./mood.html"><img src="./img/header/navHover.png" class="navHover @@display3"><img
+                        src="./img/header/navIcon3.png" class="navIcon">慢步寫心情</a></li>
+            <li><a href="./postcard.html"><img src="./img/header/navHover.png" class="navHover @@display4"><img
+                        src="./img/header/navIcon4.png" class="navIcon">情繫明信片</a></li>
+            <li><a href="./event.html"><img src="./img/header/navHover.png" class="navHover @@display5"><img
+                        src="./img/header/navIcon5.png" class="navIcon">揪團一起走</a></li>
+        </ul>
+    </nav>
+    <div class="memberIcon">
+        <!-- <div class="navCart"><a><img src="./img/header/navCart.png"></a></div> -->
+        <div class="navMember">
+            <div class="sign">登入</div>
+            <a class="memberPhoto"><img src="./img/header/navMember.png"></a>
+        </div>
+        <div class="navPoint">
+            <div class="point">點數</div>
+            <a><img src="./img/header/navPoint.png"></a>
+        </div>
+    </div>
+</header>
+<!-- 1200px下時，轉乘使用漢堡選單 -->
+
+<header class="hamburgerHeader">
+    <h1>
+        <a href="./main.html">
+            <img src="./img/header/logo272x170.png" alt="">
+        </a>
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="./route.html"><img src="./img/header/navIcon1.png" class="navIcon">散步遊台北</a></li>
+            <li><a href="./mapgame.html"><img src="./img/header/navIcon2.png" class="navIcon">攻略地圖趣</a></li>
+            <li><a href="./mood.html"><img src="./img/header/navIcon3.png" class="navIcon">慢步寫心情</a></li>
+            <li><a href="./postcard.html"><img src="./img/header/navIcon4.png" class="navIcon">情繫明信片</a></li>
+            <li><a href="./event.html"><img src="./img/header/navIcon5.png" class="navIcon">揪團一起走</a></li>
+        </ul>
+    </nav>
+    <div class="memberIcon">
+        <!-- <div class="navCart"><a href=""><img src="./img/header/navCart.png"></a></div> -->
+        <div class="navMember">
+            <a class="memberPhoto"><img src="./img/header/navMember.png"></a>
+            <div class="sign">登入</div>
+        </div>
+        <div class="navPoint">
+            <a><img src="./img/header/navPoint.png"></a>
+            <div class="point">點數</div>
+        </div>
+    </div>
+</header>
+<h1 class="smartPhoneLogo">
+    <a href="./main.html">
+        <img src="./img/header/logo272x170.png" alt="">
+    </a>
+</h1>
+<div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+    </div>
+</div>
+
+<!-- loginBlock -->
+<div class="login" id="loginBlock">
+    <div class="login_all">
+        <div class="login_all_all">
+            <p>會員登入</p>
+            <form action="" id="member_login">
+                <input type="text" placeholder="請輸入帳號" name="login_acc" id="login_acc">
+                <input type="password" placeholder="請輸入密碼" name="login_psw" id="login_psw">
+                <div class="findpsw">忘記密碼</div>
+                <div class="login_bottom">
+                    <div class="login_login btnPink" id="login_login">登入</div>
+                    <div class="login_register btnPink">註冊</div>
+                </div>
+            </form>
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+        <div class="forgetpsw">
+            <p>找回密碼</p>
+            <form action="" id="member_findpsw">
+                <input type="text" placeholder="請輸入註冊帳號" id="find_acc">
+                <input type="text" placeholder="請輸入註冊信箱" id="find_email">
+                <div class="forgetpsw_bottom">
+                    <div class="login_login btnPink" id="login_forgetpsw">發送認證信</div>
+                    <div class="btnBack btnPink">返回</div>
+                </div>
+            </form>
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+        <div class="register">
+            <form action="./php/member/register.php" id="member_register" method="POST">
+                <div class="register_item">
+                    <label for="">帳號：</label>
+                    <input type="text" id="register_acc" name="register_acc">
+                </div>
+                <div class="register_item">
+                    <label for="">暱稱：</label>
+                    <input type="text" id="register_nam" name="register_nam">
+                </div>
+                <div class="register_item">
+                    <label for="">信箱：</label>
+                    <input type="text" id="register_email" name="register_email">
+                </div>
+                <div class="register_item">
+                    <label for="">密碼：</label>
+                    <input type="text" placeholder="請輸入英數字(至少6位數)" id="register_psw" name="register_psw">
+                </div>
+                <div class="register_item">
+                    <label for="">確認密碼：</label>
+                    <input type="text" placeholder="請輸入上述相同密碼" id="register_psw_dou">
+                </div>
+                <div class="register_bottom">
+                    <div class="login_register btnPink" id="login_register">註冊</div>
+                    <div class="btnBack btnPink">返回</div>
+                </div>
+            </form>
+
+            <div class="login_close">
+                <img src="./img/element/closed.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <!-- banner -->
+        <div class="banner_02">
+            <!-- 各分頁的bannerTitle格式，可以複製貼上再改中間的標題圖片 -->
+            <img src="./img/banner/dottedLine1.png" alt="" srcset="" class="dottedLine">
+            <div class="pageBannerTitle">
+                <div class="bannerTitleMoveBlock">
+                    <!-- 這裡的圖片改成自己分頁的圖片，再想想要怎麼動，不一定要一樣，也可以直接參考 -->
+                    <img src="./img/banner/bannerTitle2.png" class="routeTitleImage1">
+                </div>
+            </div>
+            <img src="./img/banner/dottedLine2.png" alt="" srcset="" class="dottedLine">
+        </div>
+
+        <!-- breadCrumb -->
+        <ul class="breadCrumb">
+    <li><a href="./index.html">台北散步</a></li>
+    <li><a href="./mapgame.html">攻略攻略圖趣</a></li>
+    <li><a href="./google.com.tw"></a></li>
+    <li><a href="./google.com.tw"></a></li>
+    <li><a href="./google.com.tw"></a></li>
+    <li><a href="./google.com.tw"></a></li>
+</ul>
+
+        <div class="pic-container">
+            <img src="./img/mapgame/select.png" alt="" class="bubble">
+            <div class="select">
+                <div class="option">
+                    <span class="route-name">日式舊屋行</span>
+                    <img src="./img/mapgame/label.png" alt="" class="label">
+                </div>
+                <div class="option">
+                    <span class="route-name">文青品味旅</span>
+                    <img src="./img/mapgame/label.png" alt="" class="label hide-label">
+                </div>
+                <div class="option">
+                    <span class="route-name">職人散步去</span>
+                    <img src="./img/mapgame/label.png" alt="" class="label hide-label">
+                </div>
+                <div class="switch">
+                    <div class="mapMode off">GPS地圖</div>
+                    <div class="button"></div>
+                    <div class="gameMode">小遊戲</div>
+                </div>
+                <img src="./img/mapgame/filterBgImage.png" alt="" class="hr">
+            </div>
+            <div class="game-container">
+                <div class="game-map-container">
+                    <img src="./img/mapgame/big-map.jpg" alt="" class="map">
+                    <!-- spots -->
+                    <img src="./img/mapgame/spot/route1/青田七六.jpg" alt="" class="spot1">
+                    <img src="./img/mapgame/spot/route1/長慶廟.jpg" alt="" class="spot2">
+                    <img src="./img/mapgame/spot/route1/紀州庵.jpg" alt="" class="spot3">
+                    <img src="./img/mapgame/spot/route1/野草居食屋.jpg" alt="" class="spot4">
+                    <img src="./img/mapgame/spot/route1/梁實秋故居.jpg" alt="" class="spot5">
+                </div>
+                <a href="#" class="btnRed">start</a>
+                <img src="./img/mapgame/gou.gif" alt="" class="walking">
+                <div class="game-modal hide-game-modal">
+                    <div class="test-area">
+                        <div class="close-modal">Close</div>
+                        <div class="test">Q: 章魚是魚嗎？</div>
+                        <div class="opt1">1. 是</div>
+                        <div class="opt2">2. 不是</div>
+                        <div class="opt3">3. 介於是和不是之間</div>
+                        <div class="continue hide-continue-btn">繼續闖關！</div>
+                    </div>
+                </div>
+                <div class="full-screen-btn"><i class="icon-resize-full"></i></div>
+                <div class="normal-screen-btn hide-full-screen-btn"><i class="icon-resize-normal"></i></div>
+                <div class="mobile-control-wrapper hide-mobile-control-wrapper">
+                    <div class="up"></div>
+                    <div class="down"></div>
+                    <div class="left"></div>
+                    <div class="right-dir"></div>
+                    <img src="./img/mapgame/arrowKeys.png" alt="" class="arrows">
+                </div>
+            </div>
+            <div class="map-container hide-container">
+                <div id="map"></div>
+            </div>
+            <div class="fuda-container">
+                <table>
+                    <tr>
+                        <td class="spot">青田七六</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check"></td>
+                    </tr>
+                    <tr>
+                        <td class="spot">長慶廟</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check"></td>
+                    </tr>
+                    <tr>
+                        <td class="spot">紀州庵</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check"></td>
+                    </tr>
+                    <tr>
+                        <td class="spot">野草居食屋</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check"></td>
+                    </tr>
+                    <tr>
+                        <td class="spot">梁實秋故居</td>
+                        <td class="check-box"><img src="./img/mapgame/check.png" alt="" class="check"></td>
+                    </tr>
+                    <tr class="progress-container-row">
+                        <td class="progress-container" colspan="2">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                                <div class="index"></div>
+                                <div class="index"></div>
+                                <div class="index"></div>
+                                <div class="index"></div>
+                                <div class="index"></div>
+                            </div>
+                            <div class="indicator">闖關進度：0％</div>
+                        </td>
+                    </tr>
+                </table>
+                <img src="./img/mapgame/fuda.png" alt="" class="fuda">
+            </div>
+            <!-- 手機版進度條 -->
+            <div class="progress-container-mobile hide-progress-container-mobile">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                    <div class="index"></div>
+                    <div class="index"></div>
+                    <div class="index"></div>
+                    <div class="index"></div>
+                    <div class="index"></div>
+                </div>
+                <div class="indicator">闖關進度：0％</div>
+            </div>
+            <img src="./img/mapgame/campus.png" alt="" class="campus">
+        </div>
+
+        <!-- footer // -->
+        <!-- chatbot -->
+<div class="chatBot" id="chatBot">
+    <img src="./img/index/botBird.gif" class="bird">
+    <img src="./img/index/birdChat.gif" class="birdChat">
+    <div class="openBtn" id="openBot">
+        <img src="./img/index/chatBotOpen.png"> 
+    </div>
+    <div id="chatContent"> <!-- 對話內容區塊 -->
+        
+    </div>
+    <div class="keywordBar" id="keywordBar"> <!-- 關鍵字標籤 -->
+        
+    </div>
+    <div class="inputBar">
+        <input type="text" id="botInput" placeholder="和台灣藍鵲聊聊...">
+        <div id="botInputBtn">發送</div>
+    </div>
+
+</div>
+<footer>
+    <a id="btnGoTop"></a>
+    <div class="footerCloud">
+        <img src="./img/footer/footerCloud170.png" class="footerCloud170">
+        <img src="./img/footer/footerCloud122.png" class="footerCloud122">
+    </div>
+    <div class="footerLogo">
+        <img src="./img/footer/logo320x200.png">
+    </div>
+    <div class="footerText">
+        <p>Copyright (C) 2020 TAIPEI WALKING All Rights Reserved.</p>
+    </div>
+</footer>
+        <div class="image"></div>
+    </div>
+
+    <!-- manual-modal -->
+    <div class="manual-modal">
+        <div class="switch-button">小遊戲、地圖切換開關</div>
+        <div class="select-route">選擇路線</div>
+        <div class="start">按下按鈕開始闖關！</div>
+        <div class="direction-control">使用方向鍵控制人物走向</div>
+        <div class="status-info">闖關進度一覽表</div>
+        <img src="./img/mapgame/arrowKeys.png" alt="" class="arrow">
+    </div>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxHAzDuEADlkr21Aqm0ng4BqfQ3LfmD6c"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+@import './layout/card.scss';
+
+div.eventWrap{
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    div.eventBtn{
+        margin-top: 20px;
+    }
+    div.eventCardsWrap{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    @media screen and (max-width:767px){
+        div.eventCardsWrap{
+            flex-direction: column;
+            align-items: center;
+        }
+        
+    }
+
+    //-----------------------卡片---------------------------
+    // div.eventCard{
+    //     @include card(unset);
+    //     background-image: url(../img/index/eventCardBg.png);
+    //     border: 1px solid #ccc;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: start;
+
+    //     //右上點點按鈕
+    //     div.dotWrap{
+    //         width: 40px;
+    //         height: 40px;
+    //         margin: 5px 18px 0px 0px;
+    //         align-self: flex-end;
+    //         display: flex;
+    //         justify-content: space-around;
+    //         align-items: center;
+    //         cursor: pointer;
+
+    //         span.dot{
+    //             width: 6px;
+    //             height: 6px;
+    //             border-radius: 100%;
+    //             background-color: #646464;
+    //         }
+    //     }
+    //     //圖片容器
+    //     div.eventPicWrap {
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         width: 300px;
+    //         height: 300px;
+    //         margin:5px auto;
+    //         overflow: hidden;
+    //         img.eventPic{
+    //             height: 100%;
+    //             vertical-align: middle;
+    //         }
+    //     }
+    //     //文字容器
+    //     div.cardText {
+    //         width: 300px;
+    //         margin: 0 auto;
+    //         text-align: center;
+    //         letter-spacing: 2px;
+    //         line-height: 1.5;
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: center;
+    //         h1 {
+    //             width: 100%;
+    //             font-size: $fzTitle;
+    //             color: $fcContent;
+    //             font-weight: 550;
+    //             border-bottom: 1px solid #ccc;
+    //             margin-bottom: 10px;
+    //         }
+    //         p {
+    //             font-size: $fzContent;
+    //             color: $fcInfo;
+    //             text-align: left;
+    //         }
+    //         span {
+    //             color: $fcInfo;
+    //             font-size: $fzInfo;
+    //             display: inline-block;
+    //             margin: 5px 0px 20px 0px;
+    //             cursor: pointer;
+    //             &:hover{
+    //                 color: #A5361C;
+    //             }
+    //         }
+    //     }
+    // }
+    // @media screen and (max-width:1199px){
+    //     div.eventCard{
+    //         width: 300px;
+    
+    //         //右上點點按鈕
+    //         div.dotWrap{
+    //             margin: 5px 18px 0px 0px;
+    //         }
+    //         //圖片容器
+    //         div.eventPicWrap {
+    //             width: 270px;
+    //             height: 270px;
+    //         }
+    //         //文字容器
+    //         div.cardText {
+    //             width: 270px;
+    //         }
+    //     }
+    // }
+    // @media screen and (max-width:1023px){
+    //     div.eventCard{
+    //         width: 230px;
+    
+    //         //右上點點按鈕
+    //         div.dotWrap{
+    //             margin: 0px 15px 0px 0px;
+    //         }
+    //         //圖片容器
+    //         div.eventPicWrap {
+    //             width: 200px;
+    //             height: 200px;
+    //         }
+    //         //文字容器
+    //         div.cardText {
+    //             width: 200px;
+
+    //             h1{
+    //                 font-size: 20px;
+    //             }
+    //             p{
+    //                 font-size: 16px;
+    //                 letter-spacing: 1px;
+    //             }
+    //         }
+    //     }
+    // }
+    // @media screen and (max-width:767px){
+    //     div.eventCard{
+    //         width: 300px;
+    //         margin: 15px 0px;
+    
+    //         //右上點點按鈕
+    //         div.dotWrap{
+    //             margin: 5px 18px 0px 0px;
+    //         }
+    //         //圖片容器
+    //         div.eventPicWrap {
+    //             width: 270px;
+    //             height: 270px;
+    //         }
+    //         //文字容器
+    //         div.cardText {
+    //             width: 270px;
+    //             margin: 0 auto;
+    //             text-align: center;
+    //             letter-spacing: 2px;
+    //             line-height: 1.5;
+    //             h1 {
+    //                 font-size: $fzTitle;
+    //             }
+    //             p {
+    //                 font-size: $fzContent;
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+@media screen and (max-width:767px){
+    div.eventWrap{
+        margin-top: 20px;
+    }
+}
+
+
+//小標題泡泡
+img.eventSubTitle{
+    display: inline-block;
+    position: absolute;
+    left: -5%;
+    top: -150px;
+    animation: subtitleAni .8s infinite alternate;
+}
+
+@keyframes subtitleAni{
+    from{transform: translateY(20px);}
+    to{transform: translateY(0px);}
+}
+
+@media screen and (max-width:1365px){
+    img.eventSubTitle{
+        left: 0%;
+    }
+}
+@media screen and (max-width:1199px){
+    img.eventSubTitle{
+        top: -150px;
+    }
+}
+@media screen and (max-width:1023px){
+    img.eventSubTitle{
+        top: -130px;
+        width: 170px;
+    }
+}  
+@media screen and (max-width:767px){
+    img.eventSubTitle{
+        display: none;
+    }
+}  
+
+
+//-------------裝飾小圖--------------
+//小籠包
+img.baoPic{
+    width: 130px;
+    position: absolute;
+    top: 100px;
+    right: -210px;
+    animation: bagAni 2s infinite alternate linear;
+}
+//芋圓
+img.taroPic{
+    width: 150px;
+    position: absolute;
+    top: 250px;
+    right: -320px;
+    animation: bagAni 2s infinite alternate-reverse linear;
+}
+//復古包
+img.backagePic{
+    width: 160px;
+    position: absolute;
+    top: 500px;
+    left: -280px;
+    animation: bagAni 2s infinite alternate linear;
+}
+img.potPic{
+    width: 160px;
+    position: absolute;
+    top: 660px;
+    left: -200px;
+    animation: bagAni 2s infinite alternate-reverse linear;
+}
+@keyframes bagAni{
+    form{transform: rotate(-7deg);}
+    to{transform: rotate(7deg);}
+}
+
+@media screen and (max-width:1199px){
+    img.baoPic,
+    img.taroPic,
+    img.backagePic,
+    img.potPic{
+        display: none;
+    }
+}

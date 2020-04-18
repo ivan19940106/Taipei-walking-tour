@@ -1,0 +1,44 @@
+// 所有 CSS 設定，匯集為 main.css
+
+// --- varCss ---
+@import "base/var.scss";
+// --- resetCss --
+@import "base/reset.scss";
+
+// --- btnCss ---
+@import "modules/btn.scss";
+
+// --- card ---
+@import "layout/card.scss";
+
+.card{
+    @include card(520px);
+    
+}
+
+// --- header ---
+@import "layout/header.scss";
+
+// --- banner ---
+@import "layout/banner.scss";
+
+// --- breadCrumb ---
+@import "layout/breadCrumb.scss";
+
+// --- footer ---
+@import "layout/footer.scss";
+
+// --- tabFilter ---
+@import "modules/filter.scss";
+
+// --- chatBot ---
+@import "layout/chatBot.scss";
+
+// --- loginBlock ---
+@import "./login.scss";
+
+// --- sample test css ---
+.wrapper{
+    background-image: $bgImage;
+    position: relative;
+}

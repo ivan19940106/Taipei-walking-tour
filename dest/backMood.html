@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台北散步 | 後台 | 心情檢舉管理</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/back.css">
+    <style>
+               
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="./backMember.html">
+            <img src="./img/index/LOGO.svg" width="100" class="d-inline-block align-top">
+        </a>
+        <div>
+            <span id="managerId">撈取管理者ID</span>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnLogout">登出</button>
+        </div>
+    </nav>
+</header>
+
+<nav class="col-md-2  d-md-block bg-light sideNav">
+    <div class="sidebarContent">
+       <ul class="nav flex-column">
+           <li class="navItem"><a href="./backMember.html" class="">帳號管理</a></li>
+           <!-- <li class="navItem"><a href="" class="">心理測驗管理</a></li> -->
+           <li class="navItem"><a href="./backRoute.html" class="">路線管理</a></li>
+           <li class="navItem"><a href="./backAttraction.html" class="">景點管理</a></li>
+           <li class="navItem"><a href="./backMapgame.html" class="">地圖攻略管理</a></li>
+           <li class="navItem"><a href="./backMood.html" class="nowPage">心情檢舉管理</a></li>
+           <li class="navItem"><a href="./backEvent.html" class="">揪團檢舉管理</a></li>
+           <li class="navItem"><a href="./backpostcard.html" class="">客製化管理</a></li>
+           <li class="navItem"><a href="./back_order.html" class="">訂單管理</a></li>
+           <li class="navItem"><a href="./backRobot.html" class="">機器人管理</a></li>
+       </ul>
+    </div>
+</nav>
+
+<div id="sideNavBtn">
+    <svg class="bi bi-chevron-right arrow" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg%22%3E">
+        <path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+    </svg>
+</div>
+        <main class="col-md-10">
+            <h2>心情檢舉管理</h2>
+            <div class="content">
+                <table class="table table-responsive-sm table-striped">
+                    <thead>
+                        <tr class="row">
+                            <th class="col-1">檢舉編號</th>
+                            <th class="col-1">心情編號</th>
+                            <th class="col-7">心情內容</th>
+                            <th class="col-2">檢舉原因</th>
+                            <th class="col-1">處理方式</th>
+                        </tr>
+                    </thead>
+                    <!-- 要帶入資料的容器 -->
+                    <tbody id="reportList">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+    <!-- ------------ js ------------ -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/backNav.js"></script>
+    <script src="./js/backMood.js"></script>
+    <script>
+        function $id(id) {
+            return document.getElementById(id);
+        }
+
+        let member;
+        window.addEventListener("load", function () {
+            // 抓取session的資料填入頁面中
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                member = JSON.parse(xhr.responseText);
+                // console.log(member);
+                $id("managerId").innerHTML = member.memName;
+            }
+            xhr.open("get", "./php/loginInfoForBack.php", true);
+            xhr.send(null);
+            // 註冊登出按鈕，回到後台登陸頁面
+            $id("btnLogout").onclick = function () {
+                let xhr = new XMLHttpRequest();
+
+                xhr.open("get", "./php/logout.php", true);
+                xhr.send(null);
+                location.href = "./backLogin.html";
+            };
+        }, false);
+    </script>
+</body>
+
+</html>

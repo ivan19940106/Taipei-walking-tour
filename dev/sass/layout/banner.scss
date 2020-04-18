@@ -1,0 +1,68 @@
+
+@each $var in _01, _02, _03, _04, _05, _06{
+    .banner#{$var} {
+        background-image: url('../img/banner/banner#{$var}.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center bottom;
+        width: 100%;
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        overflow: hidden;
+    }
+    @media all and (max-width :$medium){
+        .banner#{$var} {
+            background-image: url('../img/banner/banner#{$var}.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center bottom;
+            width: 100%;
+            height: 300px;
+        }
+    }
+    @media all and (max-width :$small){
+        .banner#{$var} {
+            background-image: url('../img/banner/banner#{$var}.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment:unset;
+            background-position: center bottom;
+            width: 100%;
+            height: unset;
+            padding-top: 100%;
+                img.dottedLine{
+                    display: none;
+                }
+        }
+    }
+}
+
+// pageBannerTitle Block
+.pageBannerTitle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.bannerTitleMoveBlock{
+    position: relative;
+}
+@media screen and (max-width:$small){
+    .pageBannerTitle{
+        width: unset;
+        height: unset;
+    }
+    .bannerTitleMoveBlock{
+        width: 345px;
+        position: absolute;
+        top: 200px;
+        img{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,238 @@
+.header, .fullHeader {
+  z-index: 2;
+}
+
+.title {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.pic-container {
+  margin: 100px auto 200px;
+  width: 1200px;
+  position: relative;
+}
+
+.bubble {
+  width: 150px;
+  top: -30px;
+  left: 30px;
+  position: absolute;
+}
+
+.fuda-container {
+  top: 200px;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.fuda-container table {
+  top: 106px;
+  left: 109px;
+  position: absolute;
+}
+
+.fuda-container tr {
+  line-height: 2;
+  font-size: 14px;
+}
+
+.fuda-container .spot {
+  width: 100px;
+}
+
+.fuda-container .check {
+  width: 20px;
+}
+
+.fuda-container .hide-check {
+  display: none;
+}
+
+.fuda-container .progress-bar {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.fuda-container .progress-bar .progress {
+  width: 22%;
+  border: 2px solid #c45c5c;
+  border-radius: 5px;
+}
+
+.fuda-container .progress-bar .index:nth-child(2) {
+  position: absolute;
+  top: -4px;
+  left: -1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #c45c5c;
+}
+
+.fuda-container .progress-bar .index:nth-child(3) {
+  position: absolute;
+  top: -4px;
+  left: 20%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #c45c5c;
+}
+
+.fuda-container .progress-bar .index:nth-child(4) {
+  position: absolute;
+  top: -4px;
+  left: 43%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.fuda-container .progress-bar .index:nth-child(5) {
+  position: absolute;
+  top: -4px;
+  left: 67%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.fuda-container .progress-bar .index:nth-child(6) {
+  position: absolute;
+  top: -4px;
+  right: -1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.fuda-container .indicator {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.fuda-container .fuda {
+  width: 350px;
+}
+
+.campus {
+  display: block;
+  width: 200px;
+  right: 0;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  position: absolute;
+}
+
+.game-container {
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: 200px;
+  width: 30%;
+  height: 550px;
+  border: 6px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.game-container #map {
+  width: 3000px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-47%, -74%);
+          transform: translate(-47%, -74%);
+  position: absolute;
+}
+
+.game-container .btnRed {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  position: absolute;
+}
+
+.game-container .walking {
+  width: 170px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  position: absolute;
+}
+
+.map-container {
+  top: -30px;
+  display: inline-block;
+  margin: 0 0 0 200px;
+  width: 25%;
+  height: 500px;
+  border: 6px solid #ccc;
+  border-radius: 6px;
+  position: relative;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.map-container .iphone {
+  width: 120%;
+  height: 120%;
+  top: -48px;
+  left: -34px;
+  position: absolute;
+}
+
+#google-map {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .pic-container {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .fuda-container {
+    top: 100px;
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+  .campus {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .game-container {
+    margin: 0 auto;
+    margin-left: 16px;
+    width: 90%;
+  }
+  .map-container {
+    margin: 100px 30px;
+    width: 80%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .map-container .iphone {
+    left: -29px;
+  }
+}
+/*# sourceMappingURL=mapForIndex.css.map */

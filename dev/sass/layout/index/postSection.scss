@@ -1,0 +1,205 @@
+div.postWrap{
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul.stepBar{
+        width: 800px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        li.stepBox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: (166 * 0.8 )+px;
+            height: (191 * 0.8 )+px;
+            background-image: url(../img/index/stepBoxWhite.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+            span{
+                text-align: center;
+                color: #126591;
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 1.5;
+                letter-spacing: 2px;
+            }            
+        }
+    }
+    #showCard{
+        width: 800px;
+    }
+    div.postBtn{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:1023px){
+    div.postWrap{
+        width: 100%;
+        margin-top: 30px;
+    
+        ul.stepBar{
+            width: 700px;
+            margin-bottom: 20px;
+    
+            li.stepBox{
+                width: (166 * 0.7 )+px;
+                height: (191 * 0.7 )+px;
+
+                span{
+                    font-size: 20px;
+                }            
+            }
+        }
+        #showCard{
+            width: 700px;
+        }
+        div.postBtn{
+            margin-top: 20px;
+        }
+    }
+}
+@media screen and (max-width:767px){
+    div.postWrap{
+        width: 100%;
+        margin-top: 20px;
+    
+        ul.stepBar{
+            width: 95%;
+            margin-bottom: 10px;
+    
+            li.stepBox{
+                width: (166 * 0.42 )+px;
+                height: (191 * 0.42 )+px;
+
+                span{
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                }            
+            }
+        }
+        #showCard{
+            width: 95%;
+        }
+        div.postBtn{
+            margin-top: 10px;
+        }
+    }
+}
+
+
+//小標題泡泡
+img.postSubTitle{
+    display: inline-block;
+    position: absolute;
+    left: -5%;
+    top: -100px;
+    animation: subtitleAni .8s infinite alternate;
+}
+
+@keyframes subtitleAni{
+    from{transform: translateY(20px);}
+    to{transform: translateY(0px);}
+}
+
+@media screen and (max-width:1365px){
+    img.postSubTitle{
+        left: 0%;
+    }
+}
+@media screen and (max-width:1199px){
+    img.postSubTitle{
+        top: -150px;
+    }
+}
+@media screen and (max-width:1023px){
+    img.postSubTitle{
+        top: -130px;
+        width: 170px;
+    }
+}  
+@media screen and (max-width:767px){
+    img.postSubTitle{
+        display: none;
+    }
+}  
+
+
+//--------------裝飾小圖--------------
+//左邊兩張
+img.postCartPic01{
+    width: 250px;
+    position: absolute;
+    top: 480px;
+    left: -110px;
+    transform: rotate(15deg);
+}
+img.postCartPic02{
+    width: 250px;
+    position: absolute;
+    top: 630px;
+    left: -120px;
+    transform: rotate(-10deg);
+}
+//右邊三張
+img.postCartPic03{
+    width: 250px;
+    position: absolute;
+    top: 400px;
+    right: -110px;
+    transform: rotate(-15deg);
+
+}
+img.postCartPic04{
+    width: 250px;
+    position: absolute;
+    top: 560px;
+    right: -115px;
+    transform: rotate(5deg);
+
+}
+img.postCartPic05{
+    width: 250px;
+    position: absolute;
+    top: 720px;
+    right: -100px;
+    transform: rotate(-5deg);
+}
+
+@media screen and (max-width:1199px){
+    img.postCartPic01{
+        width: 170px;
+        left: -50px;
+    }
+    img.postCartPic02{
+        width: 170px;
+        left: -50px;
+    }
+    img.postCartPic03{
+        width: 170px;
+        right: -50px;
+    }
+    img.postCartPic04{
+        width: 170px;
+        right: -50px;
+    }
+    img.postCartPic05{
+        width: 170px;
+        right: -50px;
+    }
+}
+@media screen and (max-width:1023px){
+    img.postCartPic01,
+    img.postCartPic02,
+    img.postCartPic03,
+    img.postCartPic04,
+    img.postCartPic05{
+        display: none;
+    }
+}
