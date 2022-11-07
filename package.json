@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
   },
   "description": ""
